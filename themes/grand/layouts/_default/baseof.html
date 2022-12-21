@@ -20,8 +20,8 @@
 <body>
 	<header>
 		<nav class="menu">
+			<a href="{{ "/" | relURL }}" id="grand-logo"><img src="{{ "/logo.svg" | relURL }}" alt="" ></a>
 			<ul>
-				<li><a href="{{ "/" | relURL }}" id="grand-logo"><img src="{{ "/logo.svg" | relURL }}" alt="" ></a></li>
 			{{ range .Site.Menus.nav  }}
 				<li><a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a></li>
 			{{ end }}

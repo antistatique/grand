@@ -18,13 +18,13 @@
   font-display: swap;
   src: url(./bol.woff) format("woff");
 }
-@font-face {
+/* @font-face {
   font-family: "Prox";
   font-weight: light;
   font-style: normal;
   font-display: swap;
   src: url(./lig.woff) format("woff");
-}
+} */
 
 html{
 	  font-size: 16px;
@@ -36,6 +36,10 @@ body{
   background-color: var(--grand-white);
   margin: 0;
   color: var(--grand-black);
+  background-image: url(../ovo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 main{
   max-width: 50rem;
@@ -78,9 +82,14 @@ a:hover{
 
 header{
   margin-top: 2vh;
-  border-top: 1px solid var(--grand-black);
-  border-bottom: 1px solid var(--grand-black);
+  border-top: 2px solid var(--grand-black);
+  border-bottom: 2px solid var(--grand-black);
   background-color: #fff;
+  
+}
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
 }
 .menu ul{
   padding: 0;
@@ -106,16 +115,22 @@ header{
   color: var(--grand-bling);
 }
 #grand-logo{
-  border-right: 1px solid var(--grand-black);
-  border-left: 1px solid var(--grand-black);
+  display: flex;
+  border-right: 2px solid var(--grand-black);
+  border-left: 2px solid var(--grand-black);
 }
 #grand-logo img{
+  margin:1em;
   max-width: 100%;
   width:20vw;
-  min-width: 200px;
+  min-width: 100px;
   display: block;
 }
 
+article{
+  background-color: #fff;
+  padding: 2em;
+}
 
 footer{
   margin-top: 4em;

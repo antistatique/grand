@@ -3,6 +3,8 @@ title: "Grand"
 draft: false
 ---
 
+# GRAND Prix Romand de&nbsp;la&nbsp;Création
+
 ## Les inscriptions sont ouvertes. 
 ### Tarif early bird jusqu’au 12 mars !
 
