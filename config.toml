@@ -1,0 +1,10 @@
+baseURL = ""
+languageCode = "fr-ch"
+title = "Grand"
+theme = "grand"
+
+
+[markup]
+  [markup.goldmark]
+	[markup.goldmark.renderer]
+	  unsafe = true

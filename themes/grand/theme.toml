@@ -1,0 +1,11 @@
+name = "grand"
+license = "MIT"
+description = "Special theme by Antistatique"
+homepage = "https://antistatique.net"
+tags = ["grand"]
+features = ["blog"]
+min_version = "0.80"
+
+[author]
+  name = "Marc Friederich"
+  homepage = "https://antistatique.net"
