@@ -6,5 +6,26 @@ theme = "grand"
 
 [markup]
   [markup.goldmark]
-	[markup.goldmark.renderer]
-	  unsafe = true
+	  [markup.goldmark.renderer]
+	    unsafe = true
+
+[[menu.nav]]
+  name = "Nuit des Publivores"
+  weight = -100 
+  identifier = "nuit-des-publivores"
+  url = "/nuit-des-publivores"
+[[menu.nav]]
+  name = "Jury"
+  weight = -90 
+  identifier = "jury-2023"
+  url = "/jury-2023"
+[[menu.nav]]
+  name = "Catégories"
+  weight = -80 
+  identifier = "categories"
+  url = "/categories"
+[[menu.nav]]
+  name = "Billetterie & inscriptions"
+  weight = -70 
+  identifier = "billetterie_inscription"
+  url = "/billetterie_inscription"    
