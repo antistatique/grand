@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "https://legrand.ch"
 languageCode = "fr-ch"
 title = "Grand"
 theme = "grand"
