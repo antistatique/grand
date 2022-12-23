@@ -20,7 +20,7 @@
 <body>
 	<header>
 		<nav class="menu">
-			<a href="{{ "/" | relURL }}" id="grand-logo"><img src="{{ "logo.svg" | relURL }}" alt="" ></a>
+			<a href="{{ .Site.BaseURL }}" id="grand-logo"><img src="{{ "logo.svg" | relURL }}" alt="" ></a>
 			<ul>
 			{{ range .Site.Menus.nav  }}
 				<li><a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a></li>

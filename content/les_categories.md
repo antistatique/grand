@@ -1,8 +1,10 @@
 ---
-title: Categories
-date: 2022-12-21T21:44:02.000+01:00
-
+title: "Les Categories"
+date: 2022-12-23T09:52:40+01:00
+draft: false
 ---
+
+
 # Categories
 
 Pour la 14ème fois, le GRAND récompensera les campagnes et créations publicitaires romandes à travers 10 catégories, jugées par un jury d’experts reconnus.
@@ -62,5 +64,3 @@ Normal :
 ## RÈGLEMENT
 
 Avant d’inscrire votre projet, merci de prendre connaissance du règlement 2023.
-
-\[Inscription\]

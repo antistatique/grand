@@ -22,8 +22,8 @@ theme = "grand"
 [[menu.nav]]
   name = "Catégories"
   weight = -80 
-  identifier = "categories"
-  url = "/categories"
+  identifier = "les_categories"
+  url = "/les_categories"
 [[menu.nav]]
   name = "Billetterie & inscriptions"
   weight = -70 
