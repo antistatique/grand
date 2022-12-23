@@ -1,4 +1,4 @@
-baseURL = "https://legrand.ch"
+baseURL = "https://antistatique.github.io/grand"
 languageCode = "fr-ch"
 title = "Grand"
 theme = "grand"
