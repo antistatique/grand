@@ -1,7 +1,29 @@
 {{ define "main" }}
+	<article>
 	{{ if .Content }}
-	<div>
-		{{ with .Content }}<div>{{ . }}</div>{{ end }}
-	</div>
+	
+		<div class="slide">
+			{{ with .Content }}<div>{{ . }}</div>{{ end }}
+		</div>
+	
 	{{ end }}
+	
+	{{ range .Data.Pages }}
+	  <div class="slide jury">
+		<div>	
+		  <h1>
+			{{.Title}}
+		  </h1>
+		  {{ if .Params.job }}
+		    <h2>{{ .Params.job }}</h2>
+		  {{ end }}
+		  
+		  {{ with .Content }}<div>{{ . }}</div>{{ end }}
+		</div>
+		  {{ if .Params.image }}
+			<img src="{{ .Params.image | relURL }}" alt="" class="jury-image">
+		  {{ end }}
+	  </div>
+	  {{ end }}
+	</article>
 {{ end }}

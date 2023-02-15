@@ -1,7 +1,8 @@
 ---
 title: Styleguide
 date: 2020-11-22T11:34:44.000+00:00
-draft: true
+draft: false
+slide: false
 ---
 
 

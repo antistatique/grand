@@ -31,7 +31,7 @@ theme = "grand"
   name = "Jury"
   weight = -90 
   identifier = "jury-2023"
-  url = "/jury-2023"
+  url = "/jury"
 [[menu.nav]]
   name = "Catégories"
   weight = -80 
