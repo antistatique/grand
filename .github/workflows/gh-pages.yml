@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - main  # Set a branch to deploy
+      - main
 
 jobs:
   deploy:
@@ -14,7 +14,6 @@ jobs:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
@@ -23,19 +22,19 @@ jobs:
       - name: Build
         run: hugo --minify
 
-      # - name: Deploy to Server
-      #   uses: easingthemes/ssh-deploy@v2.1.1
-      #   env:
-      #     SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      #     SOURCE: "public/"
-      #     REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-      #     REMOTE_USER: ${{ secrets.REMOTE_USER }}
-      #     TARGET: ${{ secrets.REMOTE_TARGET }}
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_SSH_KEY }}
+          SOURCE: "public/"
+          REMOTE_HOST: "ig7dp.ftp.infomaniak.com"
+          REMOTE_USER: "ig7dp_antistatique"
+          TARGET: "sites/associationgrand.ch"
 
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@3.0.0
-        with:
-          ftp-server:  ${{ secrets.FTP_HOST }}
-          ftp-username: ${{ secrets.FTP_USERNAME }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: public/
+      # - name: FTP Deploy
+      #   uses: SamKirkland/FTP-Deploy-Action@3.0.0
+      #   with:
+      #     ftp-server:  ${{ secrets.FTP_HOST }}
+      #     ftp-username: ${{ secrets.FTP_USERNAME }}
+      #     ftp-password: ${{ secrets.FTP_PASSWORD }}
+      #     local-dir: public/
