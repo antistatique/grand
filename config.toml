@@ -1,6 +1,6 @@
 baseURL = "https://associationgrand.ch"
 languageCode = "fr-ch"
-title = "Grand"
+title = "GRAND Prix Romand de la Création"
 theme = "grand"
 
 [params]

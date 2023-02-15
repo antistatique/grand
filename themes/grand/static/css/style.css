@@ -124,7 +124,6 @@ footer{
   bottom: var(--left-top-margin);
   left: var(--left-top-margin);
   width: calc(90vw - var(--min-nav-width));
-  height: 2em;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
