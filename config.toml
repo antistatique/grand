@@ -1,13 +1,13 @@
-baseURL = "https://antistatique.github.io/grand"
+baseURL = "https://associationgrand.ch"
 languageCode = "fr-ch"
 title = "Grand"
 theme = "grand"
 
 [params]
   instagramLabel = "instagram"
-  instagramURL = "https://instagram.com/legrand"
+  instagramURL = "https://www.instagram.com/associationgrand/"
   mailLabel = "Mail"
-  mailURL = "mailto:@@@"
+  mailURL = "mailto:hello@associationgrand.ch"
   copyright = "© 2023 GRAND Prix Romand de la Création"
   privacyLabel = "Privacy"
   privacyURL = "privacy"
