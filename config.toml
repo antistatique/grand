@@ -3,6 +3,19 @@ languageCode = "fr-ch"
 title = "Grand"
 theme = "grand"
 
+[params]
+  instagramLabel = "instagram"
+  instagramURL = "https://instagram.com/legrand"
+  mailLabel = "Mail"
+  mailURL = "mailto:@@@"
+  copyright = "© 2023 GRAND Prix Romand de la Création"
+  privacyLabel = "Privacy"
+  privacyURL = "privacy"
+  madebyLabel = "Design exceptionnel par Baston et Antistatique"
+  madebyURL = "madeby"
+  
+  
+  
 
 [markup]
   [markup.goldmark]
@@ -28,4 +41,9 @@ theme = "grand"
   name = "Billetterie & inscriptions"
   weight = -70 
   identifier = "billetterie_inscription"
-  url = "/billetterie_inscription"    
+  url = "/billetterie_inscription" 
+[[menu.nav]]
+  name = "Sponsors"
+  weight = -70 
+  identifier = "sponsors"
+  url = "/sponsors"      
