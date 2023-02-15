@@ -26,7 +26,7 @@ jobs:
         uses: easingthemes/ssh-deploy@v3
         env:
           SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_SSH_KEY }}
-          ARGS: "-rltgoDzvO"
+          SSH_CMD_ARGS: "-o StrictHostKeyChecking=no -o PubkeyAcceptedKeyTypes=ssh-rsa"
           SOURCE: "public/"
           REMOTE_HOST: "ig7dp.ftp.infomaniak.com"
           REMOTE_USER: "ig7dp_antistatique"
