@@ -4,11 +4,25 @@ on:
   push:
     branches:
       - main
+      - dev
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Set deployment environment variables based on Git branches
+        id: deploy_target
+        run: |
+          if [[ $GITHUB_REF == 'refs/heads/dev' ]]; then
+              echo "DEPLOY_TARGET=sites/staging.associationgrand.ch" >> $GITHUB_ENV
+          fi
+          if [[ $GITHUB_REF == 'refs/heads/main' ]]; then
+              echo "DEPLOY_TARGET=sites/associationgrand.ch" >> $GITHUB_ENV
+          fi
+
       - uses: actions/checkout@v3
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
@@ -30,12 +44,4 @@ jobs:
           SOURCE: "public/"
           REMOTE_HOST: "ig7dp.ftp.infomaniak.com"
           REMOTE_USER: "ig7dp_antistatique"
-          TARGET: "sites/associationgrand.ch"
-
-      # - name: FTP Deploy
-      #   uses: SamKirkland/FTP-Deploy-Action@3.0.0
-      #   with:
-      #     ftp-server:  ${{ secrets.FTP_HOST }}
-      #     ftp-username: ${{ secrets.FTP_USERNAME }}
-      #     ftp-password: ${{ secrets.FTP_PASSWORD }}
-      #     local-dir: public/
+          TARGET: "${{ env.DEPLOY_TARGET }}"
