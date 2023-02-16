@@ -1,0 +1,9 @@
+{
+  "name": "GRAND Prix Romand de la Création",
+  "short_name": "GRAND",
+  "theme_color": "#d2aa19",
+  "background_color": "#000000",
+  "display": "browser",
+  "scope": "/",
+  "start_url": "/"
+}

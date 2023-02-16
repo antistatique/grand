@@ -2,7 +2,7 @@
   --grand-black: black;
   --grand-white: white;
   --grand-bling: rgb(210,170,25);
-  --min-nav-width: clamp(120px, 10vw, 300px);
+  --min-nav-width: clamp(40px, 10vw, 300px);
   --left-top-margin: clamp(16px, 4vw, 100px);
 }
 @media (prefers-color-scheme: dark) {
