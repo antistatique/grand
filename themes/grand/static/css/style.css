@@ -129,14 +129,20 @@ details:last-of-type {
 }
 summary{
   padding: 1em 0;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
 }
 summary::-webkit-details-marker {
     display: none
 }
 summary:after {
-    height: 50px;
-    width: 50px;
-    float: left;
+    /* position: absolute;
+    top:0;
+    left:0; */
+    height: 2.5vmax;
+    width: 2.5vmax;
     background: url("../arrow.svg");
     background-repeat: no-repeat;
     background-size: 100%;
@@ -147,16 +153,16 @@ details[open] summary:after {
     transform: rotate(45deg);
 }
 summary h2{
-  display: inline-block;
+  /* display: inline-block; */
   margin: 0;
-  margin-left: 25px;
+  margin-left: 1vmax;
   padding: 0;
   line-height: 1em;
 }
 details p{
   max-width: 50em;
   padding: 0;
-  margin-left: 75px;
+  margin-left: 3.5vmax;
   margin-bottom: 1em;
 }
 details[open] summary ~ * {
@@ -364,6 +370,7 @@ p, ul, ol, pre, table, blockquote {
   line-height: 1.43em;
   margin-top: 0;
   margin-bottom: 0.5em;
+  max-width: 60ch;
 }
 p + p, p + h2, p + h3, p + ul, ul + p, h2 + p, h3 + ol, h3 + ul, h2 + ol, h2 + ul{
   margin-top: 0.8em;
