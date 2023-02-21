@@ -11,7 +11,7 @@ slide: true
 </div>
 <div class="slide">
 	<h1>Le Grand</h1>
-	<p>L’objectif du GRAND Prix Romand de la Création est de rassembler chaque année un maximum de travaux de création en communication afin de mettre en lumière les nombreux talents de notre région. Le concours met en avant la créativité́ et le savoir-faire « Made in Suisse romande » depuis plus de 14 ans. </p>
+	<p>L’objectif du GRAND Prix Romand de la Création est de rassembler chaque année un maximum de travaux de création en communication afin de mettre en lumière les nombreux talents de notre région. Le concours met en avant la créativité et le savoir-faire « Made in Suisse romande » depuis plus de 14 ans. </p>
 </div>
 <div class="slide">
 	<h1>L’ÉDITION 2023</h1>

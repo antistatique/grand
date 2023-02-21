@@ -1,10 +1,10 @@
-baseURL = "https://associationgrand.ch"
+baseURL = "https://staging.associationgrand.ch"
 languageCode = "fr-ch"
 title = "GRAND Prix Romand de la Création"
 theme = "grand"
 
 [params]
-  instagramLabel = "instagram"
+  instagramLabel = "Instagram"
   instagramURL = "https://www.instagram.com/associationgrand/"
   mailLabel = "Mail"
   mailURL = "mailto:hello@associationgrand.ch"
