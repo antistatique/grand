@@ -8,44 +8,46 @@ slide: false
 
 # Categories
 
-Pour la 14ème fois, le GRAND récompensera les campagnes et créations publicitaires romandes à travers 10 catégories, jugées par un jury d’experts reconnus.
+### Pour la 14<sup>ème</sup> fois, le GRAND récompensera les campagnes et créations publicitaires romandes à travers 10 catégories, jugées par un jury d’experts reconnus.
+
+
 <details>
-<summary><h2>Creative Film (Commercial, Culturel, Sensibilisation)</h2></summary>
+<summary><h2>CREATIVE FILM (Commercial, Culturel, Sensibilisation)</h2></summary>
 
 Cette catégorie récompense les films d’une durée maximale de 180 sec. Les films doivent avoir été diffusés à la télévision et/ou au cinéma et/ou sur le web. Les films inscrits dans cette catégorie seront jugés selon un barème de notes basé avant tout sur la créativité du concept, l’originalité de la narration et la clarté du message.
 
 </details>
 
 <details>
-<summary><h2>Craft Film (Commercial, Culturel, Sensibilisation)</h2></summary>
+<summary><h2>CRAFT FILM (Commercial, Culturel, Sensibilisation)</h2></summary>
 
 Cette catégorie récompense les films d’une durée maximale de 180 sec. Les films doivent avoir été diffusés à la télévision et/ou au cinéma et/ou sur le web. Les films inscrits dans cette catégorie seront jugés selon un barème de notes basé avant tout sur les qualités techniques de la réalisation, mais aussi sur l’originalité de la narration et la clarté du message.
 
 </details>
 
 <details>
-<summary><h2>Affichage & Annonces (Commercial, Culturel, Sensibilisation)</h2></summary>
+<summary><h2>AFFICHAGE & ANNONCES (Commercial, Culturel, Sensibilisation)</h2></summary>
 
 Cette catégorie récompense les affiches et annonces ayant été diffusées sur les réseaux officiels des régies d’affichage et/ou dans la presse. Les affiches et annonces inscrites dans cette catégorie seront jugées selon un barème de notes basé avant tout sur la créativité du concept, la qualité d’exécution et la clarté du message.
 
 </details>
 
 <details>
-<summary><h2>Campagne Digitale (Commercial, Culturel, Sensibilisation)</h2></summary>
+<summary><h2>CAMPAGNE DIGITALE (Commercial, Culturel, Sensibilisation)</h2></summary>
 
 Cette catégorie récompense les campagnes et projets diffusés en ligne. Les projets inscrits dans cette catégorie seront jugés selon un barème de notes basé avant tout sur la créativité du concept mis en place, l’ensemble des éléments de création, l’utilisation adéquate du média.
 
 </details>
 
 <details>
-<summary><h2>Campagne Intégrée (Commercial, Culturel, Sensibilisation)</h2></summary>
+<summary><h2>CAMPAGNE INTÉGRÉE (Commercial, Culturel, Sensibilisation)</h2></summary>
 
 Cette catégorie récompense toute campagne publicitaire déclinée sur un minimum de 3 points de contact différents (ex: TV, Affichage, Web). Les campagnes inscrites dans cette catégorie seront jugées selon un barème de notes basé avant tout sur la créativité de l’idée de base, la pertinence de déclinaison sur les différents supports et la clarté du message.
 
 </details>
 
 <details>
-<summary><h2>Branding</h2></summary>
+<summary><h2>BRANDING</h2></summary>
 
 Cette catégorie récompense toute identité de marque et ses déclinaisons graphiques. Les projets inscrits dans cette catégorie seront jugés selon un barème de notes basé avant tout sur la créativité du projet, la réalisation graphique des éléments ainsi que la pertinence et la compréhension vis-à-vis de la marque.
 Expérientiel (Commercial, Culturel, Sensibilisation)
@@ -54,14 +56,14 @@ Cette catégorie récompense les actions non conventionnelles de marketing se d�
 </details>
 
 <details>
-<summary><h2>Ad for Good</h2></summary>
+<summary><h2>AD FOR GOOD</h2></summary>
 
 Cette catégorie récompense les campagnes, tout support confondu, réalisées pour des œuvres caritatives ou encourageant à un changement politique ou sociétal positif. Les projets inscrits dans cette catégorie seront jugés selon un barème de notes basé avant tout sur la créativité du concept, l’originalité de la réalisation et la clarté du message.
 
 </details>
 
 <details>
-<summary><h2>Photo (Commercial, Culturel, Sensibilisation)</h2></summary>
+<summary><h2>PHOTO (Commercial, Culturel, Sensibilisation)</h2></summary>
 
 Cette catégorie récompense les travaux photographiques de commande. Les photographies inscrites dans cette catégorie seront jugées dans le contexte du matériel de communication pour lequel elles ont été produites. Le barème de notes sera basé avant tout sur la composition, la technique et mise au service du message.
 
@@ -81,16 +83,13 @@ Distinction suprême, le GRAND récompense le projet, toutes catégories confond
 
 </details>
 
-## FERMETURE DES INSCRIPTIONS : 30 avril 2023, 23:59
+## FERMETURE DES INSCRIPTIONS
+### 30 avril 2023, 23:59
 
 ## TARIFS
 
-Earlybird (jusqu’au 12.03.2023) :
-200 CHF / projet avec 1 invitation offerte pour la cérémonie du 25 mai au TKM
-
-Normal :
-200 CHF / projet
+### 200 CHF / projet
+#### Earlybird (jusqu’au 12.03.2023) : avec 1 invitation offerte pour la cérémonie du 25 mai au TKM
 
 ## RÈGLEMENT
-
-Avant d’inscrire votre projet, merci de prendre connaissance du règlement 2023.
+### Avant d’inscrire votre projet, merci de prendre connaissance du règlement 2023.

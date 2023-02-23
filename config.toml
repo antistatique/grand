@@ -13,8 +13,8 @@ theme = "grand"
   privacyURL = "privacy"
   madebyLabel = "Design exceptionnel par Baston et Antistatique"
   madebyURL = "madeby"
-  
-  
+  dropElementLabel = "Inscrivez vos projets"
+  dropElementURL = "/les_categories"
   
 
 [markup]

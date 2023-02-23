@@ -2,7 +2,7 @@
 	<article>
 	{{ if .Content }}
 	
-		<div class="slide">
+		<div class="slide slide-intro">
 			{{ with .Content }}<div>{{ . }}</div>{{ end }}
 		</div>
 	
@@ -12,7 +12,9 @@
 	  <div class="slide jury">
 		<div>	
 		  <h1>
-			{{.Title}}
+			  <a href="{{.Permalink}}">
+				{{.Title}}
+			  </a>
 		  </h1>
 		  {{ if .Params.job }}
 		    <h2>{{ .Params.job }}</h2>
@@ -20,9 +22,12 @@
 		  
 		  {{ with .Content }}<div>{{ . }}</div>{{ end }}
 		</div>
-		  {{ if .Params.image }}
-			<img src="{{ .Params.image | relURL }}" alt="" class="jury-image">
-		  {{ end }}
+		{{ if .Params.image }}
+		<div  class="jury-image">
+			<img src="{{ .Params.image | relURL }}" alt="">
+		</div>
+		{{ end }}
+			
 	  </div>
 	  {{ end }}
 	</article>

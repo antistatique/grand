@@ -2,12 +2,13 @@
 title: "Grand"
 draft: false
 slide: true
+drop: true
 ---
 
 <div class="slide">
-	<h1>Les inscriptions sont ouvertes.<br/> 
-		Tarif early bird jusqu’au 12 mars !</h1>
-	<a href="/les_categories">Inscrire son projet</a>
+	<h1>LE GRAND REVIENT <br/>LES 24 & 25 MAI !</h1>
+	<h2><a href="/les_categories">Inscrivez vos projets</a> avant le 1<sup>er</sup> avril <br/>et profitez du tarif earlybird.</h2>
+	
 </div>
 <div class="slide">
 	<h1>Le Grand</h1>
