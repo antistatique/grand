@@ -42,12 +42,14 @@ html{
 	  font-size: 16px;
 	}
 body{
+  position: relative;
   font-family:"Prox",-apple-system,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
   font-size: calc(0.8em + 0.5vw);
   font-size: -webkit-calc(80% + 0.5vw);
   background-color: var(--grand-white);
   margin: 0;
   color: var(--grand-black);
+  overflow-x: hidden;
 }
 
 /* Main */
@@ -138,15 +140,16 @@ body.slides .slide{
   background: var(--grand-black);
 }
 .drop{
-  position: fixed;
+  position: absolute;
   z-index:0;
   top:0;
+  bottom:0;
   left:0;
   width:100vw;
-  height:100vh;
   background: url(../ovo.jpg);
   opacity: 1;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
   background-size: cover;
   background-color: var(--grand-white);
   mix-blend-mode: hard-light;
@@ -195,6 +198,7 @@ details:last-of-type {
   margin-bottom: 4em;
 }
 summary{
+  cursor: pointer;
   padding: 1.5em 0;
   position: relative;
   display: flex;
@@ -381,6 +385,8 @@ body.slides .slide-shadeing{
   margin: var(--left-top-margin); 
   background: none;
   mix-blend-mode: difference;
+  position: relative;
+  z-index:999;
 }
 .grand-logo svg{
   max-width: 300px;
@@ -496,12 +502,6 @@ ul ul, ol ol, ul ol, ol ul {
   margin-bottom: 0px;
 }
 
-table{
-  max-width: 100%;
-  border: 1px solid var(--grand-black);
-}
-tr{
-}
 
 
 

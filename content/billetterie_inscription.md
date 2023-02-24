@@ -10,7 +10,7 @@ slide: false
 
 ## BILLETTERIE NUIT DES PUBLIVORES 
 
-24 mai 2023 @ TKM Théâtre Kléber-Méleau Portes 18:30 |Entrée : 15.-
+### 24 mai 2023 @ TKM Théâtre Kléber-Méleau ### Portes 18:30 — Entrée : 15.-
 
 [Acheter des billets](#)
 
@@ -18,8 +18,8 @@ slide: false
 
 ## BILLETTERIE CÉRÉMONIE DU GRAND
 
-25 mai 2023 @ TKM Théâtre Kléber-Méleau
-Portes 18:30 |Entrée : 90.- 
+### 25 mai 2023 @ TKM Théâtre Kléber-Méleau
+### Portes 18:30 — Entrée : 90.- 
 
 [Acheter des billets](#)
 
@@ -27,13 +27,11 @@ Portes 18:30 |Entrée : 90.-
 
 ## INSCRIPTION AU CONCOURS
 
-Tarif earlybird jusqu’au 12 mars :
+### 200 CHF / projet
+#### Earlybird (jusqu’au 12.03.2023) : avec 1 invitation offerte pour la cérémonie du 25 mai au TKM
 
-1 projet inscrit = 1 entrée à la cérémonie offerte ! 
 
 Deadline inscription : 30 avril 2023
-
-Prix : 200.- / projet  
 
 Une fois inscrit, vous recevrez un lien pour uploader votre/vos projet(s). 
 

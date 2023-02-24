@@ -44,16 +44,14 @@
 		
 		
 	</header>
+	{{ if .Params.drop }}
+	<a class="drop-trigger" href="{{ $.Site.Params.dropElementURL }}">
+		<span>{{ $.Site.Params.dropElementLabel }}</span>
+	</a>
+	<div class="drop"></div>
+	{{ end }}
 	<main>
-		{{ if .Params.drop }}
-		<a class="drop-trigger" href="{{ $.Site.Params.dropElementURL }}">
-			<span>{{ $.Site.Params.dropElementLabel }}</span>
-		</a>
-		<div class="drop"></div>
-		{{ end }}
-		{{ if .Params.slide }}
-		<div class="slide-shadeing"></div>
-		{{ end }}
+
 		{{ block "main" . }}{{ end }}
 	</main>
 	<footer>
@@ -62,8 +60,8 @@
 		<span>{{ $.Site.Params.copyright }}</span>
 		{{/* 
 		<a href="{{ $.Site.Params.privacyURL | relURL }}">{{ $.Site.Params.privacyLabel }}</a>
-		<a href="{{ $.Site.Params.madebyURL | relURL }}">{{ $.Site.Params.madebyLabel }}</a>
 		*/}}
+		<a href="{{ $.Site.Params.madebyURL | relURL }}" class="powerby">{{ $.Site.Params.madebyLabel }}</a>
 	</footer>
 	<!-- TEST CURSOR -->
 	<style>
@@ -72,10 +70,6 @@
 		}
 		
 		@media (min-width: 768px) {
-  		html.js,
-		.js body {
-			/* cursor: none!important; */
-  		}
 		
   		.js .cursor {
 			pointer-events: none;
@@ -84,7 +78,7 @@
 			left: 0;
 			top: 0;
 			/* mix-blend-mode: difference; */
-			position: fixed;
+			position: absolute;
 			z-index: 100;
   		}
   		.js .cursor .cursor__ball circle {
@@ -115,7 +109,11 @@
 			 </svg>
 		  </div>
 	   </div>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+   <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+   
+   
+   
 	<script>
 		let cursor;
 		let bigBall;
@@ -148,7 +146,7 @@
 		function togglePageCursor(e) {
 		   if (e.matches) {
 			  widthMatches = true;
-			  body.style.cursor = "none";
+			  //body.style.cursor = "none";
 		   } else {
 			  widthMatches = false;
 			  body.style.cursor = "";
@@ -156,15 +154,18 @@
 		   }
 		}
 		
+		
+		
 		// Move the cursor
 		function onMouseMove(e) {
 		   if (widthMatches) {
 			  cursor.style.display = "block";
 		   }
 		   
+		   {{ if .Params.drop }}
 		   rootselector.style.setProperty('--drop-left', e.pageX + 'px');
 		   rootselector.style.setProperty('--drop-top', e.pageY + 'px');
-		   
+		   {{ end }}
 		   
 		   gsap.to(bigBall, {
 			  x: e.pageX - 20,
@@ -206,5 +207,44 @@
 
 		
 	</script>
+	{{ if .Params.reveal }}
+	<style>
+		.js .reveal > * {
+		  background: linear-gradient(
+			to right,
+			var(--grand-black) 50%,
+			var(--grand-white) 50%
+		  );
+		  background-size: 200% 100%;
+		  background-position-x: 100%;
+		  color: transparent;
+		  background-clip: text;
+		  -webkit-background-clip: text;
+		  /* margin-bottom: -250px; */
+		  /* margin-left: 50px; */
+		  line-height: 1.2;
+		/*   outline: 6px dotted teal; */
+		}
+		.js .reveal{
+			margin-bottom: 5em;
+		}		
+
+	</style>
+	<script>
+		gsap.registerPlugin(ScrollTrigger);
+		
+		gsap.to(".reveal *", {
+		  backgroundPositionX: "0%",
+		  stagger: 1,
+		  scrollTrigger: {
+			trigger: ".reveal",
+			markers: false,
+			scrub: 1,
+			start: "top 80%",
+			end: "bottom 78%"
+		  }
+		});
+	</script>
+	{{ end }}
 </body>
 </html>
