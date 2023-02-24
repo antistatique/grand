@@ -430,7 +430,15 @@ body.slides main .jury img{
   display: block;
 }
 
-
+/* Sponsors */
+.sponsors-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 8vmax;
+}
+.sponsors-grid img{
+  padding: 0 20px;
+}
 
 /* Typography */
 h1, h2, h3, h4, h5{

@@ -22,11 +22,11 @@ theme = "grand"
 	  [markup.goldmark.renderer]
 	    unsafe = true
 
-[[menu.nav]]
-  name = "Nuit des Publivores"
-  weight = -100 
-  identifier = "nuit-des-publivores"
-  url = "/nuit-des-publivores"
+# [[menu.nav]]
+#   name = "Nuit des Publivores"
+#   weight = -100 
+#   identifier = "nuit-des-publivores"
+#   url = "/nuit-des-publivores"
 [[menu.nav]]
   name = "Jury"
   weight = -90 
