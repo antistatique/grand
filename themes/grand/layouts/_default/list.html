@@ -8,19 +8,20 @@
 	
 	{{ end }}
 	
-	{{ range .Data.Pages }}
+	{{ range .Data.Pages.ByTitle }}
 	  <div class="slide jury">
 		<div>	
-		  <h1>
-			  <a href="{{.Permalink}}">
+		  <h2>
 				{{.Title}}
-			  </a>
-		  </h1>
+		  </h2>
 		  {{ if .Params.job }}
-		    <h2>{{ .Params.job }}</h2>
+		    <h3>{{ .Params.job }}</h3>
 		  {{ end }}
 		  
 		  {{ with .Content }}<div>{{ . }}</div>{{ end }}
+		  {{ if .Params.link }}
+		  <a href="{{ .Params.link }}" target="_blank">Linkedin</a>
+		  {{ end }}
 		</div>
 		{{ if .Params.image }}
 		<div  class="jury-image">

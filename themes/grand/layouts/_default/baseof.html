@@ -21,7 +21,7 @@
 	</script>
 	<script defer data-domain="associationgrand.ch" src="https://plausible.io/js/script.js"></script>
 </head>
-<body{{ if .Params.slide }} class="slides"{{ end }}>
+<body{{ if .Params.slide }} class="slides"{{ end }}{{ if .Params.madeby }} class="madeby"{{ end }}>
 	<header>
 		<a href="{{ .Site.BaseURL }}" class="grand-logo grand-logo-head hoverable">
 			<svg width="351" height="107" viewBox="0 0 351 107" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -82,7 +82,7 @@
 			z-index: 100;
   		}
   		.js .cursor .cursor__ball circle {
-			fill: rgb(210,170,25);
+			fill: var(--grand-bling);
 			opacity: 0.8;
 			
   		}
@@ -91,7 +91,7 @@
 		}
 		  .js .cursor .cursor__ball--small circle{
 			  z-index: 200;
-			  fill: rgb(210,170,25);
+			  fill: var(--grand-bling);
 		  }
 		}
 	</style>
@@ -245,6 +245,13 @@
 		  }
 		});
 	</script>
+	{{ end }}
+	{{ if .Params.madeby }}
+	<style>
+		:root {
+		  --grand-bling: #ff00aa;
+		}
+	</style>
 	{{ end }}
 </body>
 </html>
