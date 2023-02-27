@@ -374,15 +374,15 @@ nav {
 }
 .nav li a {
   font-weight: 900;
-  font-size: calc(1.3em + 2.8vw);
+  font-size: calc(1.3em + 2.2vw);
   line-height: 1.1;
   background: none;
   display: block;
   font-weight: bold;
   padding: 0;
   color: var(--grand-white);
-  margin-top: 0.2em;
-  margin-bottom: 0.2em;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
 }
 .nav li a:hover {
 }
@@ -458,9 +458,16 @@ body.slides main .jury img{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   grid-gap: 8vmax;
+  background-color: #ffffff;
+  padding: 4vmax;
+  border: 1px solid var(--grand-black);
 }
 .sponsors-grid img{
   padding: 0 20px;
+  max-width: 100%;
+}
+.sponsors-grid img{
+  fill: var(--grand-bling);
 }
 
 /* Typography */
@@ -534,9 +541,9 @@ ul ul, ol ol, ul ol, ol ul {
 }
 
 /* Made By page */
-/* body.madeby{
+body.madeby{
   background-color: #ff00aa;
-} */
+}
 
 
 
