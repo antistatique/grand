@@ -76,6 +76,8 @@ Cette catégorie récompense les travaux photographiques de commande. Les photog
 <a href="https://inscription.associationgrand.ch/petit" class="round-cta">Inscrire son projet</a>
 
 Cette catégorie récompense les talents de demain (étudiant·e·s et jeunes professionnel·le·s) qui devront répondre à un brief fourni par le GRAND. Les projets inscrits dans cette catégorie seront jugés selon un barème de notes basé avant tout sur la créativité du concept.
+
+<a href="https://inscription.associationgrand.ch/wp-content/uploads/2023/02/Petit.zip">Télécharger le brief ici (ZIP)</a>
 </details>
 
 <details>
@@ -91,7 +93,7 @@ Distinction suprême, le GRAND récompense le projet, toutes catégories confond
 ## TARIFS
 
 ### 200 CHF / projet
-#### Earlybird (jusqu’au 12.03.2023) : avec 1 invitation offerte pour la cérémonie du 25 mai au TKM
+#### Earlybird (jusqu’au 1<sup>er</sup> avril 2023) : avec 1 invitation offerte pour la cérémonie du 25 mai au TKM
 
 ## RÈGLEMENT
-### Avant d’inscrire votre projet, merci de prendre connaissance du règlement 2023.
+### Avant d’inscrire votre projet, merci de prendre connaissance du [règlement 2023](https://inscription.associationgrand.ch/wp-content/uploads/2023/02/GRAND_Reglement-2023.pdf).
