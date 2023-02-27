@@ -458,16 +458,18 @@ body.slides main .jury img{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   grid-gap: 8vmax;
-  background-color: #ffffff;
+  /* background-color: #ffffff;
   padding: 4vmax;
-  border: 1px solid var(--grand-black);
+  border: 1px solid var(--grand-black); */
 }
 .sponsors-grid img{
   padding: 0 20px;
   max-width: 100%;
 }
-.sponsors-grid img{
-  fill: var(--grand-bling);
+@media (prefers-color-scheme: dark) {
+  .sponsors-grid img{
+    filter: invert(100%);
+  }
 }
 
 /* Typography */
@@ -543,6 +545,9 @@ ul ul, ol ol, ul ol, ol ul {
 /* Made By page */
 body.madeby{
   background-color: #ff00aa;
+}
+body.madeby .grand-logo{
+  mix-blend-mode: color-dodge;
 }
 
 
