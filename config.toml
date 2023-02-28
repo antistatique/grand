@@ -1,10 +1,11 @@
 baseURL = "https://associationgrand.ch"
 languageCode = "fr-ch"
 title = "GRAND Prix Romand de la Création"
+description = "LE GRAND REVIENT LES 24 & 25 MAI ! L’objectif du GRAND Prix Romand de la Création est de rassembler chaque année un maximum de travaux de création en communication afin de mettre en lumière les nombreux talents de notre région. Le concours met en avant la créativité et le savoir-faire « Made in Suisse romande » depuis plus de 14 ans."
 theme = "grand"
 
 [params]
-  instagramLabel = "instagram"
+  instagramLabel = "Instagram"
   instagramURL = "https://www.instagram.com/associationgrand/"
   mailLabel = "Mail"
   mailURL = "mailto:hello@associationgrand.ch"
@@ -13,8 +14,6 @@ theme = "grand"
   privacyURL = "privacy"
   madebyLabel = "Design exceptionnel par Baston et Antistatique"
   madebyURL = "madeby"
-  
-  
   
 
 [markup]
@@ -31,7 +30,7 @@ theme = "grand"
   name = "Jury"
   weight = -90 
   identifier = "jury-2023"
-  url = "/jury-2023"
+  url = "/jury"
 [[menu.nav]]
   name = "Catégories"
   weight = -80 
