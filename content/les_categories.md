@@ -53,11 +53,16 @@ Cette catégorie récompense toute campagne publicitaire déclinée sur un minim
 <a href="https://inscription.associationgrand.ch/grand/?category=BRANDING" class="round-cta">Inscrire son projet</a>
 
 Cette catégorie récompense toute identité de marque et ses déclinaisons graphiques. Les projets inscrits dans cette catégorie seront jugés selon un barème de notes basé avant tout sur la créativité du projet, la réalisation graphique des éléments ainsi que la pertinence et la compréhension vis-à-vis de la marque.
-Expérientiel (Commercial, Culturel, Sensibilisation)
-Cette catégorie récompense les actions non conventionnelles de marketing se déroulant généralement en extérieur. Un descriptif de l’opération ou une vidéo de présentation doit être fourni lors de l’inscription. Les projets inscrits dans cette catégorie seront jugés selon un barème de notes basé avant tout sur la créativité du concept, la clarté du message et la mise en œuvre de l’action dans sa globalité.
 </details>
 
 <details>
+<summary><h2>EXPÉRIENTIEL (Commercial, Culturel, Sensibilisation)</h2></summary>
+<a href="https://inscription.associationgrand.ch/grand/?category=EXPERIENTIEL" class="round-cta">Inscrire son projet</a>
+
+Cette catégorie récompense les actions non conventionnelles de marketing se déroulant généralement en extérieur. Un descriptif de l’opération ou une vidéo de présentation doit être fourni lors de l’inscription. Les projets inscrits dans cette catégorie seront jugés selon un barème de notes basé avant tout sur la créativité du concept, la clarté du message et la mise en œuvre de l’action dans sa globalité.
+
+<details>
+
 <summary><h2>AD FOR GOOD</h2></summary>
 <a href="https://inscription.associationgrand.ch/grand/?category=AD%20FOR%20GOOD" class="round-cta">Inscrire son projet</a>
 
@@ -82,7 +87,6 @@ Cette catégorie récompense les talents de demain (étudiant·e·s et jeunes pr
 
 <details>
 <summary><h2>Le GRAND</h2></summary>
-<a href="https://inscription.associationgrand.ch/grand/?category=Le%20GRAND" class="round-cta">Inscrire son projet</a>
 
 Distinction suprême, le GRAND récompense le projet, toutes catégories confondues, qui aura su surprendre le jury tant par l’originalité de son concept que par sa réalisation. Tous les projets sont inscrits d’office dans cette catégorie.
 </details>
