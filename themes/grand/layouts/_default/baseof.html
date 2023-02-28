@@ -45,10 +45,10 @@
 		
 	</header>
 	{{ if .Params.drop }}
-	<a class="drop-trigger" href="{{ $.Site.Params.dropElementURL }}">
-		<span>{{ $.Site.Params.dropElementLabel }}</span>
+	<a class="drop-trigger" href="{{ .Params.dropElementURL }}">
+		<span>{{ .Params.dropElementLabel }}</span>
 	</a>
-	<div class="drop"></div>
+	<div class="drop" {{ if .Params.dropImage }}style="background-image: url({{ .Params.dropImage }});"{{ end }}></div>
 	{{ end }}
 	<main>
 

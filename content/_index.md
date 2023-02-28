@@ -3,6 +3,9 @@ title: "Grand"
 draft: false
 slide: false
 drop: true
+dropImage: "ovo.jpg"
+dropElementLabel: "Inscrivez vos projets"
+dropElementURL: "/les_categories"
 reveal: true
 ---
 

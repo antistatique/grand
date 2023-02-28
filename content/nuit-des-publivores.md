@@ -3,6 +3,10 @@ title: "La nuit des publivores"
 date: 2022-12-21T21:43:09+01:00
 draft: false
 slide: false
+drop: true
+dropImage: "/lapin.jpg"
+dropElementLabel: "Achetez vos billets"
+dropElementURL: "/billetterie_inscription"
 ---
 
 # La nuit des publivores
