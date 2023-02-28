@@ -1,10 +1,10 @@
 baseURL = "https://associationgrand.ch"
 languageCode = "fr-ch"
 title = "GRAND Prix Romand de la Création"
-description = "LE GRAND REVIENT LES 24 & 25 MAI ! L’objectif du GRAND Prix Romand de la Création est de rassembler chaque année un maximum de travaux de création en communication afin de mettre en lumière les nombreux talents de notre région. Le concours met en avant la créativité et le savoir-faire « Made in Suisse romande » depuis plus de 14 ans."
 theme = "grand"
 
 [params]
+  description = "LE GRAND REVIENT LES 24 & 25 MAI ! L’objectif du GRAND Prix Romand de la Création est de rassembler chaque année un maximum de travaux de création en communication afin de mettre en lumière les nombreux talents de notre région. Le concours met en avant la créativité et le savoir-faire « Made in Suisse romande » depuis plus de 14 ans."
   instagramLabel = "Instagram"
   instagramURL = "https://www.instagram.com/associationgrand/"
   mailLabel = "Mail"

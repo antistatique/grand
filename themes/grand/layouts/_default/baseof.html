@@ -6,7 +6,7 @@
 	<title>{{ .Title }}</title>
 	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-	<link rel="stylesheet" href="{{ "css/style.css" | relURL }}?{{ now }}">
+	<link rel="stylesheet" href="{{ "css/style.css" | relURL }}?20220228">
 	<link rel="manifest" href="{{ "/manifest.json" | relURL }}">
 	<meta name="msapplication-TileColor" content="#D2AA19">
 	<meta name="theme-color" content="#D2AA19">
@@ -63,62 +63,24 @@
 		*/}}
 		<a href="{{ $.Site.Params.madebyURL | relURL }}" class="powerby">{{ $.Site.Params.madebyLabel }}</a>
 	</footer>
-	<!-- TEST CURSOR -->
-	<style>
-		.cursor {
-  		display: none;
-		}
-		
-		@media (min-width: 768px) {
-		
-  		.js .cursor {
-			pointer-events: none;
-  		}
-  		.js .cursor .cursor__ball {
-			left: 0;
-			top: 0;
-			/* mix-blend-mode: difference; */
-			position: absolute;
-			z-index: 100;
-  		}
-  		.js .cursor .cursor__ball circle {
-			fill: var(--grand-bling);
-			opacity: 0.8;
-			
-  		}
-		.js .cursor .cursor__ball--small{
-			/* mix-blend-mode: none; */
-		}
-		  .js .cursor .cursor__ball--small circle{
-			  z-index: 200;
-			  fill: var(--grand-bling);
-		  }
-		}
-	</style>
-	<div class="cursor">
 
+	<div class="cursor">
 		  <div class="cursor__ball cursor__ball--big" >
 		 	<svg height="40" width="40">
 		  	<circle cx="20" cy="20" r="20" stroke-width="0"></circle>
 		 	</svg>
 		  </div>
-	
 		  <div class="cursor__ball cursor__ball--small">
 			 <svg height="10" width="10">
 				<circle cx="5" cy="5" r="5" stroke-width="0"></circle>
 			 </svg>
 		  </div>
 	   </div>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
-   <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-   
-   
-   
-	<script>
+   <script src="{{ "/scripts.js" | relURL }}"></script>
+   <script>
 		let cursor;
 		let bigBall;
 		let smallBall;
-		
 		let body;
 		let widthMatches = false;
 		let rootselector = document.querySelector(':root');
@@ -146,16 +108,12 @@
 		function togglePageCursor(e) {
 		   if (e.matches) {
 			  widthMatches = true;
-			  //body.style.cursor = "none";
 		   } else {
 			  widthMatches = false;
 			  body.style.cursor = "";
 			  cursor.style.display = "none";
 		   }
 		}
-		
-		
-		
 		// Move the cursor
 		function onMouseMove(e) {
 		   if (widthMatches) {
@@ -204,8 +162,6 @@
 			  duration: 0.3
 		   });
 		}
-
-		
 	</script>
 	{{ if .Params.reveal }}
 	<style>
@@ -220,15 +176,11 @@
 		  color: transparent;
 		  background-clip: text;
 		  -webkit-background-clip: text;
-		  /* margin-bottom: -250px; */
-		  /* margin-left: 50px; */
 		  line-height: 1.2;
-		/*   outline: 6px dotted teal; */
 		}
 		.js .reveal{
 			margin-bottom: 5em;
 		}		
-
 	</style>
 	<script>
 		gsap.registerPlugin(ScrollTrigger);
@@ -253,5 +205,14 @@
 		}
 	</style>
 	{{ end }}
+	<script>	
+	if (navigator.serviceWorker) {
+		window.addEventListener('load', function() {
+			navigator.serviceWorker.register('/sw.js', {
+				scope: '/'
+			});
+		});
+	}
+	</script>
 </body>
 </html>

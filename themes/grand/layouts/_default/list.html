@@ -25,7 +25,7 @@
 		</div>
 		{{ if .Params.image }}
 		<div  class="jury-image">
-			<img src="{{ .Params.image | relURL }}" alt="">
+			<img src="{{ .Params.image | relURL }}" loading="lazy" alt=""/>
 		</div>
 		{{ end }}
 			
