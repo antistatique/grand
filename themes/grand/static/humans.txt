@@ -1,0 +1,86 @@
+	_          _   _     _        _   _
+   / \   _ __ | |_(_)___| |_ __ _| |_(_) __ _ _   _  ___
+  / _ \ | '_ \| __| / __| __/ _` | __| |/ _` | | | |/ _ \
+ / ___ \| | | | |_| \__ \ || (_| | |_| | (_| | |_| |  __/
+/_/   \_\_| |_|\__|_|___/\__\__,_|\__|_|\__, |\__,_|\___|
+										   |_|
+
+/* TEAM */
+
+  Digital Strategist : Alberto Gomez
+  Twitter: @kidvaldez
+  From: Lausanne, Switzerland
+
+  Web Software Engineer : Gilles Doge
+  Twitter: @gido
+  Github: gido
+  From: Lausanne, Switzerland
+
+  Software Designer : Marc Friederich
+  Twitter: @zufrieden
+  Github: zufrieden
+  From: Lausanne, Switzerland
+
+  Visual Designer : Pierre Georges
+  Twitter: @pierre__georges
+  From: Lausanne, Switzerland
+  
+  Visual Designer : Emma Giacomelli
+  Github: EmmaGiacomelli
+  From: Annecy, France
+  
+  Visual Designer : Amparo Sánchez Marqueño
+  From: Vevey, Switzerland
+
+  UX Designer : Noemie Sandoz
+  Twitter: @noemiesandoz
+  From: Payerne, Switzerland
+
+  UX Designer : Tiphaine Rosier
+  Github: tiphainerosier
+  From: Montmorot, France
+  
+  Lead Web Developer : Yann Gouffon
+  Twitter: @Yago_0
+  Github: yago
+  From: Lausanne, Switzerland
+
+  Web Developer : Kevin Wenger
+  Twitter: @wengerk
+  Github: wengerk
+  From: Lausanne, Switzerland
+  
+  Senior Web Developer : Yann Lugrin
+  Github: YannLugrin
+  Twitter: @YannLugrin
+  From: Lausanne, Switzerland
+
+  Web developer : Franck Da Silva
+  Github: Gurakh
+  From: Lausanne, Switzerland
+
+  Web Developer : Nelson Reitz
+  Github: nelsonreitz
+  Twitter: @nelsreitz
+  From: Lausanne, Switzerland
+  
+  Web Developer : Iris Wolfisberg
+  Github: iwolfisberg
+  From: Lausanne, Switzerland
+
+  Project Manager : Sacha Tissot
+  Github: sachatissot
+  From: Saint-Julien-en-Genevois, France
+  
+  Project Manager : Susana Rodrigues
+  Github: antistatique-susana
+  From: Lausanne, Switzerland
+
+  Finance: Laura Rey
+  Github: laura84
+  From: Lausanne, Switzerland
+
+/* SITE */
+
+  Built in: 2023
+  Generator: Hugo

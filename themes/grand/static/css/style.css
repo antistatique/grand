@@ -263,6 +263,8 @@ details[open] summary ~ * {
 details .round-cta{
   float: right;
   margin-bottom: 1em;
+  position: relative;
+  z-index: 90;
 }
 
 /* footer  */
@@ -348,9 +350,13 @@ nav {
   transition: width 0.3s cubic-bezier(0.5, 1, 0.22, 1);
 }
 @media (max-width: 800px) {
-#menu input[type=checkbox]:checked ~ nav {
-  width: 100vw;
-}  
+  nav {
+    height: 0vh;
+  }
+  #menu input[type=checkbox]:checked ~ nav {
+    width: 100vw;
+    height: 100vh;
+  }  
 }
 #menu input[type=checkbox]:checked ~ .nav{
   opacity: 1;
