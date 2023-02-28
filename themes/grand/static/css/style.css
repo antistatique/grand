@@ -462,18 +462,21 @@ body.slides main .jury img{
 /* Sponsors */
 .sponsors-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  grid-gap: 8vmax;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 8vmax;
   /* background-color: #ffffff;
   padding: 4vmax;
   border: 1px solid var(--grand-black); */
 }
 .sponsors-grid a{
   background: none;
+  display: block;
+  padding: 0 20px;
 }
 .sponsors-grid img{
-  padding: 0 20px;
+  object-fit: contain;
   max-width: 100%;
+  display: block;
 }
 @media (prefers-color-scheme: dark) {
   .sponsors-grid img{
@@ -490,12 +493,12 @@ h1, .h1, .h-huge {
   font-size: -webkit-calc(310% + 1.4vw);
   line-height: 1.1em;
   font-weight: 900;
-  margin-top: 0.5em;
+  margin-top: 1.5em;
   margin-bottom: 0.5em;
 }
 h2, .h2 {
-  font-size: calc(1.2em + 1vw);
-  font-size: -webkit-calc(120% + 1vw);
+  font-size: calc(1.5em + 1vw);
+  font-size: -webkit-calc(150% + 1vw);
   line-height: 1.4em;
   font-weight: 900;
   margin-top: 0.5em;
@@ -536,7 +539,7 @@ h1 + h2, h2 + h3, h3 + h4{
   margin-top: 0.2em;
 }
 h3 + h2, h4 + h2{
-  margin-top: 1.2em;
+  margin-top: 1.5em;
 }
 ul, ol{
   margin-left: 1em;
@@ -554,6 +557,7 @@ ul ul, ol ol, ul ol, ol ul {
 /* Made By page */
 body.madeby{
   background-color: #ff00aa;
+  color: #fff;
 }
 body.madeby .grand-logo{
   mix-blend-mode: color-dodge;
