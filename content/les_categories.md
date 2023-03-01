@@ -60,6 +60,7 @@ Cette catégorie récompense toute identité de marque et ses déclinaisons grap
 <a href="https://inscription.associationgrand.ch/grand/?category=EXPERIENTIEL" class="round-cta">Inscrire son projet</a>
 
 Cette catégorie récompense les actions non conventionnelles de marketing se déroulant généralement en extérieur. Un descriptif de l’opération ou une vidéo de présentation doit être fourni lors de l’inscription. Les projets inscrits dans cette catégorie seront jugés selon un barème de notes basé avant tout sur la créativité du concept, la clarté du message et la mise en œuvre de l’action dans sa globalité.
+</details>
 
 <details>
 
