@@ -472,7 +472,7 @@ body.slides main .jury img{
 /* Sponsors */
 .sponsors-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 8vmax;
   /* background-color: #ffffff;
   padding: 4vmax;
@@ -570,7 +570,7 @@ body.madeby{
   color: #fff;
 }
 body.madeby .grand-logo{
-  mix-blend-mode: color-dodge;
+  mix-blend-mode: hard-light;
 }
 
 .cursor {
