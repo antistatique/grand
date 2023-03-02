@@ -1,0 +1,24 @@
+{{ define "main" }}
+		<article class="slide jury">
+
+			{{ if .Params.image }}
+			<div  class="jury-image">
+				<img src="{{ .Params.image | relURL }}" loading="lazy" alt="" />
+			</div>
+			{{ end }}
+			
+			<h1>
+				{{.Title}}
+		  	</h1>
+		  	{{ if .Params.job }}
+				<h2>{{ .Params.job }}</h2>
+		  	{{ end }}
+		  	
+			{{ .Content }}
+		  	
+		  	{{ if .Params.link }}
+		  	<a href="{{ .Params.link }}" target="_blank">Linkedin</a>
+		  	{{ end }}
+			</div>
+		</article>
+{{ end }}

@@ -456,14 +456,19 @@ body.slides main .jury{
 }
 @media (max-width: 800px) {
   body.slides main .jury{
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+  }
+  .jury-image{
+    width: 40vw;
   }
 }
 .jury-image{
   border: 3px solid var(--grand-bling);
   position: relative;
 }
-body.slides main .jury img{
+.jury-image img{
   transform: translateX(-1vmax) translateY(1vmax);
   max-width: 100%;  
   display: block;
@@ -472,16 +477,13 @@ body.slides main .jury img{
 /* Sponsors */
 .sponsors-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 8vmax;
-  /* background-color: #ffffff;
-  padding: 4vmax;
-  border: 1px solid var(--grand-black); */
+  grid-template-columns: repeat(auto-fill, minmax(min(140px,100%), 1fr));
+  gap: 4vmax;
 }
 .sponsors-grid a{
   background: none;
   display: block;
-  padding: 0 20px;
+  padding: 0 1.5vmax;
 }
 .sponsors-grid img{
   object-fit: contain;
