@@ -342,7 +342,7 @@ nav {
   z-index: 90;
   height: 100vh;
   width:0;
-  top:0;
+  bottom:0;
   right:0;
 }
 
@@ -354,10 +354,12 @@ nav {
 @media (max-width: 800px) {
   nav {
     height: 0vh;
+    width: 100vw;
   }
   #menu input[type=checkbox]:checked ~ nav {
     width: 100vw;
     height: 100vh;
+    transition: height 0.3s cubic-bezier(0.5, 1, 0.22, 1);
   }  
 }
 #menu input[type=checkbox]:checked ~ .nav{
