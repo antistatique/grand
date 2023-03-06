@@ -1,6 +1,6 @@
 'use strict';
 
-const version = '20220304';
+const version = '20220306';
 const staticCacheName = version + 'static';
 const pagesCacheName = 'pages';
 const imagesCacheName = 'images';
@@ -26,9 +26,7 @@ function updateStaticCache() {
 		]);
 		// These items must be cached for the Service Worker to complete installation
 		return staticCache.addAll([
-			,
-			'/style.css?' + version,
-			'/offline'
+			'/style.css?' + version
 		]);
 	});
 }
