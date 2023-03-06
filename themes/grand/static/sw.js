@@ -1,6 +1,6 @@
 'use strict';
 
-const version = '20220306';
+const version = '20220307';
 const staticCacheName = version + 'static';
 const pagesCacheName = 'pages';
 const imagesCacheName = 'images';
@@ -17,15 +17,11 @@ const cacheList = [
 function updateStaticCache() {
 	return caches.open(staticCacheName)
 	.then( staticCache => {
-		// These items won't block the installation of the Service Worker
-		staticCache.addAll([
+		return staticCache.addAll([
 			'/css/bol.woff',
 			'/css/lig.woff',
 			'/css/reg.woff',
-			'/script.js'
-		]);
-		// These items must be cached for the Service Worker to complete installation
-		return staticCache.addAll([
+			'/script.js',
 			'/style.css?' + version
 		]);
 	});
