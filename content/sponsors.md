@@ -22,6 +22,7 @@ slide: false
 <a href="https://www.adc.ch/fr/" target="_blank"><img src="/images/sponsors/472939200-adc.svg" alt="ADC" loading="lazy" /></a>
 <a href="https://www.remarq.ch/" target="_blank"><img src="/images/sponsors/472939172-remarq.svg" alt="REMARQ" loading="lazy" /></a>
 <a href="https://www.abp-project.ch/" target="_blank"><img src="/images/sponsors/473421542-abp.svg" alt="ABP" loading="lazy" /></a>
+<a href="https://www.morand.ch/" target="_blank"><img src="/images/sponsors/472939206-morand.svg" alt="ABP" loading="lazy" /></a>
 </div>
 
 
