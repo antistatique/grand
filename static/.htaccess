@@ -2,5 +2,8 @@
     RewriteEngine on
 
     RewriteCond %{HTTPS} !=on
-    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+    
+    RewriteCond %{HTTP_HOST} ^www\. [NC]
+    RewriteRule (.*) https://associationgrand.ch/$1 [R=301,L]
 </IfModule>
