@@ -1,6 +1,6 @@
 'use strict';
 
-const version = '20220307';
+const version = '20220410';
 const staticCacheName = version + 'static';
 const pagesCacheName = 'pages';
 const imagesCacheName = 'images';
@@ -21,8 +21,8 @@ function updateStaticCache() {
 			'/css/bol.woff',
 			'/css/lig.woff',
 			'/css/reg.woff',
-			'/script.js',
-			'/style.css?' + version
+			'/css/style.css?' + version,
+			'/scripts.js'
 		]);
 	});
 }
