@@ -1,5 +1,6 @@
 ---
-title: "Les Categories"
+title: "10 catégories pour pour le GRAND Prix Romand de la Création 2023. Award Le GRAND"
+description : "Afin de remporter un Award du GRAND, 10 catégories sont à disposition afin de déposer sa candidature. Bonne chance à toutes et tous. Award / Prix le Association le GRAND."
 date: 2022-12-23T09:52:40+01:00
 draft: false
 slide: false

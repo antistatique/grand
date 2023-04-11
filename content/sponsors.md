@@ -1,5 +1,6 @@
 ---
-title: "Sponsors"
+title: "Les sponsors du GRAND Prix Romand de la Création 2023"
+description: "Un grand merci à nos sponsors pour leur soutien et aide. Award / Prix le GRAND 2023."
 date: 2023-02-15T12:00:42+01:00
 draft: false
 slide: false

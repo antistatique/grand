@@ -1,5 +1,6 @@
 ---
-title: "LE GRAND REVIENT LES 24 & 25 MAI !"
+title: "GRAND Prix Romand de la Création. Award de la communication et la publicité."
+description: "Le GRAND Prix Romand de la Création est un concours ayant pour objectif de mettre en lumière les professionnelles de la communication et la publicité de Suisse Romande. Award Le GRAND 2023"
 draft: false
 slide: false
 drop: true

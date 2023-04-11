@@ -1,5 +1,6 @@
 ---
-title: "Billetterie & inscriptions"
+title: "Billetterie & inscriptions pour Le GRAND Prix Romand de la Création"
+description: "Informations pour l’inscription au GRAND Prix Romand de la Création. Award / Prix le GRAND 2023."
 date: 2022-12-21T21:46:10+01:00
 draft: false
 slide: false
