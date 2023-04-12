@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{{ .Title }}</title>
-	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+	{{ with .Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 	<link rel="stylesheet" href="{{ "css/style.css" | relURL }}?20220410">
 	<link rel="manifest" href="{{ "/manifest.json" | relURL }}">
@@ -12,7 +12,7 @@
 	<meta name="theme-color" content="#D2AA19">
 	<meta property="og:url" content="{{ .Site.Params.baseURL }}"/>
 	<meta property="og:title" content="{{ .Title }}"/>
-	{{ with .Site.Params.description }}<meta property="og:description" content="{{ . }}" />{{ end }}
+	{{ with .Params.description }}<meta property="og:description" content="{{ . }}" />{{ end }}
 	<meta property="og:image" content="{{ "/cover.png" | relURL }}"  />
 	<meta property="og:image:url"  content="{{ "/cover.png" | relURL }}"  />
 	<meta property="twitter:image" content="{{ "/cover.png" | relURL }}"  />

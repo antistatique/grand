@@ -1,5 +1,5 @@
 ---
-title: "La Nuit des publivores. GRAND Prix Romand de la Création. Award le GRAND 2023. "
+title: "La Nuit des publivores. GRAND Prix Romand de la Création. Award le GRAND 2023."
 description: "le GRAND s’associe avec La Nuit des Publivores pour une soirée de projection placée sous le signe de la créativité. le 24 mai 2023"
 date: 2022-12-21T21:43:09+01:00
 draft: false
