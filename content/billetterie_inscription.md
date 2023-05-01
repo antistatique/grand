@@ -36,5 +36,5 @@ Deadline inscription : 30 avril 2023
 
 Une fois inscrit, vous recevrez un lien pour uploader votre/vos projet(s). 
 
-[Inscrire un projet](/les_categories)
+<del>Inscrire un projet</del>
 

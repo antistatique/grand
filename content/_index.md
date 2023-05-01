@@ -5,8 +5,8 @@ draft: false
 slide: false
 drop: true
 dropImage: "ovo.jpg"
-dropElementLabel: "Inscrivez vos projets"
-dropElementURL: "/les_categories"
+dropElementLabel: "Achetez vos billets"
+dropElementURL: "/billetterie_inscription"
 reveal: true
 aliases:
 - /styleguide
@@ -15,8 +15,8 @@ aliases:
 
 
 <div class="reveal">	
-	<h1><a href="/les_categories">INSCRIVEZ</a> VOS PROJETS JUSQU'AU&nbsp;1<sup>er</sup>&nbsp;MAI&nbsp;!</h1>
-	<h2>Et <a href="/billetterie_inscription/">retrouvez-nous</a><br/> pour&nbsp;un&nbsp;GRAND&nbsp;moment<br/>le&nbsp;25&nbsp;mai&nbsp;2023</h2>
+	<h1>RENDEZ-VOUS <br/>LES 24 ET 25 MAI</h1>
+	<h2>pour le retour <a href="/billetterie_inscription">du GRAND !</a></h2>
 	<h1>Le Grand</h1>
 	<p>L’objectif du GRAND Prix Romand de la Création est de rassembler chaque année un maximum de travaux de création en communication afin de mettre en lumière les nombreux talents de notre région. Le concours met en avant la créativité et le savoir-faire « Made in Suisse romande » depuis plus de 14 ans. </p>
 	<h1>L’ÉDITION 2023</h1>
