@@ -27,6 +27,13 @@ Pour cette 14e édition, et après 6 ans d’absence, le GRAND revient pour un c
 
 ### TKM Théâtre Kléber-Méleau
 #### Portes 18:30 — Entrée : CHF 20.-
+--
+#### 18h30 Ouvertures des portes - bar
+#### 19H30 DÉBUT DE PROJECTION sélection 1
+#### 21H00 ENTRACTE - Blind test Pub
+#### 21H30 Début de PROJECTION sélection 2
+#### 23H00 FIN DE SÉANCE
+--
 
 <a href="https://widget.weezevent.com/ticket/E918662/?code=11794&locale=fr-FR&width_auto=1&color_primary=00AEEF" onclick="var w=window.open('https://widget.weezevent.com/ticket/E918662/?code=11794&locale=fr-FR&width_auto=1&color_primary=00AEEF', 'Billetterie_weezevent', 'width=650, height=600, top=100, left=100, toolbar=no, resizable=yes, scrollbars=yes, status=no'); w.focus(); return false;">Achetez vos billets</a>
 
@@ -35,6 +42,12 @@ Pour cette 14e édition, et après 6 ans d’absence, le GRAND revient pour un c
 
 ### TKM Théâtre Kléber-Méleau
 #### Portes 18:30 — Entrée : CHF 99.- 
+
+--
+#### 18H30 VERRE DE BIENVENUE
+#### 19H30 DÉBUT DE LA CÉRÉMONIE
+#### 21H00 cocktail dinatoire et fête
+--
 
 <a href="https://widget.weezevent.com/ticket/E918653/?code=44020&locale=fr-FR&width_auto=1&color_primary=00AEEF" onclick="var w=window.open('https://widget.weezevent.com/ticket/E918653/?code=44020&locale=fr-FR&width_auto=1&color_primary=00AEEF', 'Billetterie_weezevent', 'width=650, height=600, top=100, left=100, toolbar=no, resizable=yes, scrollbars=yes, status=no'); w.focus(); return false;">Achetez vos billets</a>
 	
