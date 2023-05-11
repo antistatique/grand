@@ -27,9 +27,9 @@ La soirée se déroulera avec la présence exceptionnelle de Jean Marie Boursico
 --
 #### 18h30 Ouvertures des portes - bar
 #### 19H30 DÉBUT DE PROJECTION sélection 1
-#### 21H00 ENTRACTE - Blind test Pub
-#### 21H30 Début de PROJECTION sélection 2
-#### 23H00 FIN DE SÉANCE
+#### 20H50 ENTRACTE - Blind test Pub
+#### 21H20 Début de PROJECTION sélection 2
+#### 22H30 FIN DE SÉANCE
 --
 
 

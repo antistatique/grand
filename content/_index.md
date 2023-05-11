@@ -30,9 +30,9 @@ Pour cette 14e édition, et après 6 ans d’absence, le GRAND revient pour un c
 --
 #### 18h30 Ouvertures des portes - bar
 #### 19H30 DÉBUT DE PROJECTION sélection 1
-#### 21H00 ENTRACTE - Blind test Pub
-#### 21H30 Début de PROJECTION sélection 2
-#### 23H00 FIN DE SÉANCE
+#### 20H50 ENTRACTE - Blind test Pub
+#### 21H20 Début de PROJECTION sélection 2
+#### 22H30 FIN DE SÉANCE
 --
 
 <a href="https://widget.weezevent.com/ticket/E918662/?code=11794&locale=fr-FR&width_auto=1&color_primary=00AEEF" onclick="var w=window.open('https://widget.weezevent.com/ticket/E918662/?code=11794&locale=fr-FR&width_auto=1&color_primary=00AEEF', 'Billetterie_weezevent', 'width=650, height=600, top=100, left=100, toolbar=no, resizable=yes, scrollbars=yes, status=no'); w.focus(); return false;">Achetez vos billets</a>
