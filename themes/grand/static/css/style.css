@@ -23,7 +23,7 @@
 }  
 }
 
-@font-face {
+/* @font-face {
   font-family: "Prox";
   font-weight: normal;
   font-style: normal;
@@ -36,14 +36,14 @@
   font-style: normal;
   font-display: swap;
   src: url(./bol.woff) format("woff");
-}
+} */
 
 html{
 	  font-size: 16px;
 	}
 body{
   position: relative;
-  font-family:"Prox",-apple-system,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+  font-family:-apple-system,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
   font-size: calc(0.8em + 0.5vw);
   font-size: -webkit-calc(80% + 0.5vw);
   background-color: var(--grand-white);
