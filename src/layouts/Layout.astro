@@ -1,13 +1,15 @@
 ---
 import 'styles/base.css';
 import FlagLogo from 'components/FlagLogo.astro';
+import Footer from 'components/Footer.astro';
 import Header from 'components/Header.astro';
 
 interface Props {
   title?: string;
+  hideFooterButtons?: boolean;
 }
 
-const { title } = Astro.props;
+const { title, hideFooterButtons } = Astro.props;
 ---
 
 <!doctype html>
@@ -56,5 +58,6 @@ const { title } = Astro.props;
     <main class="layout" id="main-content">
       <slot />
     </main>
+    <Footer hideButtons={hideFooterButtons} />
   </body>
 </html>

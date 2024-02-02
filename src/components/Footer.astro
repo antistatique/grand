@@ -1,0 +1,118 @@
+---
+import Button from 'components/Button.astro';
+import Icon from 'components/Icon.astro';
+const pathname = Astro.url.pathname;
+
+const nav = [
+  {
+    label: 'Jury',
+    url: '/jury',
+  },
+  {
+    label: 'Catégories',
+    url: '/categories',
+  },
+  {
+    label: 'Billeterie et inscriptions',
+    url: '/billeterie-et-inscriptions',
+  },
+  {
+    label: 'Sponsors',
+    url: '/sponsors',
+  },
+];
+
+interface Props {
+  hideButtons?: boolean;
+}
+
+const { hideButtons } = Astro.props;
+---
+
+<footer class="layout pb-4 md:pb-5 mt-20 md:mt-75">
+  {
+    !hideButtons && (
+      <div class="md:col-span-8 lg:col-span-6 lg:col-start-2 max-md:mb-10">
+        <div class="grid sm:grid-cols-2 gap-5">
+          <Button href="/">Inscrire un projet</Button>
+          <Button href="/" scheme="core">
+            Achetez vos billets
+          </Button>
+        </div>
+      </div>
+    )
+  }
+  {
+    hideButtons && (
+      <div class="col-start-2 col-span-2 max-md:hidden">
+        <Icon name="hand" classes="w-12 h-24" />
+      </div>
+    )
+  }
+
+  <div class="md:col-span-4 md:col-start-10 lg:col-span-3 lg:col-start-11">
+    <!-- NAVIGATION -->
+    <nav aria-label="Navigation principale">
+      <h2 class="sr-only">Navigation principale</h2>
+      {
+        nav.map(({ label, url }) => (
+          <a
+            href={url === pathname ? '#main-content' : url}
+            class:list={['relative block', url === pathname && 'text-core']}
+            aria-current={url === pathname ? 'page' : undefined}
+          >
+            {url === pathname && (
+              <Icon
+                name="eye"
+                classes="h-4 w-7 absolute -left-9 top-1/2 -translate-y-1/2 text-core max-md:hidden"
+              />
+            )}
+            <span
+              class:list={[
+                'hover-underline inline-flex',
+                url === pathname && '!from-core !to-core',
+              ]}
+            >
+              {label}
+            </span>
+          </a>
+        ))
+      }
+    </nav>
+
+    <!-- SOCIALS -->
+    <div class="mt-6 md:mt-20">
+      <a
+        class="block"
+        href="https://www.instagram.com/associationgrand/"
+        target="_blank">Instagram</a
+      >
+      <a class="block" href="mailto:hello@associationgrand.ch">E-mail</a>
+    </div>
+
+    <!-- CREDITS -->
+  </div>
+  <div class="mt-20 grid grid-cols-12 gap-x-5 gap-y-6">
+    <p class="*:block col-span-5 max-md:row-start-2">
+      <span> Copyright ©</span>
+      <span> 2024 Association GRAND</span>
+    </p>
+    <p
+      class="*:block col-span-12 md:col-span-4 md:col-start-9 lg:col-span-3 lg:col-start-10"
+    >
+      <span>Design par</span>
+      <span
+        class="*:underline *:decoration-1 *:underline-offset-2 *:transition-colors"
+        ><a
+          class="hover:text-[#C80000]"
+          target="_blank"
+          href="https://www.baston.ch/">Baston</a
+        > et <a
+          class="hover:text-[#FF0099]"
+          target="_blank"
+          href="https://antistatique.net">Antistatique</a
+        >
+      </span>
+    </p>
+  </div>
+</footer>

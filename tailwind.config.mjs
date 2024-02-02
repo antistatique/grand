@@ -77,6 +77,7 @@ export default {
     extend: {
       spacing: {
         30: '7.5rem',
+        75: '18.75rem',
       },
       gridColumn: {
         content: 'content',
