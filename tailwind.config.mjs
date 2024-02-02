@@ -56,6 +56,7 @@ export default {
       'slide-in-right': 'slide-in-right 200ms linear forwards, hasHovered 1ms',
       'slide-out-right':
         'slide-out-right 200ms linear forwards, hasHovered 1ms paused',
+      grain: 'grain 200ms steps(4) infinite',
     },
     keyframes: {
       hasHovered: {
@@ -71,6 +72,14 @@ export default {
         '50%': { transform: 'translateX(100%)' },
         '50.01%': { transform: 'translateX(-100%)' },
         '100%': { transform: 'translateX(0)' },
+      },
+      grain: {
+        '0%': {
+          transform: 'translate(-50%, -50%) rotate(0deg)',
+        },
+        '100%': {
+          transform: 'translate(-50%, -50%) rotate(360deg)',
+        },
       },
     },
 

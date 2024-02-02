@@ -1,0 +1,50 @@
+---
+import { Picture, Image as Img } from 'astro:assets';
+
+import grain from '../assets/images/grain.png';
+
+import type { ImageMetadata } from 'astro';
+interface Props {
+  src: string;
+  alt: string;
+  sizes: string;
+  classList?: string[];
+  loading?: 'lazy' | 'eager';
+}
+
+const { src, alt, sizes, classList, loading } = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '../assets/images/**/*',
+);
+
+const img = images[`../assets/images/${src}`];
+
+if (!img)
+  throw new Error(
+    `"${src}" does not exist in glob: "src/assets/**/*.{jpeg,jpg,png,gif}"`,
+  );
+---
+
+<figure class="relative overflow-clip">
+  <Img
+    src={grain}
+    alt=""
+    loading="eager"
+    class="absolute inset-1/2 -translate-y-1/2 -translate-x-1/2 z-10 w-[200%] aspect-1 object-cover animate-grain mix-blend-soft-light origin-center"
+    aria-hidden
+  />
+  <Picture
+    {...classList && {
+      'class:list': [...classList, 'bg-neutral-100/10'],
+    }}
+    src={img()}
+    alt={alt}
+    widths={[256, 384, 690, 750, 828, 1080, 1400, 1920, 2048]}
+    sizes={sizes}
+    formats={['avif']}
+    fallbackFormat="jpeg"
+    quality={60}
+    loading={loading || 'lazy'}
+  />
+</figure>
