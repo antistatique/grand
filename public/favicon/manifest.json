@@ -1,6 +1,6 @@
 {
   "name": "Association Grand",
-  "short_name": "Grand",
+  "short_name": "Association Grand",
   "icons": [
     {
       "src": "/favicon/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#282828",
+  "background_color": "#282828",
   "display": "standalone"
 }
