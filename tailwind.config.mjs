@@ -12,6 +12,24 @@ export default {
       white: '#fff',
       transparent: 'transparent',
     },
+    fontFamily: {
+      display: ['Printvetica', 'Helvetica', 'Arial', 'sans-serif'],
+      sans: ['Helvetica Now', 'Helvetica', 'Arial', 'sans-serif'],
+    },
+    fontSize: {
+      sm: ['16px', '18px'],
+      base: [
+        '22px',
+        { lineHeight: '24px', letterSpacing: '-0.1px', fontWeight: 700 },
+      ],
+      lg: [
+        '30px',
+        { lineHeight: '34px', letterSpacing: '-0.2px', fontWeight: 700 },
+      ],
+      xl: ['44px', '38px'],
+      '2xl': ['60px', '52px'],
+      '3xl': ['120px', '100px'],
+    },
     // For future-compatibility
     aspectRatio: {
       auto: 'auto',
