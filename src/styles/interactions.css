@@ -1,0 +1,7 @@
+@layer components {
+  .hover-underline {
+    @apply pb-0.5 bg-no-repeat lg:bg-gradient-to-b from-neutral-100 to-neutral-100;
+    @apply [transition:background-size_0.3s,_background-position_0s_0.3s] [background-position:0_100%] [background-size:0_1px];
+    @apply hover:[background-position:100%_100%] hover:[background-size:100%_1px];
+  }
+}

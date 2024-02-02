@@ -53,6 +53,9 @@ export default {
       16: '16',
     },
     extend: {
+      spacing: {
+        30: '7.5rem',
+      },
       gridColumn: {
         content: 'content',
         full: 'full',

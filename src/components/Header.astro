@@ -1,0 +1,111 @@
+---
+import { Image } from 'astro:assets';
+
+import logo from 'assets/logos/logo.svg';
+
+import Icon from './Icon.astro';
+const pathname = Astro.url.pathname;
+
+const nav = [
+  {
+    label: 'Jury',
+    url: '/jury',
+  },
+  {
+    label: 'Catégories',
+    url: '/categories',
+  },
+  {
+    label: 'Billeterie et inscriptions',
+    url: '/billeterie-et-inscriptions',
+  },
+  {
+    label: 'Sponsors',
+    url: '/sponsors',
+  },
+];
+---
+
+<header class="layout mt-4 md:mt-5">
+  <div class="flex justify-between">
+    <!-- LOGO -->
+    <a href={pathname === '/' ? '#main-content' : '/'} class="size-fit">
+      <span class="sr-only">Page d'accueil</span>
+      <Image src={logo} alt="" class="max-md:w-[86px]" />
+    </a>
+
+    <!-- MENU BUTTON -->
+    <input
+      type="checkbox"
+      name="mobile-menu-toggle"
+      id="mobile-menu-toggle"
+      class="peer invisible md:hidden"
+    />
+    <label for="mobile-menu-toggle" class="group relative z-50 md:hidden">
+      <span class="peer-checked:group-[]:hidden">Menu</span>
+      <span class="hidden peer-checked:group-[]:inline">Fermer</span>
+    </label>
+
+    <!-- NAVIGATION -->
+    <div
+      class="peer-checked:flex max-md:flex-col max-md:hidden max-md:fixed max-md:inset-0 max-md:bg-neutral-900 max-md:mt-30 flex-col z-40 max-md:px-4 max-md:pb-4"
+    >
+      <nav class="md:space-x-1.5" aria-label="Navigation principale">
+        <h2 class="sr-only">Navigation principale</h2>
+        {
+          nav.map(({ label, url }, index) => (
+            <a
+              href={url === pathname ? '#main-content' : url}
+              class:list={[
+                'block md:inline-flex max-md:pt-3 max-md:pb-1.5 max-md:text-h-xl max-md:border-t max-md:last:border-b',
+                url === pathname && 'text-core',
+              ]}
+              aria-current={url === pathname ? 'page' : undefined}
+            >
+              <span
+                class:list={[
+                  'md:hover-underline md:inline-flex',
+                  url === pathname && '!from-core !to-core',
+                ]}
+              >
+                {label}
+              </span>
+              <span class="max-md:hidden">
+                {index !== nav.length - 1 && `, `}
+              </span>
+            </a>
+          ))
+        }
+      </nav>
+
+      <!-- SOCIALS -->
+      <div class="flex md:hidden justify-between items-end mt-auto">
+        <div>
+          <a
+            class="block"
+            href="https://www.instagram.com/associationgrand/"
+            target="_blank">Instagram</a
+          >
+          <a class="block" href="mailto:hello@associationgrand.ch">E-mail</a>
+        </div>
+        <Icon name="hand" classes="h-14 w-8" />
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  /* eslint-disable prettier/prettier */
+  const mobileMenuToggle = document.getElementById(
+    'mobile-menu-toggle',
+  ) as HTMLInputElement;
+  const body = document.body;
+
+  mobileMenuToggle.addEventListener('change', () => {
+    if (mobileMenuToggle.checked) {
+      body.classList.add('fixed');
+    } else {
+      body.classList.remove('fixed');
+    }
+  });
+</script>

@@ -1,5 +1,7 @@
 ---
 import 'styles/base.css';
+import FlagLogo from 'components/FlagLogo.astro';
+import Header from 'components/Header.astro';
 
 interface Props {
   title?: string;
@@ -9,7 +11,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="fr">
+<html lang="fr" class="[color-scheme:dark] scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <title>{title}</title>
@@ -48,8 +50,10 @@ const { title } = Astro.props;
 
     <meta name="theme-color" content="#282828" />
   </head>
-  <body class="antialiased bg-neutral-900 text-neutral-100">
-    <main class="layout">
+  <body class="w-full antialiased bg-neutral-900 text-neutral-100 text-base">
+    <Header />
+    <FlagLogo />
+    <main class="layout" id="main-content">
       <slot />
     </main>
   </body>
