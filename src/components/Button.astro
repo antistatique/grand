@@ -1,0 +1,20 @@
+---
+interface Props {
+  href: string;
+  target?: string;
+  onClick?: string;
+  classes?: string;
+}
+
+const { href, target = '_self', onClick, classes } = Astro.props;
+---
+
+<a
+  rel={target === '_blank' ? 'noreferrer' : undefined}
+  href={href}
+  target={target}
+  class:list={['block', classes]}
+  onclick={onClick}
+>
+  <slot />
+</a>
