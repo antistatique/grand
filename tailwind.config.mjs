@@ -2,6 +2,16 @@
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
+    colors: {
+      core: '#C69754',
+      neutral: {
+        100: '#FAEBDC',
+        900: '#282828',
+      },
+      black: '#000',
+      white: '#fff',
+      transparent: 'transparent',
+    },
     // For future-compatibility
     aspectRatio: {
       auto: 'auto',
