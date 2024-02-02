@@ -52,6 +52,12 @@ export default {
       15: '15',
       16: '16',
     },
+    extend: {
+      gridColumn: {
+        content: 'content',
+        full: 'full',
+      },
+    },
   },
   plugins: [require('@tailwindcss/aspect-ratio')],
 };
