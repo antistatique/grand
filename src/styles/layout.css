@@ -1,6 +1,6 @@
 @layer base {
   .layout {
-    @apply grid gap-x-3 md:gap-x-5 *:col-content;
+    @apply grid gap-x-3 md:gap-x-5 *:col-content ;
 
     grid-template-columns:
       [full-start]

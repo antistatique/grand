@@ -1,20 +1,68 @@
 ---
+import grain from '../assets/svgs/button-grain.svg?raw';
 interface Props {
   href: string;
   target?: string;
   onClick?: string;
   classes?: string;
+  scheme?: 'light' | 'dark' | 'core';
 }
 
-const { href, target = '_self', onClick, classes } = Astro.props;
+const {
+  href,
+  target = '_self',
+  onClick,
+  classes,
+  scheme = 'light',
+} = Astro.props;
 ---
 
 <a
   rel={target === '_blank' ? 'noreferrer' : undefined}
   href={href}
   target={target}
-  class:list={['block', classes]}
+  class:list={[
+    'relative flex justify-between rounded-lg p-3 h-24 group',
+    'ring-4 ring-transparent transition-all duration-300 overflow-clip',
+    scheme === 'light' &&
+      'bg-neutral-100 text-neutral-900 hover:ring-neutral-100/30',
+    scheme === 'dark' && 'bg-neutral-900 text-core hover:ring-neutral-900/30',
+    scheme === 'core' && 'bg-core text-neutral-900 hover:ring-core/30',
+    classes,
+  ]}
   onclick={onClick}
 >
-  <slot />
+  <span>
+    <slot />
+  </span>
+  <span
+    class:list={[
+      'mt-auto size-6 text-[14px] leading-[14px] rounded-full overflow-clip shrink-0',
+      scheme === 'dark'
+        ? 'bg-core text-neutral-900'
+        : 'bg-neutral-900 text-neutral-100',
+    ]}
+  >
+    <span
+      class="flex md:animate-slide-out-right md:group-hover:animate-slide-in-right transition-transform"
+    >
+      <span class="shrink-0 size-6 grid place-content-center">→</span>
+    </span>
+  </span>
+
+  <!-- GRAIN -->
+  <div
+    aria-hidden
+    class:list={[
+      'absolute inset-0',
+      scheme === 'dark' ? 'text-core' : 'text-neutral-900',
+    ]}
+  >
+    <div class="absolute bottom-0 left-0">
+      <Fragment set:html={grain} />
+    </div>
+    <div class="absolute top-0 right-0 rotate-180">
+      <Fragment set:html={grain} />
+    </div>
+  </div>
 </a>

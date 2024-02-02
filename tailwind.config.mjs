@@ -52,6 +52,28 @@ export default {
       15: '15',
       16: '16',
     },
+    animation: {
+      'slide-in-right': 'slide-in-right 200ms linear forwards, hasHovered 1ms',
+      'slide-out-right':
+        'slide-out-right 200ms linear forwards, hasHovered 1ms paused',
+    },
+    keyframes: {
+      hasHovered: {
+        '0%': { transform: 'translateX(0%)' },
+        '100%': { transform: 'translateX(0%)' },
+      },
+      'slide-in-right': {
+        '50%': { transform: 'translateX(100%)' },
+        '50.01%': { transform: 'translateX(-100%)' },
+        '100%': { transform: 'translateX(0)' },
+      },
+      'slide-out-right': {
+        '50%': { transform: 'translateX(100%)' },
+        '50.01%': { transform: 'translateX(-100%)' },
+        '100%': { transform: 'translateX(0)' },
+      },
+    },
+
     extend: {
       spacing: {
         30: '7.5rem',
