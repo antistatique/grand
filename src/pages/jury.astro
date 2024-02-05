@@ -1,5 +1,43 @@
 ---
+import { getCollection } from 'astro:content';
+
+import Icon from 'components/Icon.astro';
+import JuryComponent from 'components/Jury.astro';
 import Layout from 'layouts/Layout.astro';
+
+const juries = await getCollection('juries');
 ---
 
-<Layout />
+<Layout
+  title="Le jury du GRAND 2023 est composé de 9 professionnels."
+  description="Le jury 2023: 9 professionnel·les de la communication, de la publicité, du design et des médias. À eux et elles la responsabilité d’assigner les Awards du GRAND. Association le GRAND."
+>
+  <div class="layout">
+    <h1
+      class="text-xl md:text-h-3xl text-center my-20 md:my-40 uppercase font-display"
+    >
+      <span>
+        <span class="max-md:hidden"> les </span>
+        Membres du</span
+      >
+
+      <span class="block text-core"
+        >jury<Icon
+          name="eye"
+          classes="w-14 md:w-[1.5em] h-8 md:h-[0.7em] text-neutral-100 mx-2 md:mx-3 inline align-top"
+        />2024</span
+      >
+    </h1>
+    <ul
+      class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-10 md:gap-x-5 md:gap-y-30"
+    >
+      {
+        juries.map((jury) => (
+          <li>
+            <JuryComponent jury={jury} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Layout>

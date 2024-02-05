@@ -1,0 +1,50 @@
+---
+import Button from 'components/Button.astro';
+import DetailsModal from 'components/DetailsModal.astro';
+
+import Image from './Image.astro';
+
+import type { CollectionEntry } from 'astro:content';
+interface Props {
+  jury: CollectionEntry<'juries'>;
+}
+
+const { jury } = Astro.props;
+
+const { Content } = await jury.render();
+---
+
+<DetailsModal title={jury.data.name} classes="text-sm md:text-base">
+  <div slot="summary-content" class="group">
+    <div class="relative mb-4">
+      <Image
+        src={jury.data.background}
+        alt={`Portrait de ${jury.data.name}`}
+        sizes="(min-width: 1840px) 407px, (min-width: 1040px) 22.05vw, (min-width: 780px) calc(33.33vw - 27px), calc(50vw - 22px)"
+        classes="aspect-h-7 aspect-w-6 [&_img]:size-full [&_img]:object-cover"
+      />
+      {
+        jury.data.foreground && (
+          <Image
+            src={jury.data.foreground}
+            alt=""
+            sizes="(min-width: 1840px) 407px, (min-width: 1040px) 22.05vw, (min-width: 780px) calc(33.33vw - 27px), calc(50vw - 22px)"
+            classes="[&_img]:size-full [&_img]:object-cover !absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-md:hidden"
+          />
+        )
+      }
+    </div>
+    <p class="max-md:text-sm">{jury.data.name}</p>
+    <p class="text-core max-md:text-sm">{jury.data.position}</p>
+  </div>
+
+  <div slot="modal-content" class="text-base md:text-lg">
+    <div class="mb-20 space-y-5">
+      <Content />
+    </div>
+
+    <Button href={jury.data.link} scheme="dark" classes="max-w-60"
+      >LinkedIn</Button
+    >
+  </div>
+</DetailsModal>

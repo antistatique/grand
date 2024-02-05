@@ -31,7 +31,7 @@ const nav = [
     <!-- LOGO -->
     <a
       href={pathname === '/' ? '#main-content' : '/'}
-      class="size-fit"
+      class="size-fit z-40 relative"
       data-astro-prefetch
     >
       <span class="sr-only">Page d'accueil</span>
@@ -52,7 +52,7 @@ const nav = [
 
     <!-- NAVIGATION -->
     <div
-      class="peer-checked:flex max-md:flex-col max-md:hidden max-md:fixed max-md:inset-0 max-md:bg-neutral-900 max-md:mt-30 flex-col z-40 max-md:px-4 max-md:pb-4"
+      class="peer-checked:flex max-md:flex-col max-md:hidden max-md:fixed max-md:inset-0 max-md:bg-neutral-900 max-md:pt-30 flex-col z-30 max-md:px-4 max-md:pb-4"
     >
       <nav class="md:space-x-1.5" aria-label="Navigation principale">
         <h2 class="sr-only">Navigation principale</h2>
@@ -61,7 +61,7 @@ const nav = [
             <a
               href={url === pathname ? '#main-content' : url}
               class:list={[
-                'block md:inline-flex max-md:pt-3 max-md:pb-1.5 max-md:text-h-xl max-md:border-t max-md:last:border-b',
+                'block md:inline-flex max-md:pt-3 max-md:pb-1.5 max-md:text-h-xl max-md:border-t max-md:last:border-b border-neutral-100',
                 url === pathname && 'text-core',
               ]}
               aria-current={url === pathname ? 'page' : undefined}

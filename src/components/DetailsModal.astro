@@ -1,0 +1,92 @@
+---
+interface Props {
+  title: string;
+  classes: string;
+}
+
+const { title, classes } = Astro.props;
+---
+
+<details
+  class="[&.is-open_.modal-content]:translate-y-0 [&.is-open_.modal-content]:opacity-100 group/details"
+>
+  <!-- SUMMARY -->
+  <summary
+    class="[&::-webkit-details-marker]:hidden appearance-none list-none cursor-pointer"
+  >
+    <slot name="summary-content" />
+  </summary>
+
+  <!-- "MODAL" CONTENT -->
+  <div
+    class:list={[
+      'fixed bg-core text-neutral-900 p-5 w-full md:max-w-[37.5rem] bottom-0 right-0 z-50 opacity-0 translate-y-20 transition-all duration-200 modal-content',
+      classes,
+    ]}
+  >
+    <div class="w-full flex justify-between items-center mb-5">
+      <p>{title}</p>
+      <button type="button" class="close-button underline">Fermer</button>
+    </div>
+
+    <div class="text-lg">
+      <slot name="modal-content" />
+    </div>
+  </div>
+</details>
+
+<script>
+  /* eslint-disable prettier/prettier */
+  const details = document.querySelectorAll<HTMLDetailsElement>('details');
+
+  const closeDetails = (detailsEl: HTMLDetailsElement) => {
+    detailsEl.classList.remove('is-open');
+    setTimeout(() => detailsEl.removeAttribute('open'), 200);
+    window.removeEventListener('scroll', () => closeDetails(detailsEl));
+  };
+
+  const openDetails = (detailsEl: HTMLDetailsElement) => {
+    // close other details
+    details.forEach((element) => {
+      if (element !== detailsEl) {
+        closeDetails(element);
+      }
+    });
+
+    detailsEl.classList.add('is-open');
+    detailsEl.setAttribute('open', 'true');
+
+    const closeButton = detailsEl.querySelector(
+      '.close-button',
+    ) as HTMLButtonElement;
+    closeButton.onclick = () => closeDetails(detailsEl);
+
+    window.addEventListener('scroll', () => closeDetails(detailsEl));
+  };
+
+  // Click outside handler
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    const isOutsideDetails = !target.closest('details');
+
+    if (isOutsideDetails) {
+      details.forEach((detail) => closeDetails(detail));
+    }
+  });
+
+  // Escape key handler
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      details.forEach((detail) => closeDetails(detail));
+    }
+  });
+
+  // Execution
+  details.forEach((detail) => {
+    const summary = detail.querySelector<HTMLElement>('summary');
+    summary?.addEventListener('click', (e) => {
+      e.preventDefault();
+      openDetails(detail);
+    });
+  });
+</script>
