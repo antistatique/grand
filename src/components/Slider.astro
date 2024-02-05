@@ -4,6 +4,7 @@ import Image from './Image.astro';
 
 type SliderImg = {
   src: string;
+  description?: string;
   alt: string;
   size: 'wide' | 'narrow';
 }[];
@@ -11,17 +12,21 @@ type SliderImg = {
 const images: SliderImg = [
   {
     src: 'homepage/slider/1.jpg',
-    alt: 'Cérémonie 2023 à Lausanne.',
+    description: 'Cérémonie 2023 à Lausanne.',
+    alt: 'Zoom sur un public assis dans une salle.',
     size: 'wide',
   },
   {
     src: 'homepage/slider/2.jpg',
-    alt: 'Rencontres entre créatifs.',
+    description: 'Rencontres entre créatifs.',
+    alt: 'Deux personnes en train de discuter.',
     size: 'narrow',
   },
   {
     src: 'homepage/slider/3.jpg',
-    alt: '23bis sur scène pour leur prix dans la catégorie “Creative Film”.',
+    description:
+      '23bis sur scène pour leur prix dans la catégorie “Creative Film”.',
+    alt: '5 personnes sur scene en train de recevoir un prix.',
     size: 'wide',
   },
 ];
@@ -37,7 +42,7 @@ const images: SliderImg = [
   <div class="splide__track !overflow-visible">
     <ul class="splide__list">
       {
-        images.map(({ src, alt, size }) => (
+        images.map(({ src, description, alt, size }) => (
           <li
             class:list={[
               'splide__slide mr-4 md:mr-5',
@@ -56,7 +61,11 @@ const images: SliderImg = [
                     : '(min-width: 1840px) 550px, (min-width: 780px) calc(31.35vw - 21px), calc(66.74vw - 26px)'
                 }
               />
-              {alt && <p class="mt-3 max-md:text-sm">{alt}</p>}
+              {description && (
+                <p class="mt-3 max-md:text-sm" aria-hidden>
+                  {description}
+                </p>
+              )}
             </div>
           </li>
         ))
