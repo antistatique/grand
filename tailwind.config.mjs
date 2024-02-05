@@ -91,6 +91,10 @@ export default {
       gridColumn: {
         content: 'content',
         full: 'full',
+        'span-13': 'span 13 / span 13',
+      },
+      screens: {
+        '3xl': '1728px',
       },
     },
   },

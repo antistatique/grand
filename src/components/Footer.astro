@@ -58,8 +58,12 @@ const { hideButtons } = Astro.props;
         nav.map(({ label, url }) => (
           <a
             href={url === pathname ? '#main-content' : url}
-            class:list={['relative block', url === pathname && 'text-core']}
+            class:list={[
+              'relative block w-fit hover-underline',
+              url === pathname && 'text-core',
+            ]}
             aria-current={url === pathname ? 'page' : undefined}
+            data-astro-prefetch
           >
             {url === pathname && (
               <Icon
@@ -67,27 +71,22 @@ const { hideButtons } = Astro.props;
                 classes="h-4 w-7 absolute -left-9 top-1/2 -translate-y-1/2 text-core max-md:hidden"
               />
             )}
-            <span
-              class:list={[
-                'hover-underline inline-flex',
-                url === pathname && '!from-core !to-core',
-              ]}
-            >
-              {label}
-            </span>
+            {label}
           </a>
         ))
       }
     </nav>
 
     <!-- SOCIALS -->
-    <div class="mt-6 md:mt-20">
+    <div class="mt-6 md:mt-20 flex flex-col">
       <a
-        class="block"
+        class="w-fit hover-underline"
         href="https://www.instagram.com/associationgrand/"
         target="_blank">Instagram</a
       >
-      <a class="block" href="mailto:hello@associationgrand.ch">E-mail</a>
+      <a class="w-fit hover-underline" href="mailto:hello@associationgrand.ch"
+        >E-mail</a
+      >
     </div>
 
     <!-- CREDITS -->

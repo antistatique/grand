@@ -29,7 +29,11 @@ const nav = [
 <header class="layout mt-4 md:mt-5">
   <div class="flex justify-between">
     <!-- LOGO -->
-    <a href={pathname === '/' ? '#main-content' : '/'} class="size-fit">
+    <a
+      href={pathname === '/' ? '#main-content' : '/'}
+      class="size-fit"
+      data-astro-prefetch
+    >
       <span class="sr-only">Page d'accueil</span>
       <Image src={logo} alt="" class="max-md:w-[86px]" />
     </a>
@@ -61,6 +65,7 @@ const nav = [
                 url === pathname && 'text-core',
               ]}
               aria-current={url === pathname ? 'page' : undefined}
+              data-astro-prefetch
             >
               <span
                 class:list={[

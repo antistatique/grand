@@ -1,6 +1,6 @@
 @layer base {
   .layout {
-    @apply grid gap-x-3 md:gap-x-5 *:col-content ;
+    @apply grid gap-x-3 md:gap-x-5 *:col-content auto-rows-min ;
 
     grid-template-columns:
       [full-start]
@@ -16,7 +16,7 @@
         [full-start]
         minmax(0, auto)
         [content-start]
-        repeat(12, minmax(0, 150px))
+        repeat(12, minmax(0, 7.64rem))
         [content-end]
         minmax(0, auto)
         [full-end];

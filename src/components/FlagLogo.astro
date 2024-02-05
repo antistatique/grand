@@ -5,22 +5,23 @@ import flagArrow from 'assets/logos/flag-arrow.svg';
 import flagLogo from 'assets/logos/flag-logo.svg';
 ---
 
-<button
-  type="button"
-  id="flag-logo"
-  class="-translate-y-full bg-core transition-transform z-30 h-16 w-12 fixed top-0 left-4 md:left-5 overflow-clip group ease-linear duration-200"
-  onclick="window.scrollTo(0,0)"
->
-  <div
-    aria-hidden
-    class="md:group-hover:-translate-y-1/2 md:group-focus-visible:-translate-y-1/2 transition-transform ease-linear duration-200"
+<div class="layout fixed top-0 w-full z-30 pointer-events-none">
+  <button
+    type="button"
+    id="flag-logo"
+    class="-translate-y-full bg-core transition-transform h-16 w-12 md:left-5 overflow-clip group ease-linear duration-200 pointer-events-auto"
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
   >
-    <Image src={flagLogo} alt="" />
-    <Image src={flagArrow} alt="" />
-  </div>
-  <span class="sr-only">Retourner en haut de la page</span>
-</button>
-
+    <div
+      aria-hidden
+      class="md:group-hover:-translate-y-1/2 md:group-focus-visible:-translate-y-1/2 transition-transform ease-linear duration-200"
+    >
+      <Image src={flagLogo} alt="" />
+      <Image src={flagArrow} alt="" />
+    </div>
+    <span class="sr-only">Retourner en haut de la page</span>
+  </button>
+</div>
 <script>
   /* eslint-disable prettier/prettier */
   const flagLogo = document.getElementById('flag-logo') as HTMLDivElement;
