@@ -1,5 +1,180 @@
 ---
+import Button from 'components/Button.astro';
+import Icon from 'components/Icon.astro';
+import Image from 'components/Image.astro';
+import Slider from 'components/Slider.astro';
 import Layout from 'layouts/Layout.astro';
+
+import key from '../assets/svgs/key.svg?raw';
 ---
 
-<Layout />
+<Layout>
+  <!-- HERO -->
+  <section class="layout max-w-screen-3xl mx-auto mt-20">
+    <h1
+      class="z-10 row-start-1 md:col-start-3 md:col-span-10 text-h-xl md:text-h-3xl md:mt-10 *:block uppercase"
+    >
+      <span class="relative">06.06.2024</span>
+      <span class="md:text-end text-core">Cérémonie du</span>
+      <span class="text-core">Grand</span>
+    </h1>
+    <div
+      class="relative col-start-3 md:col-start-5 col-span-full md:row-start-1 max-md:-mt-5"
+    >
+      <Image
+        src="homepage/1.jpg"
+        alt=""
+        sizes="(min-width: 1840px) 1281px, (min-width: 780px) calc(68.37vw + 37px), calc(83.48vw - 13px)"
+        classes="aspect-w-7 aspect-h-6"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <p
+        aria-hidden
+        class="max-md:hidden absolute right-4 bottom-4 text-xs font-mono [writing-mode:vertical-lr] rotate-180 z-20"
+      >
+        01001101.01000001
+      </p>
+    </div>
+    <p
+      class="z-10 md:!col-start-3 md:col-span-7 xl:col-span-6 md:text-lg -mt-10 md:-mt-[5.5rem] max-md:mb-10 indent-[calc(min(16.6vw,18rem)+20px)]"
+    >
+      Depuis 15 éditions, le GRAND Prix Romand de la Création célèbre
+      l'excellence en matière de travaux de création en communication, avec un
+      concours et un gala mettant en avant les talents, la créativité et le
+      savoir-faire "made in Suisse romande".
+    </p>
+    <!-- please pardon me for this css calc my lord -->
+    <Button
+      href="/"
+      scheme="core"
+      classes="md:mt-[min(min(50rem,calc(55vw-10rem)),max(26rem,calc(100vh-15.4rem)))] md:row-start-1 md:col-start-2 md:col-span-3 z-20"
+    >
+      Billetterie et inscriptions
+    </Button>
+    <div
+      class="col-span-full row-start-1 flex justify-end items-end pr-20 z-10 -mb-20 max-md:hidden pointer-events-none"
+    >
+      <Fragment set:html={key} />
+    </div>
+  </section>
+
+  <!-- KEY NUMBERS -->
+  <section
+    class="layout mt-20 md:mt-60 md:*:border-r *:border-core last:*:border-r-0 max-md:gap-y-10"
+  >
+    <h2 class="md:col-start-2 md:col-span-3 text-h-xl md:text-lg">
+      L'édition 2023<br />en chiffres
+    </h2>
+    {
+      [
+        [48, 'agences et indépendant·e·s'],
+        [30, 'projets en concours'],
+        [94, 'personnes à la cérémonie'],
+      ].map(([number, text]) => (
+        <p class="max-md:first-of-type:col-start-2 max-md:last:col-start-2 col-span-3">
+          <span
+            class="block text-h-xl md:text-h-3xl text-core counter-effect"
+            data-count-to={number}
+          >
+            {number}
+          </span>
+          <span>{text}</span>
+        </p>
+      ))
+    }
+  </section>
+
+  <!-- PROGRAM -->
+  <section class="layout mt-20 md:mt-60">
+    <div class="relative grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+      <Image
+        src="homepage/2.jpg"
+        alt="Salle del Castillo de Vevey"
+        sizes="(min-width: 1820px) 833px, (min-width: 780px) 46.37vw, calc(100vw - 32px)"
+      />
+      <p class="absolute -bottom-8 text-xs max-md:hidden">01001101</p>
+      <div class="flex flex-col justify-between">
+        <div>
+          <h3 class="text-h-xl md:text-h-2xl max-md:mb-10">
+            <span>Jeudi</span>
+            <span class="text-core block"
+              ><Icon
+                name="time"
+                classes="w-6 md:w-8 h-8 md:h-11 mr-2 inline align-baseline"
+              />06.06.2024</span
+            >
+          </h3>
+        </div>
+        <div>
+          <p>Salle del Castillo de Vevey</p>
+          <p class="mb-10">Entrée : CHF 99.-</p>
+          <table class="block">
+            <tbody
+              class="block w-full *:border-t last:*:border-b *:block *:py-3 align-baseline"
+            >
+              <tr>
+                <td class="w-20 lg:w-30">18:00</td>
+                <td>Verre de bienvenue</td>
+              </tr>
+              <tr>
+                <td class="w-20 lg:w-30">19:00</td>
+                <td>Cérémonie</td>
+              </tr>
+              <tr>
+                <td class="w-20 lg:w-30">20:00</td>
+                <td>Cocktail dinatoire et fête</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDER -->
+  <section class="layout mt-20 md:mt-60 overflow-clip">
+    <h2 class="text-h-xl md:text-h-2xl mb-10 md:mb-20">Édition 2023</h2>
+    <Slider />
+  </section>
+</Layout>
+
+<script>
+  /* eslint-disable prettier/prettier */
+  const counters =
+    document.querySelectorAll<HTMLSpanElement>('.counter-effect');
+
+  const createCounter = (counter: HTMLSpanElement) => {
+    const targetCount = +counter.dataset.countTo!;
+    const SPEED = 1500 / targetCount;
+    let count = 0;
+
+    const updateCounter = () => {
+      const inc = Math.ceil(targetCount / 100);
+
+      if (count < targetCount) {
+        count += inc;
+        counter.innerText = count.toString();
+        setTimeout(updateCounter, SPEED);
+      } else {
+        counter.innerText = targetCount.toString();
+      }
+    };
+
+    updateCounter();
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        createCounter(entry.target as HTMLSpanElement);
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  counters.forEach((counter) => {
+    counter.innerText = '0';
+    observer.observe(counter);
+  });
+</script>

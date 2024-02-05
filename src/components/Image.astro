@@ -8,11 +8,12 @@ interface Props {
   src: string;
   alt: string;
   sizes: string;
-  classList?: string[];
+  classes?: string;
   loading?: 'lazy' | 'eager';
+  fetchpriority?: 'auto' | 'high' | 'low';
 }
 
-const { src, alt, sizes, classList, loading } = Astro.props;
+const { src, alt, sizes, classes, loading, fetchpriority } = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   '../assets/images/**/*',
@@ -26,18 +27,20 @@ if (!img)
   );
 ---
 
-<figure class="relative overflow-clip">
+<figure class:list={['relative overflow-clip', classes]}>
   <Img
+    class="absolute inset-0 z-10 object-cover animate-grain mix-blend-soft-light origin-center pointer-events-none w-full h-full"
     src={grain}
     alt=""
-    loading="eager"
-    class="absolute inset-1/2 -translate-y-1/2 -translate-x-1/2 z-10 w-[200%] aspect-1 object-cover animate-grain mix-blend-soft-light origin-center"
+    format="avif"
+    widths={[256, 384, 690, 750, 828, 1080, 1400, 1920, 2048]}
+    sizes={sizes}
     aria-hidden
+    loading="eager"
+    fetchpriority="high"
   />
   <Picture
-    {...classList && {
-      'class:list': [...classList, 'bg-neutral-100/10'],
-    }}
+    class="bg-neutral-100/10 w-full"
     src={img()}
     alt={alt}
     widths={[256, 384, 690, 750, 828, 1080, 1400, 1920, 2048]}
@@ -46,5 +49,6 @@ if (!img)
     fallbackFormat="jpeg"
     quality={60}
     loading={loading || 'lazy'}
+    fetchpriority={fetchpriority || 'auto'}
   />
 </figure>

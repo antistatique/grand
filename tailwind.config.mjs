@@ -15,8 +15,10 @@ export default {
     fontFamily: {
       display: ['Printvetica', 'Helvetica', 'Arial', 'sans-serif'],
       sans: ['Helvetica Now', 'Helvetica', 'Arial', 'sans-serif'],
+      mono: ['IBM Plex Mono'],
     },
     fontSize: {
+      xs: ['14px', '14px'],
       sm: ['16px', '18px'],
       base: [
         '22px',
@@ -28,7 +30,10 @@ export default {
       ],
       xl: ['44px', '38px'],
       '2xl': ['60px', '52px'],
-      '3xl': ['120px', '100px'],
+      '3xl': [
+        'clamp(80px, 0.75rem + 8.85vw, 120px)',
+        'clamp(70px, 1.19rem + 6.64vw, 100px)',
+      ],
     },
     // For future-compatibility
     aspectRatio: {
@@ -56,7 +61,7 @@ export default {
       'slide-in-right': 'slide-in-right 200ms linear forwards, hasHovered 1ms',
       'slide-out-right':
         'slide-out-right 200ms linear forwards, hasHovered 1ms paused',
-      grain: 'grain 200ms steps(4) infinite',
+      grain: 'grain 300ms steps(1, end) infinite',
     },
     keyframes: {
       hasHovered: {
@@ -75,10 +80,16 @@ export default {
       },
       grain: {
         '0%': {
-          transform: 'translate(-50%, -50%) rotate(0deg)',
+          transform: 'scale(100%, 100%)',
         },
-        '100%': {
-          transform: 'translate(-50%, -50%) rotate(360deg)',
+        '25%': {
+          transform: 'scale(-100%, 100%)',
+        },
+        '50%': {
+          transform: 'scale(-100%, -100%)',
+        },
+        '75%': {
+          transform: 'scale(100%, -100%)',
         },
       },
     },

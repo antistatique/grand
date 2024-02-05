@@ -55,7 +55,7 @@ const { title, hideFooterButtons } = Astro.props;
   <body class="w-full antialiased bg-neutral-900 text-neutral-100 text-base">
     <Header />
     <FlagLogo />
-    <main class="layout" id="main-content">
+    <main id="main-content">
       <slot />
     </main>
     <Footer hideButtons={hideFooterButtons} />

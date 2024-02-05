@@ -1,0 +1,81 @@
+---
+import '@splidejs/splide/css/core';
+import Image from './Image.astro';
+
+type SliderImg = {
+  src: string;
+  alt: string;
+  size: 'wide' | 'narrow';
+}[];
+
+const images: SliderImg = [
+  {
+    src: 'homepage/slider/1.jpg',
+    alt: 'Cérémonie 2023 à Lausanne.',
+    size: 'wide',
+  },
+  {
+    src: 'homepage/slider/2.jpg',
+    alt: 'Rencontres entre créatifs.',
+    size: 'narrow',
+  },
+  {
+    src: 'homepage/slider/3.jpg',
+    alt: '23bis sur scène pour leur prix dans la catégorie “Creative Film”.',
+    size: 'wide',
+  },
+];
+---
+
+<!-- div to hide the first column -->
+<div class="max-md:hidden col-start-1 col-span-1 bg-neutral-900 z-10 -mr-5">
+</div>
+<div
+  class="splide col-start-2 col-span-full max-w-screen-2xl cursor-grab active:cursor-grabbing !visible"
+  aria-label="Carousel d'images du Grand"
+>
+  <div class="splide__track !overflow-visible">
+    <ul class="splide__list">
+      {
+        images.map(({ src, alt, size }) => (
+          <li
+            class:list={[
+              'splide__slide mr-4 md:mr-5',
+              size === 'wide'
+                ? 'w-[calc(83.3vw-1.8rem)] md:w-[min(52.1rem,calc(50vw-2.3rem))]'
+                : 'w-[calc(66.6vw-1.6rem)] md:w-[min(34.4rem,calc(34vw-2.6rem))]',
+            ]}
+          >
+            <div>
+              <Image
+                src={src}
+                alt={alt}
+                sizes={
+                  size === 'wide'
+                    ? '(min-width: 1840px) 834px, (min-width: 780px) 46.25vw, calc(83.26vw - 29px)'
+                    : '(min-width: 1840px) 550px, (min-width: 780px) calc(31.35vw - 21px), calc(66.74vw - 26px)'
+                }
+              />
+              {alt && <p class="mt-3 max-md:text-sm">{alt}</p>}
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
+
+<script>
+  /* eslint-disable prettier/prettier */
+  import { Splide } from '@splidejs/splide';
+
+  new Splide('.splide', {
+    type: 'loop',
+    rewind: true,
+    autoWidth: true,
+    arrows: false,
+    pagination: false,
+    speed: 1000,
+    flickPower: 200,
+  }).mount();
+</script>
