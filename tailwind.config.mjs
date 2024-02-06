@@ -65,7 +65,7 @@ export default {
       'slide-out-top':
         'slide-out-top 200ms ease-out forwards, hasHovered 1ms paused',
       grain: 'grain 300ms steps(1, end) infinite',
-      'fade-in': 'fade-in 1s cubic-bezier(0,0,.1,1) forwards',
+      'fade-in': 'fade-in 0.8s cubic-bezier(0,0,.1,1) forwards',
     },
     keyframes: {
       hasHovered: {

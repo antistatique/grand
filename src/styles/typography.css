@@ -1,13 +1,13 @@
 @layer base {
   .text-h-3xl {
-    @apply text-3xl font-display uppercase;
+    @apply text-3xl font-display uppercase font-normal;
   }
 
   .text-h-2xl {
-    @apply text-2xl font-display;
+    @apply text-2xl font-display font-normal;
   }
 
   .text-h-xl {
-    @apply text-xl font-display;
+    @apply text-xl font-display font-normal;
   }
 }
