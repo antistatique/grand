@@ -5,4 +5,5 @@ export type IconNames =
   | 'key'
   | 'plus'
   | 'time'
+  | 'sun'
   | 'wheat';
