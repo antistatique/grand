@@ -1,0 +1,68 @@
+---
+import Button from 'components/Button.astro';
+import DetailsModal from 'components/DetailsModal.astro';
+import Icon from 'components/Icon.astro';
+
+import type { CollectionEntry } from 'astro:content';
+interface Props {
+  category: CollectionEntry<'categories'>;
+}
+
+const { category } = Astro.props;
+
+const { Content } = await category.render();
+---
+
+<li class="border-t last:border-b">
+  <DetailsModal title="Affichage commercial" classes="text-sm md:text-base">
+    <div
+      slot="summary-content"
+      class="relative flex justify-between items-center group overflow-clip"
+    >
+      <p class="text-base md:text-h-xl lg:text-h-2xl">
+        <span
+          data-name={category.data.name}
+          class="inline-block py-2 md:pt-4 md:pb-3 mr-3 group-hover:text-core after:absolute after:py-2 after:md:pt-4 after:left-0 after:w-full after:md:pb-3 after:content-[attr(data-name)] after:-top-full animate-slide-out-top group-hover:animate-slide-in-top"
+        >
+          {category.data.name}
+        </span>
+        {
+          category.data.isNew && (
+            <span class="inline-block max-md:hidden text-sm lg:text-base text-core align-top pt-2 md:pt-4">
+              Nouveau
+            </span>
+          )
+        }
+      </p>
+
+      <div class="relative md:size-[3.75rem] grid place-content-center">
+        <Icon
+          name="eye"
+          classes="text-neutral-100 w-6 md:w-10 h-3 md:h-5 shrink-0 z-10"
+        />
+        <Icon
+          name="sun"
+          classes="max-md:hidden absolute size-full transition-transform scale-0 group-hover:scale-100 rounded-full overflow-hidden"
+        />
+      </div>
+    </div>
+
+    <div slot="modal-content" class="text-base md:text-lg">
+      <div class="mb-20 space-y-5">
+        <Content />
+      </div>
+
+      {
+        category.data.registrationLink && (
+          <Button
+            href={category.data.registrationLink}
+            scheme="dark"
+            classes="max-w-72"
+          >
+            Inscrire un projet
+          </Button>
+        )
+      }
+    </div>
+  </DetailsModal>
+</li>
