@@ -18,8 +18,20 @@ export default {
       mono: ['IBM Plex Mono'],
     },
     fontSize: {
-      xs: ['14px', '14px'],
-      sm: ['16px', '18px'],
+      xs: [
+        '14px',
+        {
+          lineHeight: '14px',
+          fontWeight: 700,
+        },
+      ],
+      sm: [
+        '16px',
+        {
+          lineHeight: '18px',
+          fontWeight: 700,
+        },
+      ],
       base: [
         '22px',
         { lineHeight: '24px', letterSpacing: '-0.1px', fontWeight: 700 },
@@ -28,11 +40,26 @@ export default {
         '30px',
         { lineHeight: '34px', letterSpacing: '-0.2px', fontWeight: 700 },
       ],
-      xl: ['44px', '38px'],
-      '2xl': ['60px', '52px'],
+      xl: [
+        '44px',
+        {
+          lineHeight: '38px',
+          fontWeight: 400,
+        },
+      ],
+      '2xl': [
+        '60px',
+        {
+          lineHeight: '52px',
+          fontWeight: 400,
+        },
+      ],
       '3xl': [
         'clamp(80px, 0.75rem + 8.85vw, 120px)',
-        'clamp(70px, 1.19rem + 6.64vw, 100px)',
+        {
+          lineHeight: 'clamp(70px, 1.19rem + 6.64vw, 100px)',
+          fontWeight: 400,
+        },
       ],
     },
     // For future-compatibility
