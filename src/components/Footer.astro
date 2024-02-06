@@ -57,15 +57,15 @@ const { hideButtons } = Astro.props;
       {
         nav.map(({ label, url }) => (
           <a
-            href={url === pathname ? '#main-content' : url}
+            href={pathname.includes(url) ? '#main-content' : url}
             class:list={[
               'relative block w-fit hover-underline',
-              url === pathname && 'text-core',
+              pathname.includes(url) && 'text-core',
             ]}
-            aria-current={url === pathname ? 'page' : undefined}
+            aria-current={pathname.includes(url) ? 'page' : undefined}
             data-astro-prefetch
           >
-            {url === pathname && (
+            {pathname.includes(url) && (
               <Icon
                 name="eye"
                 classes="h-4 w-7 absolute -left-9 top-1/2 -translate-y-1/2 text-core max-md:hidden"

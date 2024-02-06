@@ -22,6 +22,7 @@ const { Content } = await jury.render();
         alt={`Portrait de ${jury.data.name}`}
         sizes="(min-width: 1840px) 407px, (min-width: 1040px) 22.05vw, (min-width: 780px) calc(33.33vw - 27px), calc(50vw - 22px)"
         classes="aspect-h-7 aspect-w-6 [&_img]:size-full [&_img]:object-cover"
+        fadeIn
       />
       {
         jury.data.foreground && (

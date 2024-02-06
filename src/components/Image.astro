@@ -11,9 +11,11 @@ interface Props {
   classes?: string;
   loading?: 'lazy' | 'eager';
   fetchpriority?: 'auto' | 'high' | 'low';
+  fadeIn?: boolean;
 }
 
-const { src, alt, sizes, classes, loading, fetchpriority } = Astro.props;
+const { src, alt, sizes, classes, loading, fetchpriority, fadeIn } =
+  Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   '../assets/images/**/*',
@@ -27,7 +29,7 @@ if (!img)
   );
 ---
 
-<figure class:list={['relative overflow-clip', classes]}>
+<figure class:list={['relative overflow-clip bg-neutral-100/5 ', classes]}>
   <Img
     class="absolute inset-0 z-10 object-cover animate-grain mix-blend-soft-light origin-center pointer-events-none w-full h-full"
     src={grain}
@@ -38,9 +40,14 @@ if (!img)
     aria-hidden
     loading="eager"
     fetchpriority="high"
+    onload="this.classList.add('animate-fade-in')"
   />
   <Picture
-    class="bg-neutral-100/10 w-full"
+    class:list={[
+      'size-full object-cover',
+      fadeIn &&
+        'animate-fade-in [&.in-view.loaded:not(.splide_*)]:animate-fade-in opacity-0 [&:not(.in-view.loaded)]:[animation-delay:1s]',
+    ]}
     src={img()}
     alt={alt}
     widths={[256, 384, 690, 750, 828, 1080, 1400, 1920, 2048]}
@@ -50,5 +57,42 @@ if (!img)
     quality={60}
     loading={loading || 'lazy'}
     fetchpriority={fetchpriority || 'auto'}
+    {...fadeIn && {
+      'data-fade-in': true,
+    }}
   />
 </figure>
+
+<script>
+  /* eslint-disable prettier/prettier */
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      root: null,
+      threshold: 0.2,
+    },
+  );
+
+  const images = document.querySelectorAll(
+    '[data-fade-in]',
+  ) as NodeListOf<HTMLImageElement>;
+
+  images.forEach((image) => {
+    image.classList.remove('animate-fade-in');
+
+    if (image.complete) {
+      image.classList.add('loaded');
+    } else {
+      image.addEventListener('load', () => image.classList.add('loaded'));
+    }
+
+    observer.observe(image);
+  });
+</script>

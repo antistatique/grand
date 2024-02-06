@@ -59,18 +59,20 @@ const nav = [
         {
           nav.map(({ label, url }, index) => (
             <a
-              href={url === pathname ? '#main-content' : url}
+              data-pathname={pathname}
+              data-url={url}
+              href={pathname.includes(url) ? '#main-content' : url}
               class:list={[
                 'block md:inline-flex max-md:pt-3 max-md:pb-1.5 max-md:text-h-xl max-md:border-t max-md:last:border-b border-neutral-100',
-                url === pathname && 'text-core',
+                pathname.includes(url) && 'text-core',
               ]}
-              aria-current={url === pathname ? 'page' : undefined}
+              aria-current={pathname.includes(url) ? 'page' : undefined}
               data-astro-prefetch
             >
               <span
                 class:list={[
                   'md:hover-underline md:inline-flex',
-                  url === pathname && '!from-core !to-core',
+                  pathname.includes(url) && '!from-core !to-core',
                 ]}
               >
                 {label}
