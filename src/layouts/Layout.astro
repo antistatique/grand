@@ -61,6 +61,11 @@ const { title, description, hideFooterButtons } = Astro.props;
     <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
 
     <meta name="theme-color" content="#282828" />
+
+    <script
+      defer
+      data-domain="associationgrand.ch"
+      src="https://plausible.io/js/script.js"></script>
   </head>
   <body class="w-full antialiased bg-neutral-900 text-neutral-100 text-base">
     <Header />
@@ -71,3 +76,14 @@ const { title, description, hideFooterButtons } = Astro.props;
     <Footer hideButtons={hideFooterButtons} />
   </body>
 </html>
+
+<script>
+  /* eslint-disable prettier/prettier */
+  if (navigator.serviceWorker) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('/sw.js', {
+        scope: '/',
+      });
+    });
+  }
+</script>
