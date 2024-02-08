@@ -13,11 +13,11 @@ const cacheList = [staticCacheName, pagesCacheName, imagesCacheName];
 function updateStaticCache() {
   return caches.open(staticCacheName).then((staticCache) => {
     return staticCache.addAll([
-      '/dist/fonts/HelveticaNowDisplay-Bold.woff',
-      '/dist/fonts/HelveticaNowDisplay-Bold.woff2',
-      '/dist/fonts/Printvetica.woff',
-      '/dist/fonts/Printvetica.woff2',
-      '/dist/icons.svg',
+      '/fonts/HelveticaNowDisplay-Bold.woff',
+      '/fonts/HelveticaNowDisplay-Bold.woff2',
+      '/fonts/Printvetica.woff',
+      '/fonts/Printvetica.woff2',
+      '/icons.svg',
     ]);
   });
 }
