@@ -4,6 +4,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  safelist: ['animate-spin'],
   theme: {
     colors: {
       core: '#C69754',
@@ -91,11 +92,12 @@ export default {
       'slide-in-right': 'slide-in-right 200ms linear forwards, hasHovered 1ms',
       'slide-out-right':
         'slide-out-right 200ms linear forwards, hasHovered 1ms paused',
-      'slide-in-top': 'slide-in-top 200ms ease-out forwards, hasHovered 1ms',
+      'slide-in-top': 'slide-in-top 250ms ease-out forwards, hasHovered 1ms',
       'slide-out-top':
-        'slide-out-top 200ms ease-out forwards, hasHovered 1ms paused',
+        'slide-out-top 250ms ease-out forwards, hasHovered 1ms paused',
       grain: 'grain 300ms steps(1, end) infinite',
       'fade-in': 'fade-in 0.8s cubic-bezier(0,0,.1,1) forwards',
+      spin: 'spin 35s linear infinite',
     },
     keyframes: {
       hasHovered: {
@@ -143,6 +145,9 @@ export default {
           opacity: 1,
           transform: 'scale(1)',
         },
+      },
+      spin: {
+        '100%': { transform: 'rotate(360deg)' },
       },
     },
 
