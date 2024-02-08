@@ -1,5 +1,108 @@
 ---
+import Button from 'components/Button.astro';
+import Icon from 'components/Icon.astro';
+import Image from 'components/Image.astro';
 import Layout from 'layouts/Layout.astro';
 ---
 
-<Layout hideFooterButtons />
+<Layout
+  hideFooterButtons
+  title="Billetterie & inscriptions pour Le GRAND Prix Romand de la Création"
+  description="Informations pour l’inscription au GRAND Prix Romand de la Création. Award / Prix le GRAND 2024."
+>
+  <section class="layout">
+    <h1 class="text-h-xl md:text-h-3xl my-20 md:my-40 uppercase">
+      <span class="block text-start"
+        >Billeterie <Icon
+          name="bird"
+          classes="size-7 md:size-20 text-neutral-100 -ml-1 md:-ml-4 inline align-top"
+        /></span
+      >
+
+      <span class="block md:text-end text-core"
+        >et<br class="md:hidden" /> inscription</span
+      >
+    </h1>
+  </section>
+
+  <section class="layout">
+    <div
+      class="relative grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-5 py-5 border-t border-neutral-100"
+    >
+      <h3 class="text-h-xl md:hidden">
+        <span>Cérémonie du</span>
+        <span class="text-core block uppercase">Grand</span>
+      </h3>
+      <Image
+        src="billeterie-et-inscriptions/1.jpg"
+        alt="Salle del Castillo de Vevey"
+        sizes="(min-width: 1820px) 833px, (min-width: 780px) 46.37vw, calc(100vw - 32px)"
+        classes="aspect-1"
+        fadeIn
+      />
+      <div class="flex flex-col justify-between">
+        <div>
+          <h3 class="text-h-2xl mb-10 max-md:hidden">
+            <span>Cérémonie du</span>
+            <span class="text-core block uppercase">Grand</span>
+          </h3>
+        </div>
+        <div class="md:grid grid-cols-2">
+          <p class="col-span-2 mb-4 md:mb-10 *:block">
+            <span> 6 juin 2024 </span>
+            <span> Salle del Castillo de Vevey </span>
+          </p>
+          <p class="col-span-2 mb-10 md:mb-16 *:block">
+            <span> Portes : 18:00 </span>
+            <span> Entrée : CHF 99.- </span>
+          </p>
+          <Button href="/#" scheme="core" classes="max-lg:col-span-2"
+            >Achetez vos billets</Button
+          >
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="relative grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-5 py-5 border-t md:border-b border-neutral-100"
+    >
+      <h3 class="text-h-xl md:hidden">
+        <span>Inscription au</span>
+        <span class="text-core block">concours</span>
+      </h3>
+      <div class="flex flex-col justify-between">
+        <div>
+          <h3 class="text-h-2xl mb-10">
+            <span>Inscription au</span>
+            <span class="text-core block">concours</span>
+          </h3>
+        </div>
+        <div class="md:grid grid-cols-2">
+          <p class="col-span-2 mb-4 md:mb-10 md:*:block">
+            <span>Earlybird jusqu’au 1er avril 2024 avec </span>
+            <span>1 invitation offerte pour la cérémonie</span>
+          </p>
+          <p class="col-span-2 mb-4 md:mb-10 *:block">
+            <span>CHF 200.- par projet</span>
+            <span class="text-core">Deadline d’inscription : 13 mai 2024</span>
+          </p>
+          <p class="col-span-2 mb-10 md:mb-16 md:*:block">
+            Une fois inscrit, vous recevrez un lien pour<br
+              class="max-md:hidden"
+            />uploader votre/vos projet(s).
+          </p>
+          <Button href="/#" classes="max-lg:col-span-2"
+            >Inscrire un projet</Button
+          >
+        </div>
+      </div>
+      <Image
+        src="billeterie-et-inscriptions/2.jpg"
+        alt="Salle del Castillo de Vevey"
+        sizes="(min-width: 1820px) 833px, (min-width: 780px) 46.37vw, calc(100vw - 32px)"
+        fadeIn
+        classes="aspect-1 max-md:row-start-2"
+      />
+    </div>
+  </section>
+</Layout>
