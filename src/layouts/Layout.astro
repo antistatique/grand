@@ -1,5 +1,7 @@
 ---
 import 'styles/base.css';
+import { ViewTransitions } from 'astro:transitions';
+
 import FlagLogo from 'components/FlagLogo.astro';
 import Footer from 'components/Footer.astro';
 import Header from 'components/Header.astro';
@@ -16,6 +18,7 @@ const { title, description, hideFooterButtons } = Astro.props;
 <!doctype html>
 <html lang="fr" class="[color-scheme:dark]">
   <head>
+    <ViewTransitions />
     <meta charset="UTF-8" />
     <title>
       {
@@ -74,16 +77,16 @@ const { title, description, hideFooterButtons } = Astro.props;
       <slot />
     </main>
     <Footer hideButtons={hideFooterButtons} />
+
+    <script>
+      /* eslint-disable prettier/prettier */
+      if (navigator.serviceWorker) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/sw.js', {
+            scope: '/',
+          });
+        });
+      }
+    </script>
   </body>
 </html>
-
-<script>
-  /* eslint-disable prettier/prettier */
-  if (navigator.serviceWorker) {
-    window.addEventListener('load', function () {
-      navigator.serviceWorker.register('/sw.js', {
-        scope: '/',
-      });
-    });
-  }
-</script>

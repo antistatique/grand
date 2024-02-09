@@ -89,7 +89,7 @@ const participants = [
           participants.map((participant, index) => (
             <li class="inline">
               <a href={participant.link}>
-                <span class="hover-underline after:bottom-1">
+                <span class="hover-underline after:bottom-1 whitespace-nowrap">
                   {participant.name +
                     `${index !== participants.length - 1 && ','}`}
                 </span>

@@ -14,7 +14,7 @@ const { Content } = await category.render();
 ---
 
 <li class="border-t last:border-b">
-  <DetailsModal title="Affichage commercial" classes="text-sm md:text-base">
+  <DetailsModal title={category.data.name} classes="text-sm md:text-base">
     <div
       slot="summary-content"
       class="relative flex justify-between items-center group overflow-clip"
@@ -22,7 +22,7 @@ const { Content } = await category.render();
       <p class="text-base md:text-h-xl lg:text-h-2xl">
         <span
           data-name={category.data.name}
-          class="inline-block py-2 md:pt-4 md:pb-3 mr-3 group-hover:text-core after:absolute after:py-2 after:md:pt-4 after:left-0 after:w-full after:md:pb-3 after:content-[attr(data-name)] after:-top-full animate-slide-out-top group-hover:animate-slide-in-top"
+          class="inline-block py-2 md:pt-4 md:pb-3 mr-3 group-hover:text-core md:delay-[110ms] after:absolute after:py-2 after:md:pt-4 after:left-0 after:w-full after:md:pb-3 after:content-[attr(data-name)] after:-top-full animate-slide-out-top md:group-hover:animate-slide-in-top"
         >
           {category.data.name}
         </span>

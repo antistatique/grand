@@ -102,17 +102,22 @@ const nav = [
 </header>
 
 <script>
-  /* eslint-disable prettier/prettier */
-  const mobileMenuToggle = document.getElementById(
-    'mobile-menu-toggle',
-  ) as HTMLInputElement;
-  const body = document.body;
+  const init = () => {
+    /* eslint-disable prettier/prettier */
+    const mobileMenuToggle = document.getElementById(
+      'mobile-menu-toggle',
+    ) as HTMLInputElement;
+    const body = document.body;
 
-  mobileMenuToggle.addEventListener('change', () => {
-    if (mobileMenuToggle.checked) {
-      body.classList.add('fixed');
-    } else {
-      body.classList.remove('fixed');
-    }
-  });
+    mobileMenuToggle.addEventListener('change', () => {
+      if (mobileMenuToggle.checked) {
+        body.classList.add('fixed');
+      } else {
+        body.classList.remove('fixed');
+      }
+    });
+  };
+
+  document.addEventListener('DOMContentLoaded', init);
+  document.addEventListener('astro:page-load', init);
 </script>

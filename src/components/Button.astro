@@ -6,6 +6,7 @@ interface Props {
   onClick?: string;
   classes?: string;
   scheme?: 'light' | 'dark' | 'core';
+  disabled?: boolean;
 }
 
 const {
@@ -14,12 +15,13 @@ const {
   onClick,
   classes,
   scheme = 'light',
+  disabled,
 } = Astro.props;
 ---
 
 <a
   rel={target === '_blank' ? 'noreferrer' : undefined}
-  href={href}
+  href={disabled ? undefined : href}
   target={target}
   class:list={[
     'relative flex justify-between rounded-lg p-3 h-24 group',
@@ -28,6 +30,7 @@ const {
       'bg-neutral-100 text-neutral-900 hover:ring-neutral-100/30',
     scheme === 'dark' && 'bg-neutral-900 text-core hover:ring-neutral-900/30',
     scheme === 'core' && 'bg-core text-neutral-900 hover:ring-core/30',
+    disabled && 'pointer-events-none opacity-50',
     classes,
   ]}
   onclick={onClick}

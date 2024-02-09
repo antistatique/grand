@@ -50,8 +50,9 @@ import key from '../assets/svgs/key.svg?raw';
       href="/"
       scheme="core"
       classes="md:mt-[min(min(50rem,calc(55vw-10rem)),max(26rem,calc(100vh-15.4rem)))] md:row-start-1 md:col-start-2 md:col-span-3 z-20"
+      disabled
     >
-      Billetterie et inscriptions
+      Billetterie et inscriptions<br />(Bientôt)
     </Button>
     <div
       class="col-span-full row-start-1 flex justify-end items-end pr-20 z-10 -mb-20 max-md:hidden pointer-events-none"
@@ -143,40 +144,45 @@ import key from '../assets/svgs/key.svg?raw';
 
 <script>
   /* eslint-disable prettier/prettier */
-  const counters =
-    document.querySelectorAll<HTMLSpanElement>('.counter-effect');
+  const init = () => {
+    const counters =
+      document.querySelectorAll<HTMLSpanElement>('.counter-effect');
 
-  const createCounter = (counter: HTMLSpanElement) => {
-    const targetCount = +counter.dataset.countTo!;
-    const SPEED = 1500 / targetCount;
-    let count = 0;
+    const createCounter = (counter: HTMLSpanElement) => {
+      const targetCount = +counter.dataset.countTo!;
+      const SPEED = 1500 / targetCount;
+      let count = 0;
 
-    const updateCounter = () => {
-      const inc = Math.ceil(targetCount / 100);
+      const updateCounter = () => {
+        const inc = Math.ceil(targetCount / 100);
 
-      if (count < targetCount) {
-        count += inc;
-        counter.innerText = count.toString();
-        setTimeout(updateCounter, SPEED);
-      } else {
-        counter.innerText = targetCount.toString();
-      }
+        if (count < targetCount) {
+          count += inc;
+          counter.innerText = count.toString();
+          setTimeout(updateCounter, SPEED);
+        } else {
+          counter.innerText = targetCount.toString();
+        }
+      };
+
+      updateCounter();
     };
 
-    updateCounter();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          createCounter(entry.target as HTMLSpanElement);
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    counters.forEach((counter) => {
+      counter.innerText = '0';
+      observer.observe(counter);
+    });
   };
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        createCounter(entry.target as HTMLSpanElement);
-        observer.unobserve(entry.target);
-      }
-    });
-  });
-
-  counters.forEach((counter) => {
-    counter.innerText = '0';
-    observer.observe(counter);
-  });
+  document.addEventListener('DOMContentLoaded', init);
+  document.addEventListener('astro:page-load', init);
 </script>

@@ -64,35 +64,40 @@ if (!img)
 </figure>
 
 <script>
-  /* eslint-disable prettier/prettier */
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      root: null,
-      threshold: 0.2,
-    },
-  );
+  const init = () => {
+    /* eslint-disable prettier/prettier */
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.2,
+      },
+    );
 
-  const images = document.querySelectorAll(
-    '[data-fade-in]',
-  ) as NodeListOf<HTMLImageElement>;
+    const images = document.querySelectorAll(
+      '[data-fade-in]',
+    ) as NodeListOf<HTMLImageElement>;
 
-  images.forEach((image) => {
-    image.classList.remove('animate-fade-in');
+    images.forEach((image) => {
+      image.classList.remove('animate-fade-in');
 
-    if (image.complete) {
-      image.classList.add('loaded');
-    } else {
-      image.addEventListener('load', () => image.classList.add('loaded'));
-    }
+      if (image.complete) {
+        image.classList.add('loaded');
+      } else {
+        image.addEventListener('load', () => image.classList.add('loaded'));
+      }
 
-    observer.observe(image);
-  });
+      observer.observe(image);
+    });
+  };
+
+  document.addEventListener('DOMContentLoaded', init);
+  document.addEventListener('astro:page-load', init);
 </script>

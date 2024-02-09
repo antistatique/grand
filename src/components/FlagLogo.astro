@@ -24,19 +24,24 @@ import flagLogo from 'assets/logos/flag-logo.svg';
 </div>
 <script>
   /* eslint-disable prettier/prettier */
-  const flagLogo = document.getElementById('flag-logo') as HTMLDivElement;
+  const init = () => {
+    const flagLogo = document.getElementById('flag-logo') as HTMLDivElement;
 
-  const handleScroll = () => {
-    if (window.scrollY > 150) {
-      flagLogo.classList.remove('-translate-y-full');
-      flagLogo.setAttribute('tabindex', '0');
-    }
-    if (window.scrollY <= 150) {
-      flagLogo.setAttribute('tabindex', '-1');
-      flagLogo.classList.add('-translate-y-full');
-    }
+    const handleScroll = () => {
+      if (window.scrollY > 150) {
+        flagLogo.classList.remove('-translate-y-full');
+        flagLogo.setAttribute('tabindex', '0');
+      }
+      if (window.scrollY <= 150) {
+        flagLogo.setAttribute('tabindex', '-1');
+        flagLogo.classList.add('-translate-y-full');
+      }
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
   };
 
-  handleScroll();
-  window.addEventListener('scroll', handleScroll);
+  document.addEventListener('DOMContentLoaded', init);
+  document.addEventListener('astro:page-load', init);
 </script>

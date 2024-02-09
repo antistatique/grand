@@ -45,7 +45,7 @@ const images: SliderImg = [
         images.map(({ src, description, alt, size }) => (
           <li
             class:list={[
-              'splide__slide mr-4 md:mr-5',
+              'splide__slide !mr-4 md:!mr-5',
               size === 'wide'
                 ? 'w-[calc(83.3vw-1.8rem)] md:w-[min(52.1rem,calc(50vw-2.3rem))]'
                 : 'w-[calc(66.6vw-1.6rem)] md:w-[min(34.4rem,calc(34vw-2.6rem))]',
@@ -78,13 +78,18 @@ const images: SliderImg = [
   /* eslint-disable prettier/prettier */
   import { Splide } from '@splidejs/splide';
 
-  new Splide('.splide', {
-    type: 'loop',
-    rewind: true,
-    autoWidth: true,
-    arrows: false,
-    pagination: false,
-    speed: 1000,
-    flickPower: 200,
-  }).mount();
+  const init = () => {
+    new Splide('.splide', {
+      type: 'loop',
+      rewind: true,
+      autoWidth: true,
+      arrows: false,
+      pagination: false,
+      speed: 1000,
+      flickPower: 200,
+    }).mount();
+  };
+
+  document.addEventListener('DOMContentLoaded', init);
+  document.addEventListener('astro:page-load', init);
 </script>
