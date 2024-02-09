@@ -44,8 +44,11 @@ const { Content } = await jury.render();
       <Content />
     </div>
 
-    <Button href={jury.data.link} scheme="dark" classes="max-w-60"
-      >LinkedIn</Button
+    <Button
+      target="_blank"
+      href={jury.data.link}
+      scheme="dark"
+      classes="max-w-60">LinkedIn</Button
     >
   </div>
 </DetailsModal>

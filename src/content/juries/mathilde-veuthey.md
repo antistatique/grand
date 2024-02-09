@@ -3,7 +3,7 @@ name: "Mathilde Veuthey"
 position: "Graphiste indépendante"
 background: "jury/mathilde-veuthey.jpg"
 foreground: null
-link: "linkedin.com/in/mathilde-veuthey-62227323"
+link: "https://www.linkedin.com/in/mathilde-veuthey-62227323"
 ---
 Graphiste et illustratrice indépendante depuis 2010, Mathilde Veuthey est une véritable spécialiste du graphisme imprimé, et plus particulièrement de l'affiche, avec une passion marquée pour l'iconographie rétro et les techniques d'impression anciennes. Son travail s'inspire fréquemment des codes suisse et américain des années 50 à 70. 
 

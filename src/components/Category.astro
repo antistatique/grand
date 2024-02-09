@@ -56,10 +56,14 @@ const { Content } = await category.render();
         category.data.registrationLink && (
           <Button
             href={category.data.registrationLink}
+            target="_blank"
             scheme="dark"
             classes="max-w-72"
+            disabled
           >
             Inscrire un projet
+            <br />
+            (Bientôt)
           </Button>
         )
       }
