@@ -5,4 +5,4 @@ registrationLink: "https://inscription.associationgrand.ch/grand/?category=CREAT
 order: 0
 ---
 
-Cette catégorie récompense les films d’une durée maximale de 180 sec. Les films doivent avoir été diffusés à la télévision et/ou au cinéma et/ou sur le web. Les films inscrits dans cette catégorie seront jugés selon un barème de notes basé avant tout sur la créativité du concept, l’originalité de la narration et la clarté du message.
+La catégorie créative film récompense les films publicitaires diffusés en TV, au cinéma ou sur le web, selon un barème de notes basé sur la créativité du concept et l’originalité de la narration.

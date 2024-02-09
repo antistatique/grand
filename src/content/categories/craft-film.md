@@ -5,4 +5,4 @@ registrationLink: "https://inscription.associationgrand.ch/grand/?category=CRAFT
 order: 1
 ---
 
-Cette catégorie récompense les films d’une durée maximale de 180 sec. Les films doivent avoir été diffusés à la télévision et/ou au cinéma et/ou sur le web. Les films inscrits dans cette catégorie seront jugés selon un barème de notes basé avant tout sur les qualités techniques de la réalisation, mais aussi sur l’originalité de la narration et la clarté du message.
+La catégorie Craft Film récompense les films publicitaires diffusés en TV, au cinéma ou sur le web, selon un barème de notes basé sur l’excellence technique en termes de réalisation et de production.
