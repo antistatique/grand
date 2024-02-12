@@ -1,0 +1,101 @@
+---
+import Button from 'components/Button.astro';
+import Icon from 'components/Icon.astro';
+import Image from 'components/Image.astro';
+import Layout from 'layouts/Layout.astro';
+---
+
+<Layout
+  hideFooterButtons
+  title="Billetterie & inscriptions pour Le GRAND Prix Romand de la Création"
+  description="Informations pour l’inscription au GRAND Prix Romand de la Création. Award / Prix le GRAND 2024."
+>
+  <section class="layout">
+    <h1
+      class="text-h-xl md:text-h-3xl my-20 md:my-40 uppercase flex justify-between items-top"
+    >
+      <span class="block text-start text-core">Le Petit</span>
+      <Icon
+        name="plus"
+        classes="size-8 md:size-20 text-neutral-100 -ml-1 md:-ml-4 inline align-top"
+      />
+    </h1>
+  </section>
+
+  <section class="layout mb-20 md:mb-40">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-5">
+      <div class="relative aspect-1">
+        <Image
+          src="le-petit/1.jpg"
+          alt="Un jeune homme qui tient le prix dans ses mains"
+          sizes="(min-width: 1820px) 833px, (min-width: 780px) 46.37vw, calc(100vw - 32px)"
+          fadeIn
+        />
+        <p
+          aria-hidden
+          class="max-md:hidden absolute left-3 bottom-3 text-code z-20"
+        >
+          01110000 01101111 01110101 01110010 00100000<br /> 01110101 01101110 01100101
+        </p>
+      </div>
+      <div class="flex flex-col justify-between">
+        <div
+          class="md:text-lg lg:grid grid-cols-6 gap-5 space-y-4 md:space-y-5 *:col-span-5"
+        >
+          <p>
+            Pour la seconde année consécutive, on fait briller les créatif·ve·s
+            de demain avec le Petit : Le concours junior du GRAND.
+          </p>
+          <p>
+            Ouvert aux étudiant·e·s et jeunes professionnel·le·s (2 ans
+            d’expérience max) de la communication et du design, il juge les
+            participant·e·s, seul·e ou en binôme, sur leur habilité à répondre
+            créativement au brief 2024 fourni par El Tony Mate.
+          </p>
+        </div>
+        <div>
+          <p class="my-10">Dates clés</p>
+          <table class="block">
+            <tbody
+              class="block w-full *:border-t last:*:border-b *:block md:*:grid *:grid-cols-2 *:gap-5 *:py-3 align-baseline"
+            >
+              <tr class="max-md:*:block max-md:first:*:text-core">
+                <td>18 mars 2024 à 10:00</td>
+                <td>Publication du brief</td>
+              </tr>
+              <tr class="max-md:*:block max-md:first:*:text-core">
+                <td>18 avril 2024 à 20:00</td>
+                <td>Fermeture des inscriptions</td>
+              </tr>
+              <tr class="max-md:*:block max-md:first:*:text-core">
+                <td>6 juin 2024</td>
+                <td>Annonce du gagnant lors de la cérémonie du GRAND</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="layout">
+    <div class="py-5 border-y">
+      <h2 class="text-h-xl md:text-h-2xl mb-10 md:mb-30">
+        Faites une <span class="text-core">entrée remarquée</span><br />
+        dans le milieu
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-3 md:gap-5 items-end">
+        <p class="col-span-2 max-md:mb-10">Frais d'inscription : 50 CHF</p>
+        <Button
+          href="https://inscription.associationgrand.ch/wp-content/uploads/2023/02/GRAND_Reglement-2023.pdf"
+          target="_blank"
+          classes="max-lg:col-span-2">Télécharger le brief 2024</Button
+        >
+        <Button scheme="core" disabled href="/#" classes="max-lg:col-span-2"
+          >Inscrire un projet<br />(Bientôt)</Button
+        >
+      </div>
+    </div>
+  </section>
+</Layout>

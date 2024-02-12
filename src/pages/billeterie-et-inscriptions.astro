@@ -98,13 +98,20 @@ import Layout from 'layouts/Layout.astro';
           >
         </div>
       </div>
-      <Image
-        src="billeterie-et-inscriptions/2.jpg"
-        alt="Salle del Castillo de Vevey"
-        sizes="(min-width: 1820px) 833px, (min-width: 780px) 46.37vw, calc(100vw - 32px)"
-        fadeIn
-        classes="aspect-1 max-md:row-start-2"
-      />
+      <div class="relative aspect-1 max-md:row-start-2">
+        <Image
+          src="billeterie-et-inscriptions/2.jpg"
+          alt="Salle del Castillo de Vevey"
+          sizes="(min-width: 1820px) 833px, (min-width: 780px) 46.37vw, calc(100vw - 32px)"
+          fadeIn
+        />
+        <p
+          aria-hidden
+          class="max-md:hidden absolute right-3 bottom-2.5 text-code z-20"
+        >
+          01000111 01010010 01000001 01001110 01000100
+        </p>
+      </div>
     </div>
   </section>
 </Layout>

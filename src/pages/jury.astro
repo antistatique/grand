@@ -27,7 +27,7 @@ const juries = await getCollection('juries');
       >
     </h1>
     <ul
-      class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 md:gap-x-5 gap-y-10 md:gap-y-30"
+      class="relative grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 md:gap-x-5 gap-y-10 md:gap-y-30"
     >
       {
         juries.map((jury) => (
@@ -36,6 +36,12 @@ const juries = await getCollection('juries');
           </li>
         ))
       }
+      <p
+        aria-hidden
+        class="max-md:hidden absolute -right-4 lg:right-0 bottom-28 lg:bottom-[5.5rem] xl:bottom-16 text-code [writing-mode:tb-rl] rotate-180 z-20"
+      >
+        01000111 01010010 01000001 01001110 01000100
+      </p>
     </ul>
   </div>
 </Layout>

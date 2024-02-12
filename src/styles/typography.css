@@ -10,4 +10,10 @@
   .text-h-xl {
     @apply text-xl font-display;
   }
+
+  .text-code {
+    @apply font-mono text-[11px] leading-[13px];
+    
+    font-feature-settings: 'ss04' on;
+  }
 }
