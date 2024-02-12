@@ -9,12 +9,12 @@ import flagLogo from 'assets/logos/flag-logo.svg';
   <button
     type="button"
     id="flag-logo"
-    class="-translate-y-full bg-core transition-transform h-16 w-12 md:left-5 overflow-clip group ease-linear duration-200 pointer-events-auto"
+    class="ease-in-out -translate-y-full bg-core transition-transform h-16 w-12 md:left-5 overflow-clip group duration-[400ms] pointer-events-auto"
     onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
   >
     <div
       aria-hidden
-      class="md:group-hover:-translate-y-1/2 md:group-focus-visible:-translate-y-1/2 transition-transform ease-linear duration-200"
+      class="md:group-hover:-translate-y-1/2 md:group-focus-visible:-translate-y-1/2 transition-transform duration-[400ms] ease-in-out"
     >
       <Image src={flagLogo} alt="" />
       <Image src={flagArrow} alt="" />
