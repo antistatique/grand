@@ -8,20 +8,20 @@ import Layout from 'layouts/Layout.astro';
 const categories = await getCollection('categories');
 
 const participants = [
-  { name: 'Havas', link: '#' },
-  { name: 'Franz&René', link: '#' },
-  { name: 'Cavalcade', link: '#' },
-  { name: 'M&C Saatchi', link: '#' },
-  { name: 'Créatives', link: '#' },
-  { name: 'Farner', link: '#' },
-  { name: 'Trio', link: '#' },
-  { name: 'Octane', link: '#' },
-  { name: 'Moser Design', link: '#' },
-  { name: 'Karim Merzoug', link: '#' },
-  { name: '23bis', link: '#' },
-  { name: 'Forme', link: '#' },
-  { name: 'North Communication', link: '#' },
-  { name: 'Parenti Design', link: '#' },
+  { name: 'Havas', link: 'https://swiss.havas.com/' },
+  { name: 'Franz&René', link: 'https://www.franzetrene.ch/' },
+  { name: 'Cavalcade', link: 'https://www.cavalcade.ch/' },
+  { name: 'M&C Saatchi', link: 'https://www.mcsaatchi.ch/' },
+  { name: 'Créatives', link: 'https://creatives.com/projets/' },
+  { name: 'Farner', link: 'https://www.farner.ch/en/' },
+  { name: 'Trio', link: 'https://trio.ch/' },
+  { name: 'Octane', link: 'https://www.octane-com.ch/' },
+  { name: 'Moser Design', link: 'https://moserdesign.ch/en/' },
+  { name: 'Karim Merzoug', link: 'https://karim.merzoug.ch/' },
+  { name: '23bis', link: 'https://23bis.ch/en' },
+  { name: 'Forme', link: 'https://www.forme.ch/' },
+  { name: 'North Communication', link: 'https://www.north-communication.ch/' },
+  { name: 'Parenti Design', link: 'https://www.parentidesign.com/' },
 ];
 ---
 
@@ -88,10 +88,10 @@ const participants = [
         {
           participants.map((participant, index) => (
             <li class="inline">
-              <a href={participant.link}>
+              <a href={participant.link} target="_blank">
                 <span class="hover-underline after:bottom-1 whitespace-nowrap">
                   {participant.name +
-                    `${index !== participants.length - 1 && ','}`}
+                    `${index !== participants.length - 1 ? ',' : ''}`}
                 </span>
               </a>
             </li>
