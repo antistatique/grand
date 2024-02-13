@@ -7,6 +7,7 @@ interface Props {
   classes?: string;
   scheme?: 'light' | 'dark' | 'core';
   disabled?: boolean;
+  download?: string;
 }
 
 const {
@@ -16,6 +17,7 @@ const {
   classes,
   scheme = 'light',
   disabled,
+  download,
 } = Astro.props;
 ---
 
@@ -34,6 +36,9 @@ const {
     classes,
   ]}
   onclick={onClick}
+  {...download && {
+    download,
+  }}
 >
   <span>
     <slot />
