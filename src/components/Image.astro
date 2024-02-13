@@ -1,7 +1,5 @@
 ---
-import { Picture, Image as Img } from 'astro:assets';
-
-import grain from '../assets/images/grain.png';
+import { Picture } from 'astro:assets';
 
 import type { ImageMetadata } from 'astro';
 interface Props {
@@ -29,19 +27,12 @@ if (!img)
   );
 ---
 
-<figure class:list={['relative overflow-clip bg-neutral-100/5 ', classes]}>
-  <Img
-    class="absolute inset-0 z-10 object-cover animate-grain mix-blend-soft-light origin-center pointer-events-none w-full h-full"
-    src={grain}
-    alt=""
-    format="avif"
-    widths={[256, 384, 690, 750, 828, 1080, 1400, 1920, 2048]}
-    sizes={sizes}
+<figure class:list={['relative overflow-clip bg-neutral-900 isolate', classes]}>
+  <div
     aria-hidden
-    loading="eager"
-    fetchpriority="high"
-    onload="this.classList.add('animate-fade-in')"
-  />
+    class="absolute inset-0 z-10 bg-[url(../assets/images/grain.gif)] mix-blend-soft-light opacity-30"
+  >
+  </div>
   <Picture
     class:list={[
       'size-full object-cover',

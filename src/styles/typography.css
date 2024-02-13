@@ -12,7 +12,7 @@
   }
 
   .text-code {
-    @apply font-mono text-[11px] leading-[13px];
+    @apply font-mono text-[9px] md:text-[11px] leading-[13px];
     
     font-feature-settings: 'ss04' on;
   }

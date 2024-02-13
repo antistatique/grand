@@ -6,27 +6,53 @@ type SliderImg = {
   src: string;
   description?: string;
   alt: string;
-  size: 'wide' | 'narrow';
+  size: 'wide' | 'medium' | 'narrow';
 }[];
 
 const images: SliderImg = [
   {
+    src: 'homepage/slider/4.jpg',
+    alt: '',
+    size: 'narrow',
+  },
+  {
     src: 'homepage/slider/1.jpg',
-    description: 'Cérémonie 2023 à Lausanne.',
     alt: 'Zoom sur un public assis dans une salle.',
     size: 'wide',
   },
   {
     src: 'homepage/slider/2.jpg',
-    description: 'Rencontres entre créatifs.',
     alt: 'Deux personnes en train de discuter.',
-    size: 'narrow',
+    size: 'medium',
   },
   {
     src: 'homepage/slider/3.jpg',
-    description:
-      '23bis sur scène pour leur prix dans la catégorie “Creative Film”.',
     alt: '5 personnes sur scene en train de recevoir un prix.',
+    size: 'wide',
+  },
+  {
+    src: 'homepage/slider/4.jpg',
+    alt: '',
+    size: 'narrow',
+  },
+  {
+    src: 'homepage/slider/5.jpg',
+    alt: '',
+    size: 'medium',
+  },
+  {
+    src: 'homepage/slider/6.jpg',
+    alt: '',
+    size: 'wide',
+  },
+  {
+    src: 'homepage/slider/7.jpg',
+    alt: '',
+    size: 'narrow',
+  },
+  {
+    src: 'homepage/slider/8.jpg',
+    alt: '',
     size: 'wide',
   },
 ];
@@ -46,9 +72,12 @@ const images: SliderImg = [
           <li
             class:list={[
               'splide__slide !mr-4 md:!mr-5',
-              size === 'wide'
-                ? 'w-[calc(83.3vw-1.8rem)] md:w-[min(52.1rem,calc(50vw-2.3rem))]'
-                : 'w-[calc(66.6vw-1.6rem)] md:w-[min(34.4rem,calc(34vw-2.6rem))]',
+              size === 'wide' &&
+                'w-[calc(83.3vw-1.8rem)] md:w-[min(52.1rem,calc(50vw-2.3rem))]',
+              size === 'medium' &&
+                'w-[calc(66.6vw-1.6rem)] md:w-[min(34.4rem,calc(34vw-2.6rem))]',
+              size === 'narrow' &&
+                'w-[calc(43.5vw-1.6rem)] md:w-[min(25.3rem,calc(25.5vw-2.2rem))]',
             ]}
           >
             <div>
