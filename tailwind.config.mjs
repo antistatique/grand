@@ -4,7 +4,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-  safelist: ['animate-spin'],
+  safelist: ['animate-spin', 'origin-center'],
   theme: {
     colors: {
       core: '#C69754',
