@@ -1,6 +1,6 @@
 'use strict';
 
-const version = '2-20240215';
+const version = '3-0240215';
 const staticCacheName = version + 'static';
 const pagesCacheName = version + 'pages';
 const imagesCacheName = 'images';
@@ -36,7 +36,6 @@ function cacheClients() {
     })
     .then(() => {
       caches.open(pagesCacheName).then((pagesCache) => {
-        console.log(pagesCache);
         return pagesCache.addAll(pages);
       });
     });
@@ -47,7 +46,8 @@ async function clearOldCaches() {
   return caches.keys().then((keys) => {
     return Promise.all(
       keys
-        .filter((key) => !cacheList.includes(key))
+        // @TODO: optimize cache
+        // .filter((key) => !cacheList.includes(key))
         .map((key) => caches.delete(key)),
     );
   });
