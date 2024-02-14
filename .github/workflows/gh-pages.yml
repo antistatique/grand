@@ -1,0 +1,42 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - dev-2024
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set deployment environment variables based on Git branches
+        id: deploy_target
+        run: |
+          if [[ $GITHUB_REF == 'refs/heads/dev-2024' ]]; then
+              echo "DEPLOY_TARGET=sites/staging.associationgrand.ch" >> $GITHUB_ENV
+          fi
+
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build with astro
+        run: yarn build
+
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@v3
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_SSH_KEY }}
+          SSH_CMD_ARGS: "-o StrictHostKeyChecking=no -o PubkeyAcceptedKeyTypes=ssh-rsa"
+          SOURCE: "build/"
+          REMOTE_HOST: "ig7dp.ftp.infomaniak.com"
+          REMOTE_USER: "ig7dp_antistatique"
+          TARGET: "${{ env.DEPLOY_TARGET }}"
