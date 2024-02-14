@@ -108,7 +108,11 @@ const sponsors = [
       {
         Object.values(sponsors).map(({ logoPath, url }) => (
           <li>
-            <a href={url} target="_blank" class="block aspect-1 p-5 md:p-10">
+            <a
+              href={url}
+              target="_blank"
+              class="block aspect-1 p-5 md:p-10 cursor-pointer"
+            >
               <Image
                 src={sponsorsSvgs[`../assets/svgs/sponsors/${logoPath}`]()}
                 alt=""
