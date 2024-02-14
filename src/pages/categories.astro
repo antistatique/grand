@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 
+import Button from 'components/Button.astro';
 import Category from 'components/Category.astro';
 import Image from 'components/Image.astro';
 import Layout from 'layouts/Layout.astro';
@@ -88,6 +89,19 @@ const participants = [
           .map((category) => <Category category={category} />)
       }
     </ul>
+  </section>
+
+  <!-- DOWNLOAD PDF -->
+  <section class="layout my-20 md:my-40">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-5 md:text-lg">
+      <h2 class="col-span-2">Règlement</h2>
+      <Button
+        href="/GRAND_Reglement-2024.pdf"
+        download="GRAND_Reglement-2024"
+        target="_blank"
+        classes="max-lg:col-span-2">Télécharger le brief 2024</Button
+      >
+    </div>
   </section>
 
   <!-- PARTICIPANTS -->

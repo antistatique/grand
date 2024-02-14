@@ -1,6 +1,6 @@
 'use strict';
 
-const version = '20240212';
+const version = '20240214';
 const staticCacheName = version + 'static';
 const pagesCacheName = 'pages';
 const imagesCacheName = 'images';
@@ -10,7 +10,7 @@ const timeout = 5000; // Number of milliseconds before timing out
 
 const cacheList = [staticCacheName, pagesCacheName, imagesCacheName];
 
-function updateStaticCache() {
+async function updateStaticCache() {
   return caches.open(staticCacheName).then((staticCache) => {
     return staticCache.addAll([
       '/fonts/HelveticaNowDisplay-Bold.woff',
@@ -43,7 +43,7 @@ function cacheClients() {
 }
 
 // Remove caches whose name is no longer valid
-function clearOldCaches() {
+async function clearOldCaches() {
   return caches.keys().then((keys) => {
     return Promise.all(
       keys

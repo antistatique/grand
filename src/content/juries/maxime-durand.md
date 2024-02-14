@@ -1,8 +1,10 @@
 ---
 name: "Maxime Durand"
-position: "Concepteur-Rédacteur Senior"
+position: "Film Director chez maximedurand.net"
 background: "jury/maxime-durand.jpg"
 foreground: "jury/maxime-durand-hover.jpg"
-link: "https://www.linkedin.com/in/antoinekarpat"
+link: "https://www.linkedin.com/in/maximedurand/"
 ---
-Fort de son expérience publicitaire acquise dans de grandes agences internationales, Antoine est un créatif primé doublé d’un enseignant. Avec sa bonne humeur légendaire, rien ne l'épanouit plus que de trouver de nouveaux concepts et de transmettre cette passion à ses étudiant(e)s entre deux parcours de golf.
+Débutant sa carrière du côté de la gestion de projet en tant qu’account manager, Maxime Durand passe du côté des créatifs à grand coup de nuits blanches. C’est en complet autodidacte qu’il s’empare de la caméra et développe son œil et son style avec une approche multidisciplinaire combinant tournage, 3D et design dans des créations multi-couches.
+
+Aujourd’hui devenu “le mec derrière le mec derrière la caméra” il compte dans ses réalisations des films pour des marques telles que Jean Paul Gaultier, Audemars Piguet, The North Face ou encore l'Occitane en Provence.
