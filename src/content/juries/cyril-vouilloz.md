@@ -1,6 +1,6 @@
 ---
 name: "Cyril Vouilloz aka RYLSEE"
-position: "Creative Director & Founder chez Studio Panpan"
+position: "Artiste"
 background: "jury/cyril-vouilloz.jpg"
 foreground: "jury/cyril-vouilloz-hover.jpg"
 link: "https://www.linkedin.com/in/cyril-vouilloz-9a5a5363/"
