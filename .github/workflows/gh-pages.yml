@@ -3,7 +3,8 @@ name: Deploy
 on:
   push:
     branches:
-      - dev-2024
+      - main-2024
+      - dev
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -15,8 +16,11 @@ jobs:
       - name: Set deployment environment variables based on Git branches
         id: deploy_target
         run: |
-          if [[ $GITHUB_REF == 'refs/heads/dev-2024' ]]; then
+          if [[ $GITHUB_REF == 'refs/heads/dev' ]]; then
               echo "DEPLOY_TARGET=sites/staging.associationgrand.ch" >> $GITHUB_ENV
+          fi
+          if [[ $GITHUB_REF == 'refs/heads/main-2024' ]]; then
+            echo "DEPLOY_TARGET=sites/associationgrand.ch" >> $GITHUB_ENV
           fi
 
       - uses: actions/checkout@v3
