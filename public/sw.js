@@ -1,8 +1,8 @@
 'use strict';
 
-const version = '20240215';
+const version = '2-20240215';
 const staticCacheName = version + 'static';
-const pagesCacheName = 'pages';
+const pagesCacheName = version + 'pages';
 const imagesCacheName = 'images';
 const maxPages = 50; // Maximum number of pages to cache
 const maxImages = 100; // Maximum number of images to cache
