@@ -36,11 +36,11 @@ jobs:
         run: yarn build
 
       - name: Deploy to Server
-        uses: easingthemes/ssh-deploy@v3
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_SSH_KEY }}
-          SSH_CMD_ARGS: "-o StrictHostKeyChecking=no -o PubkeyAcceptedKeyTypes=ssh-rsa"
-          SOURCE: "dist/"
-          REMOTE_HOST: "ig7dp.ftp.infomaniak.com"
-          REMOTE_USER: "ig7dp_antistatique"
-          TARGET: "${{ env.DEPLOY_TARGET }}"
+        uses: burnett01/rsync-deployments@6.0.0
+        with:
+          switches: -avzr --delete
+          path: dist/
+          remote_path: ${{ env.DEPLOY_TARGET }}
+          remote_host: "ig7dp.ftp.infomaniak.com"
+          remote_user: "ig7dp_antistatique"
+          remote_key: ${{ secrets.PRIVATE_SSH_KEY }}
