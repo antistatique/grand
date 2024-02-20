@@ -38,15 +38,18 @@ const { hideButtons } = Astro.props;
     !hideButtons && (
       <div class="md:col-span-8 lg:col-span-6 lg:col-start-2 max-md:mb-10">
         <div class="grid sm:grid-cols-2 gap-5">
-          <Button href="/" disabled>
+          <Button
+            href="https://inscription.associationgrand.ch/grand/"
+            target="_blank"
+          >
             Inscrire un projet
-            <br />
-            (Bientôt)
           </Button>
-          <Button href="/" scheme="core" disabled>
+          <Button
+            href="https://my.weezevent.com/gala-du-grand-2024"
+            target="_blank"
+            scheme="core"
+          >
             Achetez vos billets
-            <br />
-            (Bientôt)
           </Button>
         </div>
       </div>

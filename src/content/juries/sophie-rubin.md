@@ -1,6 +1,6 @@
 ---
 name: "Sophie Rubin"
-position: "Co-fondatricen de WePlayDesign"
+position: "Co-fondatrice de WePlayDesign"
 background: "jury/sophie-rubin.jpg"
 foreground: "jury/sophie-rubin-hover.jpg"
 link: "https://www.linkedin.com/in/sophie-rubin/"

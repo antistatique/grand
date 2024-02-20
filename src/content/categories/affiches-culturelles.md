@@ -1,7 +1,7 @@
 ---
 name: "Affiches Culturelles"
 isNew: true
-registrationLink: "https://inscription.associationgrand.ch/grand/?category=AFFICHAGE%20CULTUREL"
+registrationLink: "https://inscription.associationgrand.ch/grand/?category=Affiches%20Culturelles"
 order: 2
 ---
 

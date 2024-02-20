@@ -1,7 +1,7 @@
 ---
 name: "Creative Film"
 isNew: false
-registrationLink: "https://inscription.associationgrand.ch/grand/?category=CREATIVE%20FILM"
+registrationLink: "https://inscription.associationgrand.ch/grand/?category=Creative%20Film"
 order: 0
 ---
 

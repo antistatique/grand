@@ -1,7 +1,7 @@
 ---
 name: "Creative Web"
 isNew: true
-registrationLink: "https://inscription.associationgrand.ch/grand/?category=CREATIVE%20WEB"
+registrationLink: "https://inscription.associationgrand.ch/grand/?category=Creative%20Web"
 order: 6
 ---
 

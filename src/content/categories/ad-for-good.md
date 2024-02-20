@@ -1,7 +1,7 @@
 ---
 name: "Ad For Good"
 isNew: false
-registrationLink: "https://inscription.associationgrand.ch/grand/?category=AD%20FOR%20GOOD"
+registrationLink: "https://inscription.associationgrand.ch/grand/?category=Ad%20For%20Good"
 order: 7
 ---
 
