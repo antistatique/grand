@@ -36,11 +36,12 @@ jobs:
         run: yarn build
 
       - name: Deploy to Server
-        uses: easingthemes/ssh-deploy@v3
+        uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_SSH_KEY }}
           SSH_CMD_ARGS: "-o StrictHostKeyChecking=no -o PubkeyAcceptedKeyTypes=ssh-rsa"
+          ARGS: "-avz --delete"
           SOURCE: "dist/"
           REMOTE_HOST: "ig7dp.ftp.infomaniak.com"
           REMOTE_USER: "ig7dp_antistatique"
-          TARGET: "${{ env.DEPLOY_TARGET }}"
+          TARGET: ${{ env.DEPLOY_TARGET }}

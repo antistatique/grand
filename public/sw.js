@@ -1,8 +1,8 @@
 'use strict';
 
-const version = '20240215';
+const version = '20240220';
 const staticCacheName = version + 'static';
-const pagesCacheName = 'pages';
+const pagesCacheName = version + 'pages';
 const imagesCacheName = 'images';
 const maxPages = 50; // Maximum number of pages to cache
 const maxImages = 100; // Maximum number of images to cache
@@ -36,7 +36,6 @@ function cacheClients() {
     })
     .then(() => {
       caches.open(pagesCacheName).then((pagesCache) => {
-        console.log(pagesCache);
         return pagesCache.addAll(pages);
       });
     });
@@ -47,7 +46,8 @@ async function clearOldCaches() {
   return caches.keys().then((keys) => {
     return Promise.all(
       keys
-        .filter((key) => !cacheList.includes(key))
+        // @TODO: optimize cache
+        // .filter((key) => !cacheList.includes(key))
         .map((key) => caches.delete(key)),
     );
   });

@@ -1,7 +1,7 @@
 ---
 name: "Craft Film"
 isNew: false
-registrationLink: "https://inscription.associationgrand.ch/grand/?category=CRAFT%20FILM"
+registrationLink: "https://inscription.associationgrand.ch/grand/?category=Craft%20Film"
 order: 1
 ---
 

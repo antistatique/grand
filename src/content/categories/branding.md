@@ -1,7 +1,7 @@
 ---
 name: "Branding"
 isNew: false
-registrationLink: "https://inscription.associationgrand.ch/grand/?category=BRANDING"
+registrationLink: "https://inscription.associationgrand.ch/grand/?category=Branding"
 order: 5
 ---
 

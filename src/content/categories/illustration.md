@@ -1,7 +1,7 @@
 ---
 name: "Illustration"
 isNew: true
-registrationLink: "https://inscription.associationgrand.ch/grand/?category=ILLUSTRATION"
+registrationLink: "https://inscription.associationgrand.ch/grand/?category=Illustration"
 order: 8
 ---
 

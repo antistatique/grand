@@ -1,7 +1,7 @@
 ---
 name: "Affiches et Annonces"
 isNew: false
-registrationLink: "https://inscription.associationgrand.ch/grand/?category=AFFICHAGE%20%26%20ANNONCES"
+registrationLink: "https://inscription.associationgrand.ch/grand/?category=Affiches%20et%20Annonces"
 order: 3
 ---
 
