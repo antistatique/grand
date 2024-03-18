@@ -87,11 +87,16 @@ import Layout from 'layouts/Layout.astro';
 
       <div class="grid grid-cols-1 md:grid-cols-4 gap-3 md:gap-5 items-end">
         <p class="col-span-2 max-md:mb-10">Frais d'inscription : 50 CHF</p>
-        <Button disabled href="/#" classes="max-lg:col-span-2"
-          >Télécharger le brief 2024<br />(Bientôt)</Button
+        <Button
+          href="/24-03-GRAND-BRIEF.pdf"
+          download="24-03-GRAND-BRIEF"
+          target="_blank"
+          classes="max-lg:col-span-2">Télécharger le brief 2024</Button
         >
-        <Button scheme="core" disabled href="/#" classes="max-lg:col-span-2"
-          >Inscrire un projet<br />(Bientôt)</Button
+        <Button
+          scheme="core"
+          href="https://inscription.associationgrand.ch/petit"
+          classes="max-lg:col-span-2">Inscrire un projet</Button
         >
       </div>
     </div>
