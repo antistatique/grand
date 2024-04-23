@@ -1,6 +1,7 @@
 ---
 name: "Le Petit"
 isNew: false
+registrationLink: "https://inscription.associationgrand.ch/petit"
 order: 9
 ---
 

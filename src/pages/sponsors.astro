@@ -28,14 +28,10 @@ const sponsors = [
     logoPath: 'yuh.svg',
     url: 'https://www.yuh.com/',
   },
-  // {
-  //   logoPath: 'abp.svg',
-  //   url: 'https://www.abp-project.ch/',
-  // },
-  // {
-  //   logoPath: 'crea.svg',
-  //   url: 'https://www.creageneve.com/',
-  // },
+  {
+    logoPath: 'crea.svg',
+    url: 'https://www.creageneve.com/',
+  },
   {
     logoPath: 'goldbach.svg',
     url: 'https://goldbach.com/ch/fr/home',
@@ -44,30 +40,22 @@ const sponsors = [
     logoPath: 'mahakala.svg',
     url: 'https://mahakala.ch/',
   },
-  // {
-  //   logoPath: 'morand.svg',
-  //   url: 'https://www.morand.ch/',
-  // },
+  {
+    logoPath: 'obrist.svg',
+    url: 'https://www.obrist.ch/fr/',
+  },
   {
     logoPath: 'polygravia.svg',
     url: 'https://polygravia.ch/pag-accueil/',
   },
-  // {
-  //   logoPath: 'remarq.svg',
-  //   url: 'https://www.remarq.ch/',
-  // },
+  {
+    logoPath: 'remarq.svg',
+    url: 'https://www.remarq.ch/',
+  },
   {
     logoPath: 'sga.svg',
     url: 'https://www.apgsga.ch/fr/',
   },
-  // {
-  //   logoPath: 'tkm.svg',
-  //   url: 'https://www.tkm.ch/',
-  // },
-  // {
-  //   logoPath: 'visuals.svg',
-  //   url: 'https://corporate.visuals.ch/',
-  // },
   {
     logoPath: 'weez.svg',
     url: 'https://weezevent.com/fr-ch/',
@@ -75,6 +63,10 @@ const sponsors = [
   {
     logoPath: 'baston.svg',
     url: 'https://www.baston.ch/',
+  },
+  {
+    logoPath: 'brasserie-pecherie.svg',
+    url: 'https://www.labrasseriedelapecherie.ch/',
   },
 ];
 ---
@@ -111,7 +103,7 @@ const sponsors = [
             <a
               href={url}
               target="_blank"
-              class="block aspect-1 p-5 md:p-10 cursor-pointer"
+              class="block aspect-1 p-5 md:p-10 cursor-pointer grid place-content-center"
             >
               <Image
                 src={sponsorsSvgs[`../assets/svgs/sponsors/${logoPath}`]()}
@@ -124,7 +116,7 @@ const sponsors = [
       }
       <p
         aria-hidden
-        class="text-code text-end !border-0 pl-3 pt-3 col-start-3 md:col-start-3 lg:col-start-5 xl:col-start-5 col-span-full"
+        class="text-code text-end pl-3 pt-3 col-start-1 md:col-start-3 lg:col-start-5 xl:col-start-1 col-span-full max-md:border-l-4 xl:border-l-4 border-l-neutral-900 !border-r-0 !border-y-0 xl:ml-[-3px] max-md:ml-[-2px]"
       >
         01110011 01110101 01110010 01110000 01110010 01101001 <br /> 01110011 01100101
       </p>
