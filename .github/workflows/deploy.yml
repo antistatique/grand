@@ -1,0 +1,36 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - landing-2025
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set deployment environment variables based on Git branches
+        id: deploy_target
+        run: |
+          if [[ $GITHUB_REF == 'refs/heads/dev' ]]; then
+              echo "DEPLOY_TARGET=sites/staging.associationgrand.ch" >> $GITHUB_ENV
+          fi
+          if [[ $GITHUB_REF == 'refs/heads/main-2024' ]]; then
+            echo "DEPLOY_TARGET=sites/associationgrand.ch" >> $GITHUB_ENV
+          fi
+
+      - uses: actions/checkout@v3
+
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_SSH_KEY }}
+          SSH_CMD_ARGS: "-o StrictHostKeyChecking=no -o PubkeyAcceptedKeyTypes=ssh-rsa"
+          ARGS: "-avz --delete"
+          SOURCE: "public/"
+          REMOTE_HOST: "ig7dp.ftp.infomaniak.com"
+          REMOTE_USER: "ig7dp_antistatique"
+          TARGET: ${{ env.DEPLOY_TARGET }} 
