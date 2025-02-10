@@ -18,7 +18,10 @@ jobs:
           if [[ $GITHUB_REF == 'refs/heads/dev' ]]; then
               echo "DEPLOY_TARGET=sites/staging.associationgrand.ch" >> $GITHUB_ENV
           fi
-          if [[ $GITHUB_REF == 'refs/heads/main-2024' ]]; then
+          if [[ $GITHUB_REF == 'refs/heads/main-2025' ]]; then
+            echo "DEPLOY_TARGET=sites/associationgrand.ch" >> $GITHUB_ENV
+          fi
+          if [[ $GITHUB_REF == 'refs/heads/landing-2024' ]]; then
             echo "DEPLOY_TARGET=sites/associationgrand.ch" >> $GITHUB_ENV
           fi
 
