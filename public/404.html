@@ -64,10 +64,29 @@
             background-color: #333;
         }
     </style>
+
+    <script
+      defer
+      data-domain="associationgrand.ch"
+      src="https://plausible.io/js/script.js"></script>
+
+    <script>
+        // Unregister existing service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                for(let registration of registrations) {
+                    registration.unregister();
+                }
+            });
+        }
+    </script>
+    <!-- handle 404 page for Plausible-->
+    <script>document.addEventListener('DOMContentLoaded', function () { plausible('404', { props: { path: document.location.pathname } }); });</script>
+
 </head>
 <body>
     <div class="container">
-        <img src="images/logo_association_grand.png" alt="Le GRAND Logo" class="logo">
+        <img src="/images/logo_association_grand.png" alt="Le GRAND Logo" class="logo">
         
         <h1 class="title">Le GRAND revient le 17 juin 2025 à Lausanne</h1>
         
