@@ -53,10 +53,13 @@
         .container {
             padding: 10px;
             max-width: 800px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .logo {
             max-width: 400px;
+            width: 90%;
             height: auto;
             margin-bottom: 40px;
         }
@@ -66,18 +69,21 @@
             font-weight: bold;
             margin-bottom: 20px;
             color: #333;
+            padding: 0 10px;
         }
 
         .date {
             font-size: 18px;
             margin-bottom: 40px;
             color: #666;
+            padding: 0 10px;
         }
 
         .social-text {
             font-size: 16px;
             margin-bottom: 15px;
             color: #666;
+            padding: 0 10px;
         }
 
         .button {
@@ -93,6 +99,71 @@
 
         .button:hover {
             background-color: #333;
+        }
+
+        /* Tablettes */
+        @media (max-width: 768px) {
+            body {
+                margin: 15px;
+            }
+
+            .logo {
+                max-width: 350px;
+                margin-bottom: 30px;
+            }
+
+            .title {
+                font-size: 22px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            body {
+                margin: 10px;
+                min-height: 90vh;
+            }
+
+            .container {
+                padding: 5px;
+            }
+
+            .logo {
+                max-width: 280px;
+                margin-bottom: 25px;
+            }
+
+            .title {
+                font-size: 20px;
+                margin-bottom: 15px;
+                padding: 0 15px;
+            }
+
+            .date {
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+
+            .social-text {
+                font-size: 15px;
+                margin-bottom: 12px;
+            }
+
+            .button {
+                padding: 10px 25px;
+                font-size: 15px;
+            }
+        }
+
+        /* Très petits écrans */
+        @media (max-width: 320px) {
+            .logo {
+                max-width: 240px;
+            }
+
+            .title {
+                font-size: 18px;
+            }
         }
     </style>
 
