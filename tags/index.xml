@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on GRAND Prix Romand de la Création</title>
-    <link>https://associationgrand.ch/tags/</link>
+    <link>https://antistatique.github.io/grand/tags/</link>
     <description>Recent content in Tags on GRAND Prix Romand de la Création</description>
     <generator>Hugo</generator>
     <language>fr-ch</language>
-    <atom:link href="https://associationgrand.ch/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://antistatique.github.io/grand/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
