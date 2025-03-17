@@ -1,0 +1,20 @@
+{
+  "marquee": "Inscrivez vos projets dès maintenant!",
+  "ctas": {
+    "buy_ticket": "Acheter mon billet",
+    "submit_project": "Inscrire mon projet"
+  },
+  "menu": {
+    "toggle_open": "Menu",
+    "toggle_close": "Fermer",
+    "home": "Accueil",
+    "jury": "Jury",
+    "categories": "Catégories",
+    "billetterie-et-inscriptions": "Billetterie et inscriptions",
+    "sponsors": "Sponsors"
+  },
+  "external_links": {
+    "tickets": "https://my.weezevent.com/gala-du-grand-2025",
+    "prjects": "https://inscription.associationgrand.ch/grand/"
+  }
+}

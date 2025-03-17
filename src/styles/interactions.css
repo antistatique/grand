@@ -1,0 +1,6 @@
+.hover-underline {
+  @apply relative text-gray-900;
+  @apply after:bg-[currentColor] after:absolute after:-bottom-0.5 after:inset-x-0 after:h-px;
+  @apply after:scale-x-0 after:origin-[right_center] after:transition-transform after:duration-300;
+  @apply hover:after:scale-x-100 hover:after:origin-[left_center];
+}

@@ -1,2 +1,7 @@
 @import "./tailwind.css";
 @import "./fonts.css";
+@import "./interactions.css";
+
+[x-cloak] {
+  display: none !important;
+}

@@ -1,0 +1,41 @@
+---
+import { range } from 'ramda';
+
+import { t } from '@/locales';
+---
+
+<div
+  class="absolute top-0 left-0 z-10 flex w-full mt-3 overflow-hidden uppercase bg-gray-100 border-gray-900 group px-1.5! border-y text-smmd:text-lg"
+  data-transition
+>
+  <div
+    class="flex animate-marquee group-hover:[animation-play-state:paused] whitespace-nowrap gap-1"
+  >
+    {
+      range(0, 4).map(() => (
+        <>
+          <span>{t('marquee')}</span>
+          <span>-</span>
+        </>
+      ))
+    }
+  </div>
+  <div
+    class="absolute flex pl-1 top-1/2 animate-marquee2 group-hover:[animation-play-state:paused] whitespace-nowrap gap-1"
+  >
+    {
+      range(0, 4).map(() => (
+        <>
+          <span>{t('marquee')}</span>
+          <span>-</span>
+        </>
+      ))
+    }
+  </div>
+  <a
+    href="#"
+    class="absolute inset-x-0 top-0 flex items-center justify-center text-gray-100 bg-gray-900 opacity-0 group-hover:opacity-100 transition-opacity duration-150"
+  >
+    {t('buy_ticket')}
+  </a>
+</div>

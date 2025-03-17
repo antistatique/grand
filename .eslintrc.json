@@ -1,5 +1,12 @@
 {
-  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:astro/recommended",
+    "prettier",
+    "plugin:tailwind/recommended"
+  ],
   "plugins": ["simple-import-sort", "prettier"],
   "rules": {
     "arrow-body-style": [2, "as-needed"],
@@ -25,5 +32,16 @@
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": "latest"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.astro"],
+      "parser": "astro-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [".astro"]
+      },
+      "processor": "astro/client-side-ts"
+    }
+  ]
 }
