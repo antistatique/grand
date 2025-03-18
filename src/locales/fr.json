@@ -16,5 +16,12 @@
   "external_links": {
     "tickets": "https://my.weezevent.com/gala-du-grand-2025",
     "prjects": "https://inscription.associationgrand.ch/grand/"
+  },
+  "hero": {
+    "date": "27.05.25",
+    "title": "DEADLINE",
+    "subtitle": "GRAND PRIX ROMAND DE LA CRÉATION",
+    "subtitle_mobile1": "GRAND PRIX ROMAND",
+    "subtitle_mobile2": "DE LA CRÉATION"
   }
 }

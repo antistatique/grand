@@ -24,7 +24,7 @@ const pathname = Astro.url.pathname;
 ---
 
 <header
-  class="flex items-center justify-between px-6 mx-auto md:px-10 py-7 max-w-(--container)"
+  class="flex items-center justify-between px-6 mx-auto md:px-10 pt-7 max-w-(--container)"
   x-data="{ open: false, mobile: window.innerWidth < 768 }"
   x-init="window.addEventListener('resize', () => mobile = window.innerWidth < 768)"
 >

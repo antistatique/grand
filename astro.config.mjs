@@ -1,5 +1,6 @@
 // @ts-check
 import alpinejs from '@astrojs/alpinejs';
+import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 
 import { defineConfig } from 'astro/config';
@@ -10,5 +11,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  integrations: [alpinejs()],
+  integrations: [alpinejs(), react()],
 });
