@@ -2,7 +2,11 @@
   "marquee": "Inscrivez vos projets dès maintenant!",
   "ctas": {
     "buy_ticket": "Acheter mon billet",
-    "submit_project": "Inscrire mon projet"
+    "submit_project": "Inscrire mon projet",
+    "contest": "Le concours",
+    "context_desc": "Inscriptions ouvertes du 1er avril au 27 mai 2025<br />Frais d’inscriptions : CHF 200.-/projet",
+    "night": "Gala",
+    "night_desc": "Mardi 17 juin 2025, 18h30 @ Pathé Flon, Lausanne<br />Entrée et cocktail dînatoire: CHF 99.-"
   },
   "menu": {
     "toggle_open": "Menu",
@@ -15,7 +19,7 @@
   },
   "external_links": {
     "tickets": "https://my.weezevent.com/gala-du-grand-2025",
-    "prjects": "https://inscription.associationgrand.ch/grand/"
+    "projects": "https://inscription.associationgrand.ch/grand/"
   },
   "hero": {
     "date": "27.05.25",
@@ -23,5 +27,50 @@
     "subtitle": "GRAND PRIX ROMAND DE LA CRÉATION",
     "subtitle_mobile1": "GRAND PRIX ROMAND",
     "subtitle_mobile2": "DE LA CRÉATION"
+  },
+  "pages": {
+    "homepage": {
+      "intro_title": "GRAND PRIX ROMAND DE LA CRÉATION 2025",
+      "intro_desc": "Le GRAND revient à Lausanne le mardi 17 juin pour une soirée, en deux temps, au Pathé Flon puis au Jumeaux Jazz Club! Le concours et sa cérémonie auront à nouveau la mission de mettre en lumière la créativité et le savoir-faire “made in Suisse romande” à travers 10 catégories! Agences, studios et indépendant·e·s, rendez-vous en juin pour le GRAND rendez-vous des créatif·ve·s romand·e·s.",
+      "schedule": {
+        "title": "Programme",
+        "date": "17.06.25",
+        "items": [
+          {
+            "time": "18h30",
+            "title": "Accueil au pathé flon lausanne"
+          },
+          {
+            "time": "19h00",
+            "title": "Début de la cérémonie en salle 1"
+          },
+          {
+            "time": "20h30",
+            "title": "Cocktail et soirée au jumeaux jazz club"
+          }
+        ]
+      },
+      "access": {
+        "title": "Accès",
+        "desc": "En voiture: Parking du Centre-Flon (ouvert 24/24)<br />En TP: Arrêt de métro Lausanne-Flon (M1 et M2)",
+        "pathe": {
+          "title": "Pathé Flon, salle 1",
+          "streetAddress": "Rue du Port-Franc 16",
+          "addressLocality": "Lausanne",
+          "postalCode": "1003",
+          "cta": "Obtenir des itinéraires",
+          "link": "https://maps.app.goo.gl/r4UrUWNdxjSEQ3jLA"
+        },
+        "jazz": {
+          "title": "Jumeaux Jazz Club",
+          "streetAddress": "Rue de Genève 19",
+          "addressLocality": "Lausanne",
+          "postalCode": "1003",
+          "cta": "Obtenir des itinéraires",
+          "link": "https://maps.app.goo.gl/Qiv4cqFhWmC8s8zm7"
+        }
+      },
+      "2024": "Edition 2024"
+    }
   }
 }

@@ -1,0 +1,53 @@
+---
+import Picture from '@/components/Picture.astro';
+
+interface Props {
+  name: string;
+  alt: string;
+  sizes: string;
+  loading?: 'lazy' | 'eager';
+  fetchpriority?: 'auto' | 'high' | 'low';
+}
+
+const { name, alt, sizes, loading, fetchpriority } = Astro.props;
+---
+
+<div
+  class="relative w-full aspect-[4/5]"
+  x-data="{ 
+    isHovered: false,
+    clipX: 50,
+    handleMove(event) {
+      const rect = event.target.getBoundingClientRect();
+      this.clipX = ((event.clientX - rect.left) / rect.width) * 100;
+    }
+  }"
+  @mouseenter="isHovered = true"
+  @mousemove="handleMove"
+  @mouseleave="isHovered = false"
+>
+  <div
+    class="absolute inset-0 z-10 opacity-0 transition-opacity duration-300 blur-[0.9px]"
+    tlg-fluted-glass-canvas
+    tlg-fluted-glass-segments="42"
+    tlg-fluted-glass-overlay="10"
+    tlg-fluted-glass-motion="-0.5"
+    :style="`clip-path: inset(0% ${Math.max(0, 100 - (clipX + 1))}% 0% ${Math.max(0, clipX - 60)}%)`"
+    :class="isHovered ? 'opacity-100' : 'opacity-0'"
+  >
+    <img
+      class="hidden"
+      src={`/images/${name}_256.jpg`}
+      alt=""
+      tlg-fluted-glass-image
+    />
+  </div>
+  <Picture
+    name={name}
+    alt={alt}
+    sizes={sizes}
+    class="absolute inset-0 block object-cover w-full h-full"
+    loading={loading}
+    fetchpriority={fetchpriority}
+  />
+</div>

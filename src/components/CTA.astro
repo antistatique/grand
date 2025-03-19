@@ -1,0 +1,56 @@
+---
+import { isNotNil } from 'ramda';
+
+import Icon from '@/components/Icon.astro';
+import { cm } from '@/utils';
+type Props = {
+  dark?: boolean;
+  title: string;
+  description: string;
+  link: string;
+  linkText?: string;
+  icon?: string;
+};
+
+const {
+  dark = false,
+  title,
+  description,
+  link,
+  linkText,
+  icon = 'chevron-right',
+}: Props = Astro.props;
+---
+
+<a
+  href={link}
+  class={cm(
+    'rounded-lg p-5 md:pt-6 md:p-7 border border-gray-900 group min-h-40 md:min-h-50',
+    'grid md:grid-cols-2 gap-2 items-center grid-rows-[min-content_min-content_1fr] md:grid-rows-[min-content_auto]',
+    dark && 'bg-gray-900 text-gray-100'
+  )}
+>
+  <h3 class="uppercase text-heading-sm">{title}</h3>
+
+  <div class="mt-auto max-md:order-last max-md:col-span-2">
+    <span
+      class={cm(
+        'flex items-center justify-end bg-gray-900 text-gray-100 h-7 md:h-10 rounded-full justify-self-end',
+        dark && 'bg-gray-100 text-gray-900'
+      )}
+    >
+      {
+        isNotNil(linkText) && (
+          <span class="overflow-hidden md:group-hover:ml-4 max-w-0 group-hover:max-w-96 transition-all group-hover:duration-700 duration-300 whitespace-nowrap text-paragraph-xs ease-in-out max-md:max-w-96 max-md:pl-4">
+            {linkText}
+          </span>
+        )
+      }
+      <span class="flex items-center justify-center h-full w-7 md:w-10">
+        <Icon name={icon} className="w-3 h-3 md:w-4 md:h-4 top-0!" />
+      </span>
+    </span>
+  </div>
+
+  <p class="self-end text-paragraph-xs col-span-2" set:html={description} />
+</a>

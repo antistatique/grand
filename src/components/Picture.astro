@@ -1,0 +1,37 @@
+---
+interface Props {
+  name: string;
+  alt: string;
+  sizes: string;
+  class?: string;
+  loading?: 'lazy' | 'eager';
+  fetchpriority?: 'auto' | 'high' | 'low';
+}
+
+const {
+  name,
+  alt,
+  sizes,
+  class: classes,
+  loading,
+  fetchpriority,
+} = Astro.props;
+
+const widths = [256, 384, 640, 750, 828, 1080, 1200, 1653];
+---
+
+<picture>
+  <source
+    type="image/avif"
+    srcset={widths.map(w => `/images/${name}_${w}.avif ${w}w`).join(', ')}
+    sizes={sizes}
+  />
+  <img
+    class:list={['size-full object-cover', classes]}
+    srcset={widths.map(w => `/images/${name}_${w}.jpg ${w}w`).join(', ')}
+    sizes={sizes}
+    loading={loading || 'lazy'}
+    fetchpriority={fetchpriority || 'auto'}
+    alt={alt}
+  />
+</picture>

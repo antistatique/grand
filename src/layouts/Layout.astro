@@ -1,20 +1,24 @@
 ---
-import '@/styles/global.css';
-import Marquee from '@/components/Marquee.astro';
 import Header from '@/components/Header.astro';
+import Marquee from '@/components/Marquee.astro';
+
+import '@/styles/global.css';
 ---
+
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="generator" content={Astro.generator} />
-  <title>Astro Basics</title>
-</head>
-<body class="antialiased text-gray-900 bg-gray-100 font-sans pt-10">
-  <Marquee />
-  <Header />
-  <slot />
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro Basics</title>
+  </head>
+  <body class="pt-10 pb-64 font-sans antialiased text-gray-900 bg-gray-100">
+    <Marquee />
+    <Header />
+    <slot />
+
+    <script src="../modules/tlg-fluted-glass-main/tlg-fluted-glass.js"></script>
+  </body>
 </html>

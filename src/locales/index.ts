@@ -2,4 +2,4 @@ import { path } from 'ramda';
 
 import strings from '@/locales/fr.json';
 
-export const t = (key: string): string => path(key.split('.'), strings) ?? key;
+export const t = <T>(key: string): T => path(key.split('.'), strings)!;
