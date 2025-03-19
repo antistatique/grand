@@ -1,0 +1,48 @@
+---
+import BrickWrapper from '@/components/BrickWrapper';
+import CTA from '@/components/CTA.astro';
+import { t } from '@/locales';
+---
+
+<footer
+  class="relative px-6 pt-20 pb-10 mx-auto md:gap-8 max-w-(--container) md:pt-60"
+>
+  <div class="relative z-10 grid md:grid-cols-2 gap-12">
+    <div
+      class="flex-col justify-between grid grid-cols-2 md:flex gap-2 [&_a]:underline [&_a]:underline-offset-6 [&_a]:decoration-1 text-paragraph-xs"
+    >
+      <a href="/">
+        <img
+          src="/svg/logo-g-dark.svg"
+          alt="Logo"
+          class="w-11 h-11 md:w-18 md:h-18"
+        />
+      </a>
+      <div>
+        <p set:html={t('footer.contact_us')} />
+        <div class="flex max-md:flex-col gap-7 mt-7">
+          <p set:html={t('footer.copyright')} />
+          <p set:html={t('footer.made_by')} />
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col gap-4 md:gap-6 md:pl-[16%] max-md:mt-48">
+      <CTA
+        title={t('ctas.contest')}
+        description={t('ctas.context_desc')}
+        link={t('external_links.projects')}
+        linkText={t('ctas.submit_project')}
+      />
+      <CTA
+        title={t('ctas.night')}
+        description={t('ctas.night_desc')}
+        link={t('external_links.tickets')}
+        linkText={t('ctas.buy_ticket')}
+        dark
+      />
+    </div>
+  </div>
+  <div class="absolute inset-0">
+    <BrickWrapper client:only="react" />
+  </div>
+</footer>

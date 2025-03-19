@@ -72,5 +72,10 @@
       },
       "2024": "Edition 2024"
     }
+  },
+  "footer": {
+    "contact_us": "Contactez-nous<br /><a href=\"https://www.instagram.com/associationgrand/\">Instragrame</a> et <a href=\"hello@associationgrand.ch\">E-mail</a>",
+    "copyright": "Copyright ©<br />2025 Association Grand",
+    "made_by": "Réalisation<br /><a target=\"_blank\" href=\"https://www.baston.ch/\">Baston</a> et <a target=\"_blank\" href=\"https://antistatique.net\">Antistatique</a> "
   }
 }

@@ -28,11 +28,11 @@ const HeroTitle = () => {
   return (
     <group>
       <group
-        scale={sm ? w / 20 : h / 19}
+        scale={sm ? h / 18 : h / 12}
         position={[0, 0.28, 2]}
         rotation={[0, 0, -0.3]}
       >
-        <Brick />
+        <Brick speed={0.006} />
       </group>
 
       <Text {...textProps} anchorX="center" position={[l, y[0], 0]}>

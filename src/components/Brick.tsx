@@ -3,7 +3,11 @@ import { MeshTransmissionMaterial, useGLTF } from '@react-three/drei';
 import { useFrame, useThree } from '@react-three/fiber';
 import type { Mesh } from 'three';
 
-const Brick = () => {
+type Props = {
+  speed?: number;
+};
+
+const Brick = ({ speed = 0.006 }: Props) => {
   const meshRef = useRef<Mesh | null>(null);
   const { nodes } = useGLTF('/3d/brick.gltf');
   const { viewport } = useThree();
@@ -11,7 +15,7 @@ const Brick = () => {
   useFrame(() => {
     if (meshRef.current) {
       // meshRef.current.rotation.x += 0.00005;
-      meshRef.current.rotation.y += 0.006;
+      meshRef.current.rotation.y += speed;
       // meshRef.current.rotation.z += 0.00005;
     }
   });
