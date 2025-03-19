@@ -1,4 +1,5 @@
 ---
+import Carousel from '@/components/Carousel.astro';
 import CTA from '@/components/CTA.astro';
 import FlutedPicture from '@/components/FlutedPicture.astro';
 import Hero from '@/components/Hero';
@@ -13,7 +14,9 @@ import { t } from '@/locales';
     <h1 class="sr-only bg-gray-">{t('hero.date')} {t('hero.title')}</h1>
     <h2 class="sr-only">{t('hero.subtitle')}</h2>
   </div>
+
   <div class="px-6 mx-auto max-w-(--container)">
+    {/* Introduction and CTAs */}
     <div class="grid md:grid-cols-2 gap-12 md:gap-8">
       <div>
         <h2 class="text-heading-base">
@@ -40,6 +43,7 @@ import { t } from '@/locales';
       </div>
     </div>
 
+    {/* Schedule */}
     <div class="grid md:grid-cols-[1fr_2fr] gap-8 md:gap-5 mt-30 md:mt-60">
       <div>
         <h3 class="uppercase text-heading-base">
@@ -84,135 +88,168 @@ import { t } from '@/locales';
         </ul>
       </div>
     </div>
+  </div>
+
+  {/* Access */}
+  <div
+    class="max-w-full md:px-6 md:mx-auto md:max-w-(--container) grid md:grid-cols-3 gap-4 md:gap-x-5 md:gap-y-1.5 mt-30 grid-rows-[min-content_1fr]"
+    x-data="{ embla: null, current: 0 }"
+    x-init="embla = window.innerWidth < 768 ? EmblaCarousel($refs.viewport, { align: 'start', loop: true }) : null;"
+    style="--slide-spacing: 1rem;"
+  >
+    <div class="max-md:px-6 pr-[20%]">
+      <h3 class="uppercase text-heading-base">
+        {t('pages.homepage.access.title')}
+      </h3>
+    </div>
 
     <div
-      class="grid md:grid-cols-3 gap-4 md:gap-x-5 md:gap-y-1.5 mt-30 grid-rows-[min-content_1fr]"
+      x-ref="viewport"
+      class="w-full overflow-hidden md:col-span-2 md:row-span-2 md:grid grid-cols-subgrid grid-rows-subgrid max-md:px-6"
     >
-      <div class="pr-[25%]">
-        <h3 class="uppercase text-heading-base">
-          {t('pages.homepage.access.title')}
-        </h3>
-      </div>
-      <a
-        href={t('pages.homepage.access.pathe.link')}
-        target="_blank"
-        rel="noopener"
-        class="relative overflow-hidden rounded-xl md:rounded-2xl group row-span-2"
-        itemscope
-        itemtype="https://schema.org/Place"
+      <div
+        class="flex md:grid md:grid-cols-subgrid md:col-span-2 md:row-span-2 md:grid-rows-subgrid max-md:touch-pan-y max-md:pinch-zoom max-md:-ml-(--slide-spacing)"
       >
-        <FlutedPicture
-          name="pathe"
-          alt={t('pages.homepage.access.pathe.title')}
-          sizes="(min-width: 1540px) 458px, (min-width: 780px) 30.68vw, calc(100.22vw - 49px)"
-        />
-        <div
-          class="absolute inset-0 z-10 flex flex-col items-start justify-between py-8 text-gray-100 pointer-events-none px-7"
+        <a
+          href={t('pages.homepage.access.pathe.link')}
+          target="_blank"
+          rel="noopener"
+          class="relative overflow-hidden max-md:w-[75vw] rounded-xl md:rounded-2xl group row-span-2 max-md:shrink-0 max-md:grow-0 max-md:ml-(--slide-spacing) max-md:aspect-[4/5]"
+          itemscope
+          itemtype="https://schema.org/Place"
         >
-          <div>
-            <h3 class="uppercase text-heading-sm">
-              {t('pages.homepage.access.pathe.title')}
-            </h3>
-            <address
-              itemprop="address"
-              itemscope
-              itemtype="https://schema.org/PostalAddress"
-              class="relative pl-24 mt-1 not-italic text-paragraph-xs before:content-[''] before:absolute before:left-0 before:top-0 before:w-22 before:mt-2.5 before:h-px before:bg-gray-100"
-            >
-              <span itemprop="streetAddress">
-                {t('pages.homepage.access.pathe.streetAddress')}
-              </span><br />
-              <span itemprop="postalCode">
-                {t('pages.homepage.access.pathe.postalCode')}
-              </span>
-              <span itemprop="addressLocality">
-                {t('pages.homepage.access.pathe.addressLocality')}
-              </span>
-            </address>
-          </div>
-
-          <div class="w-full">
-            <span
-              class="flex items-center justify-end text-gray-900 bg-gray-100 rounded-full h-7 md:h-10 justify-self-end"
-            >
-              <span
-                class="overflow-hidden md:group-hover:ml-4 max-w-0 group-hover:max-w-96 transition-all group-hover:duration-700 duration-300 whitespace-nowrap text-paragraph-xs ease-in-out max-md:max-w-96 max-md:pl-4"
+          <FlutedPicture
+            name="pathe"
+            alt={t('pages.homepage.access.pathe.title')}
+            sizes="(min-width: 1540px) 458px, (min-width: 780px) 30.68vw, calc(100.22vw - 49px)"
+          />
+          <div
+            class="absolute inset-0 z-10 flex flex-col items-start justify-between py-8 text-gray-100 pointer-events-none px-7"
+          >
+            <div>
+              <h3 class="uppercase text-heading-sm">
+                {t('pages.homepage.access.pathe.title')}
+              </h3>
+              <address
+                itemprop="address"
+                itemscope
+                itemtype="https://schema.org/PostalAddress"
+                class="relative pl-24 mt-1 not-italic text-paragraph-xs before:content-[''] before:absolute before:left-0 before:top-0 before:w-22 before:mt-2.5 before:h-px before:bg-gray-100"
               >
-                {t('pages.homepage.access.pathe.cta')}
+                <span itemprop="streetAddress">
+                  {t('pages.homepage.access.pathe.streetAddress')}
+                </span><br />
+                <span itemprop="postalCode">
+                  {t('pages.homepage.access.pathe.postalCode')}
+                </span>
+                <span itemprop="addressLocality">
+                  {t('pages.homepage.access.pathe.addressLocality')}
+                </span>
+              </address>
+            </div>
+
+            <div class="w-full">
+              <span
+                class="flex items-center justify-end text-gray-900 bg-gray-100 rounded-full h-7 md:h-10 justify-self-end"
+              >
+                <span
+                  class="overflow-hidden md:group-hover:ml-4 max-w-0 group-hover:max-w-96 transition-all group-hover:duration-700 duration-300 whitespace-nowrap text-paragraph-xs ease-in-out max-md:max-w-96 max-md:pl-4"
+                >
+                  {t('pages.homepage.access.pathe.cta')}
+                </span>
+                <span
+                  class="flex items-center justify-center h-full w-7 md:w-10"
+                >
+                  <Icon
+                    name="chevron-right"
+                    className="w-3 h-3 md:w-4 md:h-4 top-0!"
+                  />
+                </span>
               </span>
-              <span class="flex items-center justify-center h-full w-7 md:w-10">
-                <Icon
-                  name="chevron-right"
-                  className="w-3 h-3 md:w-4 md:h-4 top-0!"
-                />
-              </span>
-            </span>
+            </div>
           </div>
-        </div>
-      </a>
-      <a
-        href={t('pages.homepage.access.jazz.link')}
-        target="_blank"
-        rel="noopener"
-        class="relative overflow-hidden rounded-xl md:rounded-2xl group row-span-2"
-        itemscope
-        itemtype="https://schema.org/Place"
-      >
-        <FlutedPicture
-          name="jazz"
-          alt={t('pages.homepage.access.jazz.title')}
-          sizes="(min-width: 1540px) 458px, (min-width: 780px) 30.68vw, calc(100.22vw - 49px)"
-        />
-        <div
-          class="absolute inset-0 z-10 flex flex-col items-start justify-between py-8 text-gray-100 pointer-events-none px-7"
+        </a>
+        <a
+          href={t('pages.homepage.access.jazz.link')}
+          target="_blank"
+          rel="noopener"
+          class="relative overflow-hidden max-md:w-[75vw] rounded-xl md:rounded-2xl group row-span-2 max-md:shrink-0 max-md:grow-0 max-md:ml-(--slide-spacing) max-md:aspect-[4/5]"
+          itemscope
+          itemtype="https://schema.org/Place"
         >
-          <div>
-            <h3 class="uppercase text-heading-sm">
-              {t('pages.homepage.access.jazz.title')}
-            </h3>
-            <address
-              itemprop="address"
-              itemscope
-              itemtype="https://schema.org/PostalAddress"
-              class="relative pl-24 mt-1 not-italic text-paragraph-xs before:content-[''] before:absolute before:left-0 before:top-0 before:w-22 before:mt-2.5 before:h-px before:bg-gray-100"
-            >
-              <span itemprop="streetAddress">
-                {t('pages.homepage.access.jazz.streetAddress')}
-              </span><br />
-              <span itemprop="postalCode">
-                {t('pages.homepage.access.jazz.postalCode')}
-              </span>
-              <span itemprop="addressLocality">
-                {t('pages.homepage.access.jazz.addressLocality')}
-              </span>
-            </address>
-          </div>
-
-          <div class="w-full">
-            <span
-              class="flex items-center justify-end text-gray-900 bg-gray-100 rounded-full h-7 md:h-10 justify-self-end"
-            >
-              <span
-                class="overflow-hidden md:group-hover:ml-4 max-w-0 group-hover:max-w-96 transition-all group-hover:duration-700 duration-300 whitespace-nowrap text-paragraph-xs ease-in-out max-md:max-w-96 max-md:pl-4"
+          <FlutedPicture
+            name="jazz"
+            alt={t('pages.homepage.access.jazz.title')}
+            sizes="(min-width: 1540px) 458px, (min-width: 780px) 30.68vw, calc(100.22vw - 49px)"
+          />
+          <div
+            class="absolute inset-0 z-10 flex flex-col items-start justify-between py-8 text-gray-100 pointer-events-none px-7"
+          >
+            <div>
+              <h3 class="uppercase text-heading-sm">
+                {t('pages.homepage.access.jazz.title')}
+              </h3>
+              <address
+                itemprop="address"
+                itemscope
+                itemtype="https://schema.org/PostalAddress"
+                class="relative pl-24 mt-1 not-italic text-paragraph-xs before:content-[''] before:absolute before:left-0 before:top-0 before:w-22 before:mt-2.5 before:h-px before:bg-gray-100"
               >
-                {t('pages.homepage.access.jazz.cta')}
+                <span itemprop="streetAddress">
+                  {t('pages.homepage.access.jazz.streetAddress')}
+                </span><br />
+                <span itemprop="postalCode">
+                  {t('pages.homepage.access.jazz.postalCode')}
+                </span>
+                <span itemprop="addressLocality">
+                  {t('pages.homepage.access.jazz.addressLocality')}
+                </span>
+              </address>
+            </div>
+
+            <div class="w-full">
+              <span
+                class="flex items-center justify-end text-gray-900 bg-gray-100 rounded-full h-7 md:h-10 justify-self-end"
+              >
+                <span
+                  class="overflow-hidden md:group-hover:ml-4 max-w-0 group-hover:max-w-96 transition-all group-hover:duration-700 duration-300 whitespace-nowrap text-paragraph-xs ease-in-out max-md:max-w-96 max-md:pl-4"
+                >
+                  {t('pages.homepage.access.jazz.cta')}
+                </span>
+                <span
+                  class="flex items-center justify-center h-full w-7 md:w-10"
+                >
+                  <Icon
+                    name="chevron-right"
+                    className="w-3 h-3 md:w-4 md:h-4 top-0!"
+                  />
+                </span>
               </span>
-              <span class="flex items-center justify-center h-full w-7 md:w-10">
-                <Icon
-                  name="chevron-right"
-                  className="w-3 h-3 md:w-4 md:h-4 top-0!"
-                />
-              </span>
-            </span>
+            </div>
           </div>
-        </div>
-      </a>
-      <div class="pr-[25%]">
-        <p
-          class="text-paragraph-xs"
-          set:html={t('pages.homepage.access.desc')}
-        />
+        </a>
       </div>
+    </div>
+
+    <div class="max-md:px-6 pr-[20%]">
+      <p class="text-paragraph-xs" set:html={t('pages.homepage.access.desc')} />
+    </div>
+  </div>
+
+  <div class="px-6 mx-auto max-w-(--container) mt-30 md:mt-60">
+    {/* Carousel */}
+
+    <h2 class="mb-4 uppercase text-heading-base md:mb-7">
+      {t('pages.homepage.2024')}
+    </h2>
+  </div>
+  <div
+    class="grid grid-cols-[minmax(24px,1fr)_minmax(0,var(--container))_minmax(24px,1fr)]"
+  >
+    <div class="2xl:pl-6 col-start-2 col-end-4">
+      <Carousel />
     </div>
   </div>
 </Layout>
+
+<script src="@/modules/embla.ts"></script>

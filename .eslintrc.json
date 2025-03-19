@@ -28,6 +28,7 @@
       ]
     }],
     "simple-import-sort/exports": "error"
+    
   },
   "parserOptions": {
     "sourceType": "module",

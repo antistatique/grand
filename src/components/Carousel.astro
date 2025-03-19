@@ -1,0 +1,50 @@
+---
+import { range } from 'ramda';
+
+import Icon from '@/components/Icon.astro';
+import Picture from '@/components/Picture.astro';
+import { t } from '@/locales';
+---
+
+<section
+  class="relative w-full"
+  x-data="{ embla: null, current: 0 }"
+  x-init="embla = EmblaCarousel($refs.viewport, { align: 'start', loop: true });"
+>
+  <div class="overflow-hidden" x-ref="viewport">
+    <div class="flex -ml-4 touch-pan-y pinch-zoom md:-ml-6">
+      {
+        range(0, 6).map(i => (
+          <div class="pl-4 shrink-0 grow-0 md:pl-6">
+            <Picture
+              name={`0${i + 1}`}
+              alt={t('pages.homepage.2024')}
+              sizes="(min-width: 1540px) 458px, (min-width: 780px) 30.68vw, calc(100.22vw - 49px)"
+              class="h-auto w-[75vw] md:w-auto rounded-xl md:rounded-2xl md:h-122"
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <div
+    class="absolute right-0 justify-between pr-6 mt-6 mb-6 bottom-full grid grid-cols-[auto_1fr] gap-4 max-md:hidden"
+  >
+    <button
+      class="w-10 h-10 border border-gray-100 rounded-full cursor-pointer hover:border-gray-900 transition-colors duration-150"
+      type="button"
+      @click="embla.scrollPrev();"
+    >
+      <Icon name="chevron-left" className="w-4 h-4" />
+    </button>
+
+    <button
+      class="w-10 h-10 border border-gray-100 rounded-full cursor-pointer hover:border-gray-900 transition-colors duration-150"
+      type="button"
+      @click="embla.scrollNext();"
+    >
+      <Icon name="chevron-right" className="w-4 h-4" />
+    </button>
+  </div>
+</section>
