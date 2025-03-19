@@ -32,14 +32,9 @@ const pathname = Astro.url.pathname;
   }"
   x-init="
     window.addEventListener('resize', () => mobile = window.innerWidth < 768)
-    // Add scroll event listener for rotation
     window.addEventListener('scroll', () => {
       if (showLogo) {
-        const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollProgress = scrollTop / docHeight;
-        const rotationDegree = Math.min(30, scrollProgress * 30);
-        
+        const rotationDegree = Math.min(30, (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 30);
         document.documentElement.style.setProperty('--logo-rotation', `${rotationDegree}deg`);
       }
     });
