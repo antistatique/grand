@@ -1,5 +1,5 @@
 // @ts-check
-import alpinejs from '@astrojs/alpinejs';
+import alpine from '@astrojs/alpinejs';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 
@@ -11,5 +11,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  integrations: [alpinejs(), react()],
+  integrations: [alpine({ entrypoint: '/src/modules/alpine' }), react()],
 });
