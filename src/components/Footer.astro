@@ -1,5 +1,5 @@
 ---
-import BrickWrapper from '@/components/BrickWrapper';
+import FooterCanvas from '@/components/bricks/footer/FooterCanvas';
 import CTA from '@/components/CTA.astro';
 import { t } from '@/locales';
 ---
@@ -43,6 +43,6 @@ import { t } from '@/locales';
     </div>
   </div>
   <div class="absolute inset-0 z-1">
-    <BrickWrapper client:only="react" />
+    <FooterCanvas client:only="react" />
   </div>
 </footer>

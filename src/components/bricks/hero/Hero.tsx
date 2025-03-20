@@ -3,7 +3,7 @@ import { Line, Text, type TextProps } from '@react-three/drei';
 import { useThree } from '@react-three/fiber';
 import { range } from 'ramda';
 
-import Brick from '@/components/Brick';
+import Brick from '@/components/bricks/Brick';
 import { t } from '@/locales';
 
 const HeroTitle = () => {

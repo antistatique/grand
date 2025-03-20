@@ -1,17 +1,14 @@
 ---
-import Carousel from '@/components/Carousel.astro';
 import FlutedPicture from '@/components/FlutedPicture.astro';
-import Hero from '@/components/Hero';
 import Icon from '@/components/Icon.astro';
 import Modal from '@/components/Modal.astro';
 import Layout from '@/layouts/Layout.astro';
 import { t } from '@/locales';
-import { cm } from '@/utils/cm';
 ---
 
 <Layout>
   <div class="px-6 mx-auto max-w-(--container)">
-    <div class="flex justify-center">
+    <section class="flex justify-center">
       <div
         class="w-full md:w-auto grid md:inline-grid md:grid-cols-[min-content] gap-4 mt-30"
       >
@@ -24,13 +21,25 @@ import { cm } from '@/utils/cm';
           {t('pages.jury.intro')}
         </p>
       </div>
-    </div>
+    </section>
 
-    <div
+    <section
       class="grid grid-cols-2 md:grid-cols-3 gap-x-3 md:gap-x-6 gap-y-12 md:gap-y-16 mt-30"
     >
       {
-        Object.keys(t('pages.jury.members')).map((slug, i) => (
+        (t('pages.jury.members') as {
+          slug: string;
+          name: string;
+          role: string;
+          description: string;
+          linkedin: string;
+        }[]).map(({
+          slug,
+          name,
+          role,
+          description,
+          linkedin,
+        }, i) => (
           <>
             <div
               x-data="{ shown: false }"
@@ -46,30 +55,30 @@ import { cm } from '@/utils/cm';
                 <div class="rounded">
                   <FlutedPicture
                     name={slug}
-                    alt={t(`pages.jury.members.${slug}.name`)}
+                    alt={name}
                     sizes="(min-width: 1540px) 458px, (min-width: 780px) 30.68vw, calc(100.22vw - 49px)"
                   />
                 </div>
                 <h3 class="mt-6 uppercase text-heading-base">
-                  {t(`pages.jury.members.${slug}.name`)}
+                  {name}
                 </h3>
                 <p class="relative w-3/4 ml-auto text-paragraph-sm before:content-[''] before:absolute before:right-full before:top-0 before:w-[calc(33.3%-1rem)] before:mt-3 before:h-px before:bg-gray-900 before:mr-4">
-                  {t(`pages.jury.members.${slug}.role`)}
+                  {role}
                 </p>
               </a>
             </div>
             <Modal id={slug}>
               <h3 class="uppercase text-heading-base">
-                {t(`pages.jury.members.${slug}.name`)}
+                {name}
               </h3>
               <p class="relative w-3/4 ml-auto text-paragraph-xs before:content-[''] before:absolute before:right-full before:top-0 before:w-[calc(33.3%-1rem)] before:mt-3 before:h-px before:bg-gray-100 before:mr-4">
-                {t(`pages.jury.members.${slug}.role`)}
+                {role}
               </p>
               <p class="mt-8 text-paragraph-xs">
-                {t(`pages.jury.members.${slug}.description`)}
+                {description}
               </p>
               <a
-                href={t(`pages.jury.members.${slug}.linkedin`)}
+                href={linkedin}
                 class="inline-flex items-center py-2 pl-5 pr-4 mt-8 border border-gray-100 rounded-full text-paragraph-xs gap-2 hover:bg-gray-100 hover:text-gray-900 transition-colors duration-300"
               >
                 LinkedIn
@@ -79,7 +88,7 @@ import { cm } from '@/utils/cm';
           </>
         ))
       }
-    </div>
+    </section>
   </div>
 </Layout>
 

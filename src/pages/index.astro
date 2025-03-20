@@ -1,23 +1,23 @@
 ---
+import HeroCanvas from '@/components/bricks/hero/HeroCanvas';
 import Carousel from '@/components/Carousel.astro';
 import CTA from '@/components/CTA.astro';
 import FlutedPicture from '@/components/FlutedPicture.astro';
-import Hero from '@/components/Hero';
 import Icon from '@/components/Icon.astro';
 import Layout from '@/layouts/Layout.astro';
 import { t } from '@/locales';
 ---
 
 <Layout>
-  <div class="w-full h-[80vh] [&_canvas]:h-full [&_canvas]:w-full">
-    <Hero client:only="react" />
+  <section class="w-full h-[80vh] [&_canvas]:h-full [&_canvas]:w-full">
+    <HeroCanvas client:only="react" />
     <h1 class="sr-only bg-gray-">{t('hero.date')} {t('hero.title')}</h1>
     <h2 class="sr-only">{t('hero.subtitle')}</h2>
-  </div>
+  </section>
 
   <div class="px-6 mx-auto max-w-(--container)">
     {/* Introduction and CTAs */}
-    <div class="grid md:grid-cols-2 gap-12 md:gap-8">
+    <section class="grid md:grid-cols-2 gap-12 md:gap-8">
       <div>
         <h2 class="text-heading-base">
           {t('pages.homepage.intro_title')}
@@ -41,10 +41,10 @@ import { t } from '@/locales';
           dark
         />
       </div>
-    </div>
+    </section>
 
     {/* Schedule */}
-    <div class="grid md:grid-cols-[1fr_2fr] gap-8 md:gap-5 mt-30 md:mt-60">
+    <section class="grid md:grid-cols-[1fr_2fr] gap-8 md:gap-5 mt-30 md:mt-60">
       <div>
         <h3 class="uppercase text-heading-base">
           {t('pages.homepage.schedule.title')}
@@ -87,11 +87,11 @@ import { t } from '@/locales';
           }
         </ul>
       </div>
-    </div>
+    </section>
   </div>
 
   {/* Access */}
-  <div
+  <section
     class="max-w-full md:px-6 md:mx-auto md:max-w-(--container) grid md:grid-cols-3 gap-4 md:gap-x-5 md:gap-y-1.5 mt-30 grid-rows-[min-content_1fr]"
     x-data="{ embla: null, current: 0 }"
     x-init="embla = window.innerWidth < 768 ? EmblaCarousel($refs.viewport, { align: 'start', loop: true }) : null;"
@@ -234,7 +234,7 @@ import { t } from '@/locales';
     <div class="max-md:px-6 pr-[20%]">
       <p class="text-paragraph-xs" set:html={t('pages.homepage.access.desc')} />
     </div>
-  </div>
+  </section>
 
   <div class="px-6 mx-auto max-w-(--container) mt-30 md:mt-60">
     {/* Carousel */}

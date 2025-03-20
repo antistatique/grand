@@ -35,7 +35,6 @@ const { name, alt, sizes, loading, fetchpriority } = Astro.props;
   @mousemove="handleMove"
   @mouseleave="isHovered = false"
 >
-  <pre x-text="JSON.stringify({ isHovered, clipX }, null, 2)"></pre>
   <div
     class="absolute inset-0 z-10 opacity-0 transition-opacity duration-300 blur-[0.9px]"
     tlg-fluted-glass-canvas

@@ -1,0 +1,130 @@
+---
+import CategoriesCanvas from '@/components/bricks/categories/CategoriesCanvas';
+import CTA from '@/components/CTA.astro';
+import Icon from '@/components/Icon.astro';
+import Modal from '@/components/Modal.astro';
+import Layout from '@/layouts/Layout.astro';
+import { t } from '@/locales';
+---
+
+<Layout>
+  <div
+    class="px-6 mx-auto max-w-(--container)"
+    x-data="{ hash: window.location.hash }"
+    x-init="window.addEventListener('hashchange', () => hash = window.location.hash)"
+  >
+    <section class="flex justify-center">
+      <div
+        class="w-full md:w-auto grid md:inline-grid md:grid-cols-[min-content] gap-4 mt-30"
+      >
+        <h1 class="uppercase text-heading-lg md:whitespace-nowrap">
+          {t('pages.categories.title')}
+        </h1>
+        <p
+          class="relative w-3/4 ml-auto md:w-2/3 text-paragraph-sm before:content-[''] before:absolute before:right-full before:top-0 before:w-[calc(33.3%-1rem)] md:before:w-[calc(50%-1rem)] before:mt-3 before:h-px before:bg-gray-900 before:mr-4"
+        >
+          {t('pages.categories.intro')}
+        </p>
+      </div>
+    </section>
+
+    <section class="relative flex flex-col divide-y md:divide-y-3 divide-gray-900 mt-30">
+      {
+        (
+          t('pages.categories.categories') as {
+            name: string;
+            description: string;
+            slug: string;
+          }[]
+        ).map(({ name, description, slug }) => (
+          <>
+            <a
+              id={slug}
+              href={`#${slug}`}
+              class="flex items-center w-full py-4 md:py-4 gap-2.5 md:gap-5 group last-of-type:border-b-0"
+            >
+              <h3 class="uppercase text-label-lg">{name}</h3>
+              {slug === 'creative-tech' && (
+                <span class="px-2 border border-gray-900 rounded-full pb-0.5 md:pt-1 md:px-5 md:pb-1.5 md:border-[1.5px] text-paragraph-base">
+                  {t('pages.categories.new')}
+                </span>
+              )}
+              <span
+                class="block w-4 h-4 ml-auto md:opacity-0 md:w-13 md:h-13 md:scale-0 group-hover:scale-100 transition-all duration-200 group-hover:opacity-100"
+                :class={`hash === '#${slug}' && 'opacity-100! scale-100!'`}
+              >
+                <span class="block w-full h-px bg-gray-900 md:h-1 translate-y-[9px] md:translate-y-6" />
+                <span
+                  class="block w-full h-px bg-gray-900 md:h-1 rotate-90 translate-y-2 md:translate-y-5 transition-all duration-200 delay-100"
+                  :class={`hash === '#${slug}' && 'scale-0'`}
+                />
+              </span>
+            </a>
+            <Modal id={slug}>
+              <h3 class="uppercase text-heading-base">{name}</h3>
+              <p class="relative w-3/4 ml-auto text-paragraph-xs before:content-[''] before:absolute before:right-full before:top-0 before:w-[calc(33.3%-1rem)] before:mt-3 before:h-px before:bg-gray-100 before:mr-4">
+                {name}
+              </p>
+              <p class="mt-8 text-paragraph-xs">{description}</p>
+              <a
+                href={t('external_links.projects')}
+                class="inline-flex items-center py-2 pl-5 pr-4 mt-8 border border-gray-100 rounded-full text-paragraph-xs gap-2 hover:bg-gray-100 hover:text-gray-900 transition-colors duration-300"
+              >
+                {t('ctas.submit_project')}
+                <Icon name="chevron-right" className="top-0 w-3 h-3" />
+              </a>
+            </Modal>
+          </>
+        ))
+      }
+      <div class="absolute inset-0 -z-1">
+        <CategoriesCanvas client:only="react" />
+      </div>
+    </section>
+
+    <section class="px-6 text-gray-100 bg-gray-900 rounded-xl md:rounded-2xl md:p-8 grid md:grid-cols-2 gap-8 md:gap-4 mt-14 md:mt-30">
+      <div class="flex pt-10 max-md:flex-col gap-10 md:gap-12 md:pt-8">
+        <div class="flex flex-col gap-1.5">
+          <h2 class="uppercase text-heading-base">{t('pages.categories.submission.closing_title')}</h2>
+          <p class="text-paragraph-base">{t('pages.categories.submission.closing_date')}</p>
+        </div>
+        <div class="flex flex-col gap-1.5">
+          <h2 class="uppercase text-heading-base">{t('pages.categories.submission.price_title')}</h2>
+          <p class="text-paragraph-base">{t('pages.categories.submission.price_content')}</p>
+        </div>
+      </div>
+      <div class="md:pl-20 max-md:mb-5">
+        <CTA
+          title={t('pages.categories.submission.rules_title')}
+          description={t('pages.categories.submission.rules_content')}
+          link="#"
+          linkText={t('pages.categories.submission.rules_download')}
+          icon="arrow-down"
+        />
+      </div>
+    </section>
+
+    <section class="mt-14 md:mt-36">
+      <h2 class="uppercase text-heading-base">{t('pages.categories.participants.title')}</h2>
+      <p class="mt-2 text-paragraph-lg">
+        {
+          (t('pages.categories.participants.list') as {
+            name: string;
+            link: string;
+          }[]).map(({ name, link }) => (
+            <>
+              <a
+                class="hover:underline underline-offset-8 decoration-2"
+                href={link}
+                target="_blank"
+                rel="noopener"
+              >{name}</a>, 
+            </>
+          ))
+        }
+      </p>
+    </section>
+  </div>
+</Layout>
+
+<script src="@/modules/embla.ts"></script>
