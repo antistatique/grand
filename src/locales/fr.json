@@ -287,6 +287,38 @@
           }
         ]
       }
+    },
+    "tickets": {
+      "title1": "Billetterie &",
+      "title2": "Inscriptions",
+      "ctas": {
+        "night": {
+          "title": "BILLETTERIE CÉRÉMONIE DU GRAND",
+          "content": "17 juin 2024 @ Cinéma Pathé Flon, Lausanne<br />Portes 18:30 — Entrée : CHF 99.-<br /><br />Attention: Capacité limitée, ne trainez pas!",
+          "cta": "Achetez vos billets"
+        },
+        "submission": {
+          "title": "INSCRIPTION AU CONCOURS",
+          "content": "CHF 200.- / projet<br />Deadline inscription : 27 mai 2025, 20h<br /><br />Une fois inscrit, vous recevrez un lien pour uploader votre/vos projet(s).",
+          "cta": "Inscrivez votre projet"
+        }
+      }
+    },
+    "sponsors": {
+      "title": "Sponsors<br />de l'événement",
+      "intro": "Cet événement ne serait pas possible sans la générosité de nos sponsors. Un grand merci à eux pour leur soutien et aide.",
+      "sponsors": [
+        { "slug": "ameira", "link": "https://admeira.ch/" },
+        { "slug": "yuh", "link": "https://www.yuh.ch/" },
+        { "slug": "leading", "link": "https://leadingswissagencies.ch/" },
+        { "slug": "remarq", "link": "https://www.remarq.ch/" },
+        { "slug": "swissfilm", "link": "https://www.swissfilm.org/fr/" },
+        { "slug": "antistatique", "link": "https://antistatique.net/" },
+        { "slug": "baston", "link": "https://www.baston.ch/" },
+        { "slug": "maxime", "link": "https://www.maxime.ch/" },
+        { "slug": "sga", "link": "https://www.sga.ch/" },
+        { "slug": "weezevent", "link": "https://www.weezevent.com/" }
+      ]
     }
   },
   "footer": {

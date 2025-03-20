@@ -1,0 +1,56 @@
+---
+import CTA from '@/components/CTA.astro';
+import Picture from '@/components/Picture.astro';
+import Layout from '@/layouts/Layout.astro';
+import { t } from '@/locales';
+---
+
+<Layout>
+  <div
+    class="px-6 mx-auto max-w-(--container)"
+    x-data="{ hash: window.location.hash }"
+    x-init="window.addEventListener('hashchange', () => hash = window.location.hash)"
+  >
+    <section class="flex justify-center">
+      <h1 class="uppercase text-heading-lg mt-30">
+        <span class="block md:pl-20">{t('pages.tickets.title1')}</span>
+        <span class="block max-md:pl-9">{t('pages.tickets.title2')}</span>
+      </h1>
+    </section>
+
+    <section
+      class="grid md:grid-cols-2 gap-4 md:gap-6 mt-30 md:mt-38 [&_a]:max-md:order-first"
+    >
+      <Picture
+        name="event-01"
+        alt="Event 01"
+        sizes="(min-width: 1540px) 695px, (min-width: 780px) 46.08vw, calc(99.78vw - 46px)"
+        class="rounded-xl md:rounded-2xl"
+      />
+      <CTA
+        title={t('pages.tickets.ctas.night.title')}
+        description={t('pages.tickets.ctas.night.content')}
+        link={t('external_links.tickets')}
+        linkText={t('pages.tickets.ctas.night.cta')}
+        dark
+      />
+    </section>
+
+    <section class="mt-12 grid md:grid-cols-2 gap-4 md:gap-6 md:mt-16">
+      <CTA
+        title={t('pages.tickets.ctas.submission.title')}
+        description={t('pages.tickets.ctas.submission.content')}
+        link={t('external_links.projects')}
+        linkText={t('pages.tickets.ctas.submission.cta')}
+      />
+      <Picture
+        name="event-02"
+        alt="Event 02"
+        sizes="(min-width: 1540px) 695px, (min-width: 780px) 46.08vw, calc(99.78vw - 46px)"
+        class="rounded-xl md:rounded-2xl"
+      />
+    </section>
+  </div>
+</Layout>
+
+<script src="@/modules/embla.ts"></script>
