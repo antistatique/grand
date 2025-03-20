@@ -13,19 +13,29 @@ const { name, alt, sizes, loading, fetchpriority } = Astro.props;
 ---
 
 <div
-  class="relative w-full aspect-[4/5]"
-  x-data="{ 
+  class="relative w-full overflow-hidden aspect-[4/5] rounded-xl md:rounded-2xl"
+  x-data={`{ 
     isHovered: false,
     clipX: 50,
     handleMove(event) {
       const rect = event.target.getBoundingClientRect();
       this.clipX = ((event.clientX - rect.left) / rect.width) * 100;
-    }
-  }"
+    },
+    init() {
+      this.checkHash();
+      window.addEventListener('popstate', () => this.checkHash());
+    },
+    checkHash() {
+      this.isHovered = window.location.hash === '#${name}';
+      this.clipX = window.location.hash === '#${name}' ? (window.innerWidth < 764 ? 50 : this.clipX) : 0;
+    },    
+  }`}
+  @click.outside="isHovered = false; clipX = 0"
   @mouseenter="isHovered = true"
   @mousemove="handleMove"
   @mouseleave="isHovered = false"
 >
+  <pre x-text="JSON.stringify({ isHovered, clipX }, null, 2)"></pre>
   <div
     class="absolute inset-0 z-10 opacity-0 transition-opacity duration-300 blur-[0.9px]"
     tlg-fluted-glass-canvas

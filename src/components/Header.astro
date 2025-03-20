@@ -5,7 +5,7 @@ import { cm } from '@/utils';
 const nav = [
   {
     label: t('menu.jury'),
-    href: '/',
+    href: '/jury',
   },
   {
     label: t('menu.categories'),
@@ -59,15 +59,13 @@ const pathname = Astro.url.pathname;
   <div
     x-intersect:leave="showLogo = true"
     x-intersect:enter="showLogo = false; document.documentElement.style.setProperty('--logo-rotation', '0deg')"
-    x-intersect:margin="0px 0px -200px 0px"
     class="absolute z-50 w-full h-0 bg-gray-900 top-[200px]"
     aria-hidden="true"
   >
   </div>
 
   {/* Rotating fixed logo */}
-  <a
-    href="/"
+  <button
     x-show="showLogo"
     x-transition:enter="transition ease-out duration-300"
     x-transition:enter-start="opacity-0 transform -translate-y-4"
@@ -75,14 +73,15 @@ const pathname = Astro.url.pathname;
     x-transition:leave="transition ease-in duration-200"
     x-transition:leave-start="opacity-100"
     x-transition:leave-end="opacity-0 -translate-y-4"
-    class="fixed z-50 top-6 left-6 rotate-(--logo-rotation)"
+    @click="window.scrollTo({ top: 0, behavior: 'smooth' });"
+    class="fixed z-50 cursor-pointer top-6 left-6 rotate-(--logo-rotation)"
   >
     <img
       src="/svg/logo-g-light.svg"
       alt="Logo"
       class="w-11 h-11 md:w-18 md:h-18"
     />
-  </a>
+  </button>
 
   <button
     class="relative z-10 md:text-gray-900 md:hidden"
@@ -92,8 +91,9 @@ const pathname = Astro.url.pathname;
     <span x-show="!open">{t('menu.toggle_open')}</span>
     <span x-show="open">{t('menu.toggle_close')}</span>
   </button>
+
   <nav
-    class="max-md:fixed max-md:inset-0 max-md:bg-gray-900 max-md:text-gray-100 max-md:px-6 max-md:flex max-md:flex-col max-md:justify-between max-md:pb-8"
+    class="max-md:fixed max-md:inset-0 max-md:bg-gray-900 max-md:text-gray-100 max-md:px-6 max-md:flex max-md:flex-col max-md:justify-between max-md:pb-8 z-9"
     x-show="open || !mobile"
     x-transition.opacity
     x-transition.duration.100ms

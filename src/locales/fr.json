@@ -71,6 +71,66 @@
         }
       },
       "2024": "Edition 2024"
+    },
+    "jury": {
+      "title": "Découvrez le jury 2025",
+      "intro": "Chaque catégorie est jugée par un panel d’expert·e·s issu·e·s des domaines de la communication, de la publicité, du design et des médias. Iels auront la responsabilité de composer les shortlists et élire les gagnant·e·s.",
+      "members": {
+        "camille": {
+          "name": "Camille Natalini",
+          "role": "Co-fondatrice & Graphiste @ aminima",
+          "description": "Camille Natalini étudie le graphisme au CFP Arts de Genève avant de faire ses armes auprès de Roger Pfund, chez qui elle se constitue une riche expérience du graphisme suisse. Après un passage par l’horlogerie de luxe, Camille passe six ans dans la publicité chez Cavalcade, qu’elle quitte en 2022 pour co-fonder l’agence créative aminima avec Fabien Bergerat.",
+          "linkedin": "https://www.linkedin.com/in/camille-natalini-a949a0121/"
+        },
+        "julia": {
+          "name": "Julia Michel Roubaud",
+          "role": "Brand Strategist indépendante",
+          "description": "Formée au sein d’Ogilvy Paris et dotée d’une spécialisation en RSE acquise en 2008 au sein du master HEC Paris « Management du Développement Durable », Julia prend ses quartiers à Genève en qualité de planneur stratégique indépendante en 2013. Avec une vision de la communication basée sur la force de l’idée, elle érige les meilleurs concepts grâce à la convergence des différentes expertises et l’hybridation des compétences.",
+          "linkedin": "https://www.linkedin.com/in/julia-michel-roubaud-a3a2b04/"
+        },
+        "nathan": {
+          "name": "Nathan Saurer",
+          "role": "Creative Director & Co-fondateur @ 23Bis & Outfits.Studio",
+          "description": "Depuis plus de 10 ans, Nathan rassemble les talents devant et derrière la caméra. Alternant entre réalisation et direction créative, il explore et expérimente différentes manières de capturer, traduire et mettre en scène des histoires fortes. Engagé pour une communication responsable, il tisse des liens entre les différentes régions suisses et partage ses connaissances en création de contenu à l’UNINE.",
+          "linkedin": "https://www.linkedin.com/in/nathan-saurer-bb07a520/"
+        },
+        "nina": {
+          "name": "Nina Hugentobler",
+          "role": "Client director & associée @ Cavalcade",
+          "description": "Avec plus de 25 ans d’expérience au sein d’agences de réseau (Publicis/Saatchi&Saatchi) et indépendante dans des postes de direction, Nina œuvre aujourd’hui en qualité de co-directrice et associée chez Cavalcade. Avec une passion pour les bonnes idées et les belles réalisations, elle accompagne les clients et équipes de l’agence afin de rendre chaque campagne unique et pertinente.",
+          "linkedin": "https://www.linkedin.com/in/ninahugentobler/"
+        },
+        "jeremy": {
+          "name": "Jeremy Formaz",
+          "role": "Creative Director & Fondateur @ Forme",
+          "description": "Jeremy prend ses premiers repères en suivant une formation de graphiste, dans le monde d’avant Facebook, avec des profs d’avant l’ordinateur, apprenant l’importance du détail, de l’idée avant l’effet, de la forme au service du propos. Après s’être frotté à la réalité des agences romandes, il fonde Formeen 2014. Il enseigne également à l’édhéa à Sierre pour la filière graphiste CFC, et est chef-expert aux examens de fin d’apprentissage pour l’Etat du Valais.",
+          "linkedin": "https://www.linkedin.com/in/jeremy-formaz-4766a557/"
+        },
+        "dani": {
+          "name": "Daniel Kobi",
+          "role": "Art Director @ Digitec Galaxus AG",
+          "description": "Après une formation à Bâle dans les années 1990, Dani s'établit à Zurich où il débute sa carrière de publicitaire comme graphiste et directeur artistique. Après 20 ans au sein de grandes agences, il rejoint Digitec Galaxus en 2020. Aujourd'hui, il travaille avec une équipe de 20 collaborateurs aux activités de branding et publicité de la marque. Ses campagnes percutantes ont non seulement marqué les esprits, mais ont également été primées à plusieurs reprises.",
+          "linkedin": "https://www.linkedin.com/in/daniel-kobi-a212a0136/"
+        },
+        "gabriel": {
+          "name": "Gabriel Mauron",
+          "role": "Chief Creative Officer @ Havas Switzerland",
+          "description": "Plaçant la créativité et son impact social et culturel au cœur de son travail, Gabriel Mauron imagine et développe des campagnes qui changent les comportements et les marques depuis 20 ans. Au cours de sa carrière au sein d’agences de renom, il a été primé par de prestigieuses institutions telles que Cannes Lions, Epica, The One Show, Eurobest, LIA, NY Festival et l’ADC*E. CCO de Havas Suisse depuis 2 ans, il a été nommé « Advertiser of the Year CH » en 2024.",
+          "linkedin": "https://www.linkedin.com/in/gabrielmauron/"
+        },
+        "azizah": {
+          "name": "Azizah Boo",
+          "role": "Managing Director @ Marvelous",
+          "description": "Co-directrice de Marvelous Digital SA depuis 2017, Azizah aborde les défis stratégiques de la communication et du digital avec des solutions pragmatiques et efficaces, mettant à profit son background académique en sciences économiques. Passionnée par le sport et son impact, elle a eu la chance de contribuer à cinq Jeux olympiques dans son rôle professionnel.",
+          "linkedin": "https://www.linkedin.com/in/azizah-boo-80272967/"
+        },
+        "catherine": {
+          "name": "Catherine Pearson",
+          "role": "Illustratrice indépendante",
+          "description": "Catherine développe, au cours de son parcours, un style raffiné et ludique qui inspire la joie et la bonne humeur. Passionnée par l’idée de donner vie aux concepts à travers son coup de crayon, elle croit que l'illustration peut emmener là où les mots ne le peuvent. Son univers coloré, mêlant arrière-plans abstraits, détails narratifs et textures riches, s’est illustré dans de nombreux magazines, événements, packagings et campagnes publicitaires.",
+          "linkedin": "https://www.linkedin.com/in/catherine-pearson-6b9227102/"
+        }
+      }
     }
   },
   "footer": {

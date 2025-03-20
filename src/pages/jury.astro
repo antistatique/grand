@@ -1,0 +1,86 @@
+---
+import Carousel from '@/components/Carousel.astro';
+import FlutedPicture from '@/components/FlutedPicture.astro';
+import Hero from '@/components/Hero';
+import Icon from '@/components/Icon.astro';
+import Modal from '@/components/Modal.astro';
+import Layout from '@/layouts/Layout.astro';
+import { t } from '@/locales';
+import { cm } from '@/utils/cm';
+---
+
+<Layout>
+  <div class="px-6 mx-auto max-w-(--container)">
+    <div class="flex justify-center">
+      <div
+        class="w-full md:w-auto grid md:inline-grid md:grid-cols-[min-content] gap-4 mt-30"
+      >
+        <h1 class="uppercase text-heading-lg md:whitespace-nowrap">
+          {t('pages.jury.title')}
+        </h1>
+        <p
+          class="relative w-3/4 ml-auto md:w-1/2 text-paragraph-sm before:content-[''] before:absolute before:right-full before:top-0 before:w-[calc(33.3%-1rem)] md:before:w-[calc(100%-1rem)] before:mt-3 before:h-px before:bg-gray-900 before:mr-4"
+        >
+          {t('pages.jury.intro')}
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="grid grid-cols-2 md:grid-cols-3 gap-x-3 md:gap-x-6 gap-y-12 md:gap-y-16 mt-30"
+    >
+      {
+        Object.keys(t('pages.jury.members')).map((slug, i) => (
+          <>
+            <div
+              x-data="{ shown: false }"
+              x-intersect:enter="shown = true"
+              x-intersect:leave="shown = false"
+            >
+              <a
+                id={slug}
+                href={`#${slug}`}
+                class={`scroll-mt-6 block transition ease-out duration-700 ${i % 2 === 1 && 'max-md:delay-200'} ${i % 3 === 1 && 'md:delay-100'} ${i % 3 === 2 && 'md:delay-200'}`}
+                :class={`shown ? 'opacity-100 -translate-y-5 scale-100' : 'opacity-0 translate-y-0 scale-95'`}
+              >
+                <div class="rounded">
+                  <FlutedPicture
+                    name={slug}
+                    alt={t(`pages.jury.members.${slug}.name`)}
+                    sizes="(min-width: 1540px) 458px, (min-width: 780px) 30.68vw, calc(100.22vw - 49px)"
+                  />
+                </div>
+                <h3 class="mt-6 uppercase text-heading-base">
+                  {t(`pages.jury.members.${slug}.name`)}
+                </h3>
+                <p class="relative w-3/4 ml-auto text-paragraph-sm before:content-[''] before:absolute before:right-full before:top-0 before:w-[calc(33.3%-1rem)] before:mt-3 before:h-px before:bg-gray-900 before:mr-4">
+                  {t(`pages.jury.members.${slug}.role`)}
+                </p>
+              </a>
+            </div>
+            <Modal id={slug}>
+              <h3 class="uppercase text-heading-base">
+                {t(`pages.jury.members.${slug}.name`)}
+              </h3>
+              <p class="relative w-3/4 ml-auto text-paragraph-xs before:content-[''] before:absolute before:right-full before:top-0 before:w-[calc(33.3%-1rem)] before:mt-3 before:h-px before:bg-gray-100 before:mr-4">
+                {t(`pages.jury.members.${slug}.role`)}
+              </p>
+              <p class="mt-8 text-paragraph-xs">
+                {t(`pages.jury.members.${slug}.description`)}
+              </p>
+              <a
+                href={t(`pages.jury.members.${slug}.linkedin`)}
+                class="inline-flex items-center py-2 pl-5 pr-4 mt-8 border border-gray-100 rounded-full text-paragraph-xs gap-2 hover:bg-gray-100 hover:text-gray-900 transition-colors duration-300"
+              >
+                LinkedIn
+                <Icon name="chevron-right" className="top-0 w-3 h-3" />
+              </a>
+            </Modal>
+          </>
+        ))
+      }
+    </div>
+  </div>
+</Layout>
+
+<script src="@/modules/embla.ts"></script>
