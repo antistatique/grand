@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Environment,
   Lightformer,
-  // OrbitControls,
+  OrbitControls,
   PerspectiveCamera,
 } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
@@ -14,7 +14,7 @@ const CategoriesCanvas = () => (
     <PerspectiveCamera fov={42} makeDefault position={[0, 0, 10]} />
 
     <color attach="background" args={['#EDEDED']} />
-    {/* <OrbitControls makeDefault /> */}
+    <OrbitControls makeDefault />
 
     <spotLight position={[20, 20, 10]} penumbra={1} castShadow angle={0.2} />
 

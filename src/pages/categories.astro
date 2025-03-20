@@ -28,7 +28,7 @@ import { t } from '@/locales';
       </div>
     </section>
 
-    <section class="relative flex flex-col divide-y md:divide-y-3 divide-gray-900 mt-30">
+    <section class="relative flex flex-col divide-y md:divide-y-3 divide-gray-900/0 mt-30">
       {
         (
           t('pages.categories.categories') as {
@@ -43,7 +43,7 @@ import { t } from '@/locales';
               href={`#${slug}`}
               class="flex items-center w-full py-4 md:py-4 gap-2.5 md:gap-5 group last-of-type:border-b-0"
             >
-              <h3 class="uppercase text-label-lg">{name}</h3>
+              <h3 class="uppercase opacity-0 text-label-lg">{name}</h3>
               {slug === 'creative-tech' && (
                 <span class="px-2 border border-gray-900 rounded-full pb-0.5 md:pt-1 md:px-5 md:pb-1.5 md:border-[1.5px] text-paragraph-base">
                   {t('pages.categories.new')}
