@@ -41,19 +41,20 @@ const pathname = Astro.url.pathname;
   "
 >
   {/* Normal logo */}
-  <a href="/" class="relative z-10 block h-auto w-28 md:w-40 shrink-0">
-    <img
+  <div class="relative">
+    <a
       x-cloak
       x-show="open && mobile"
-      src="/svg/logo-full-light.svg"
-      alt="Le GRAND"
-    />
-    <img
-      x-show="!open || !mobile"
-      src="/svg/logo-full-dark.svg"
-      alt="Le GRAND"
-    />
-  </a>
+      href="/"
+      class="absolute top-0 left-0 z-10 block h-auto w-28 md:w-40 shrink-0"
+    >
+      <img src="/svg/logo-full-light.svg" alt="Le GRAND" />
+    </a>
+
+    <a href="/" class="relative block h-auto z-2 w-28 md:w-40 shrink-0">
+      <img src="/svg/logo-full-dark.svg" alt="Le GRAND" />
+    </a>
+  </div>
 
   {/* Threshold marker set at 200px from the top  */}
   <div

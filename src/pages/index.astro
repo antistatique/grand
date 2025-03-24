@@ -10,12 +10,7 @@ import { t } from '@/locales';
 
 <Layout>
   <section class="w-full h-[80vh] [&_canvas]:h-full [&_canvas]:w-full">
-    <HeroCanvas client:only="react">
-      <div slot="fallback">
-        <h1 class="text-heading-lg">{t('hero.date')} {t('hero.title')}</h1>
-        <h2>{t('hero.subtitle')}</h2>
-      </div>
-    </HeroCanvas>
+    <HeroCanvas client:idle={{ timeout: 3000 }} />
     <h1 class="sr-only">{t('hero.date')} {t('hero.title')}</h1>
     <h2 class="sr-only">{t('hero.subtitle')}</h2>
   </section>

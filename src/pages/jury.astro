@@ -60,6 +60,8 @@ import { t } from '@/locales';
                     name={slug}
                     alt={name}
                     sizes="(min-width: 1540px) 455px, (min-width: 780px) 30.68vw, calc(50vw - 30px)"
+                    fetchpriority={i < 3 ? 'high' : 'low'}
+                    loading={i < 3 ? 'eager' : 'lazy'}
                   />
                 </div>
                 <h3 class="mt-6 uppercase text-heading-base">

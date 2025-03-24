@@ -81,7 +81,7 @@ import { t } from '@/locales';
         ))
       }
       <div class="absolute inset-0 -z-1">
-        <CategoriesCanvas client:only="react" />
+        <CategoriesCanvas client:idle={{ timeout: 3000 }} />
       </div>
     </section>
 
