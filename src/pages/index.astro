@@ -10,8 +10,13 @@ import { t } from '@/locales';
 
 <Layout>
   <section class="w-full h-[80vh] [&_canvas]:h-full [&_canvas]:w-full">
-    <HeroCanvas client:only="react" />
-    <h1 class="sr-only bg-gray-">{t('hero.date')} {t('hero.title')}</h1>
+    <HeroCanvas client:only="react">
+      <div slot="fallback">
+        <h1 class="text-heading-lg">{t('hero.date')} {t('hero.title')}</h1>
+        <h2>{t('hero.subtitle')}</h2>
+      </div>
+    </HeroCanvas>
+    <h1 class="sr-only">{t('hero.date')} {t('hero.title')}</h1>
     <h2 class="sr-only">{t('hero.subtitle')}</h2>
   </section>
 
@@ -148,7 +153,7 @@ import { t } from '@/locales';
               </address>
             </div>
 
-            <div class="w-full">
+            <div class="md:w-full max-md:ml-auto">
               <span
                 class="flex items-center justify-end text-gray-900 bg-gray-100 rounded-full h-7 md:h-10 justify-self-end"
               >
@@ -207,7 +212,7 @@ import { t } from '@/locales';
               </address>
             </div>
 
-            <div class="w-full">
+            <div class="md:w-full max-md:ml-auto">
               <span
                 class="flex items-center justify-end text-gray-900 bg-gray-100 rounded-full h-7 md:h-10 justify-self-end"
               >

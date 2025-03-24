@@ -46,9 +46,10 @@ const { name, alt, sizes, loading, fetchpriority } = Astro.props;
   >
     <img
       class="hidden"
-      src={`/images/${name}_256.jpg`}
-      alt=""
+      src={`/images/${name}_256.avif`}
       tlg-fluted-glass-image
+      loading="lazy"
+      fetchpriority="low"
     />
   </div>
   <Picture

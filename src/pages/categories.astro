@@ -7,7 +7,10 @@ import Layout from '@/layouts/Layout.astro';
 import { t } from '@/locales';
 ---
 
-<Layout>
+<Layout
+  title="10 catégories pour pour le GRAND Prix Romand de la Création 2025. Award Le GRAND"
+  description="Afin de remporter un Award du GRAND, 10 catégories sont à disposition afin de déposer sa candidature. Bonne chance à toutes et tous. Award / Prix le Association le GRAND."
+>
   <div
     class="px-6 mx-auto max-w-(--container)"
     x-data="{ hash: window.location.hash }"
@@ -41,7 +44,7 @@ import { t } from '@/locales';
             <a
               id={slug}
               href={`#${slug}`}
-              class="flex items-center w-full py-4 md:py-4 gap-2.5 md:gap-5 group last-of-type:border-b-0"
+              class="flex items-center w-full py-4 outline-none md:py-4 gap-2.5 md:gap-5 group last-of-type:border-b-0"
             >
               <h3 class="uppercase opacity-0 text-label-lg">{name}</h3>
               {slug === 'creative-tech' && (

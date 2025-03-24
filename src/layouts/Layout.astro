@@ -4,6 +4,14 @@ import Header from '@/components/Header.astro';
 import Marquee from '@/components/Marquee.astro';
 
 import '@/styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const asPath = Astro.url.pathname;
 ---
 
 <!doctype html>
@@ -13,7 +21,59 @@ import '@/styles/global.css';
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <meta charset="UTF-8" />
+    <title>
+      {
+        title ||
+          'GRAND Prix Romand de la Création. Award de la communication et la publicité.'
+      }
+    </title>
+    <meta
+      name="description"
+      content={description ||
+        'Le GRAND Prix Romand de la Création est un concours ayant pour objectif de mettre en lumière les professionnelles de la communication et la publicité de Suisse Romande. Award Le GRAND 2025'}
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="manifest" href="/favicon/manifest.json" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="GRAND" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+
+    <meta property="og:title" content={`${title}`} />
+    <meta property="twitter:title" content={`${title}`} />
+    <meta property="og:type" content="website" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:creator" content="Yann Gouffon" />
+    <meta property="description" content={description} />
+    <meta property="og:description" content={description} />
+    <meta property="twitter:description" content={description} />
+    <meta
+      property="og:image"
+      content="https://associationgrand.ch/og-image.jpg"
+    />
+    <meta property="og:url" content={`https://associationgrand.ch`} />
+    <link rel="canonical" href={`https://associationgrand.ch/${asPath}`} />
+
+    <script
+      defer
+      data-domain="associationgrand.ch"
+      src="https://plausible.io/js/script.js"></script>
   </head>
   <body class="pt-10 font-sans antialiased text-gray-900 bg-gray-100">
     <Marquee />

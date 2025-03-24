@@ -1,7 +1,12 @@
 @import "./tailwind.css";
 @import "./fonts.css";
 @import "./interactions.css";
+@import "./transitions.css";
 
 [x-cloak] {
   display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+    [x-cloak="mobile"] { display: none; }
 }
