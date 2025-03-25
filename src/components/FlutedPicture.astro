@@ -41,7 +41,7 @@ const { name, alt, sizes, loading, fetchpriority } = Astro.props;
     tlg-fluted-glass-segments="42"
     tlg-fluted-glass-overlay="10"
     tlg-fluted-glass-motion="-0.5"
-    :style="`clip-path: inset(0% ${Math.max(0, 100 - (clipX + 1))}% 0% ${Math.max(0, clipX - 60)}%)`"
+    :style="`clip-path: inset(0% ${Math.max(0, 100 - (clipX + 1))}% 0% ${Math.max(0, clipX - 100)}%)`"
     :class="isHovered ? 'opacity-100' : 'opacity-0'"
   >
     <img

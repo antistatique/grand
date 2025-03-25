@@ -10,8 +10,8 @@
 
   --font-sans: 'Articulat', 'Impact', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-  --text-heading-lg: clamp(44px, 4.07vw + 28.52px, 88px);
-  --text-heading-lg--line-height: clamp(48px, 4.07vw + 32.52px, 92px);
+  --text-heading-lg: clamp(41px, 4.35vw + 24.46px, 88px);
+  --text-heading-lg--line-height: clamp(45px, 4.35vw + 28.46px, 92px);
   --text-heading-lg--font-weight: 700;
 
   --text-heading-base: clamp(16px, 0.74vw + 13.19px, 24px);

@@ -18,13 +18,13 @@ import { t } from '@/locales';
   >
     <section class="flex justify-center">
       <div
-        class="w-full md:w-auto grid md:inline-grid md:grid-cols-[min-content] gap-4 mt-30"
+        class="w-full md:w-auto grid md:inline-grid md:grid-cols-[min-content] gap-2 mt-30"
       >
         <h1 class="uppercase text-heading-lg md:whitespace-nowrap">
           {t('pages.categories.title')}
         </h1>
         <p
-          class="relative w-3/4 ml-auto md:w-2/3 text-paragraph-sm before:content-[''] before:absolute before:right-full before:top-0 before:w-[calc(33.3%-1rem)] md:before:w-[calc(50%-1rem)] before:mt-3 before:h-px before:bg-gray-900 before:mr-4"
+          class="relative w-3/4 ml-auto md:w-2/3 text-paragraph-sm before:content-[''] before:absolute before:right-full before:top-0 before:w-[calc(33.3%-1rem)] md:before:w-[calc(50%-1rem)] before:mt-[0.6em] before:h-px before:bg-gray-900 before:mr-4"
         >
           {t('pages.categories.intro')}
         </p>
@@ -65,7 +65,7 @@ import { t } from '@/locales';
             </a>
             <Modal id={slug}>
               <h3 class="uppercase text-heading-base">{name}</h3>
-              <p class="relative w-3/4 ml-auto text-paragraph-xs before:content-[''] before:absolute before:right-full before:top-0 before:w-[calc(33.3%-1rem)] before:mt-3 before:h-px before:bg-gray-100 before:mr-4">
+              <p class="relative w-3/4 ml-auto text-paragraph-xs before:content-[''] before:absolute before:right-full before:top-0 before:w-[calc(33.3%-1rem)] before:mt-[0.7em] before:h-px before:bg-gray-100 before:mr-4">
                 {name}
               </p>
               <p class="mt-8 text-paragraph-xs">{description}</p>
@@ -124,7 +124,7 @@ import { t } from '@/locales';
               >{name}</a>, 
             </>
           ))
-        }
+        }...
       </p>
     </section>
   </div>
