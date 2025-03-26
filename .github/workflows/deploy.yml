@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main-2025
-      - deployment
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -17,9 +16,6 @@ jobs:
         id: deploy_target
         run: |
           if [[ $GITHUB_REF == 'refs/heads/main-2025' ]]; then
-              echo "DEPLOY_TARGET=sites/staging.associationgrand.ch" >> $GITHUB_ENV
-          fi
-          if [[ $GITHUB_REF == 'refs/heads/deployment' ]]; then
               echo "DEPLOY_TARGET=sites/staging.associationgrand.ch" >> $GITHUB_ENV
           fi
           # if [[ $GITHUB_REF == 'refs/heads/main-2025' ]]; then
