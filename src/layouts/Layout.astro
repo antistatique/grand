@@ -12,6 +12,14 @@ interface Props {
 
 const { title, description } = Astro.props;
 const asPath = Astro.url.pathname;
+
+const mainTitle =
+  title ||
+  'GRAND Prix Romand de la Création. Award de la communication et la publicité.';
+
+const mainDescription =
+  description ||
+  'Le GRAND Prix Romand de la Création est un concours ayant pour objectif de mettre en lumière les professionnelles de la communication et la publicité de Suisse Romande. Award Le GRAND 2025';
 ---
 
 <!doctype html>
@@ -23,16 +31,9 @@ const asPath = Astro.url.pathname;
     <meta name="generator" content={Astro.generator} />
     <meta charset="UTF-8" />
     <title>
-      {
-        title ||
-          'GRAND Prix Romand de la Création. Award de la communication et la publicité.'
-      }
+      {mainTitle}
     </title>
-    <meta
-      name="description"
-      content={description ||
-        'Le GRAND Prix Romand de la Création est un concours ayant pour objectif de mettre en lumière les professionnelles de la communication et la publicité de Suisse Romande. Award Le GRAND 2025'}
-    />
+    <meta name="description" content={mainDescription} />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
 
@@ -53,14 +54,14 @@ const asPath = Astro.url.pathname;
     <link rel="manifest" href="/favicon/site.webmanifest" />
     <meta name="theme-color" content="#EDEDED" />
 
-    <meta property="og:title" content={`${title}`} />
-    <meta property="twitter:title" content={`${title}`} />
+    <meta property="og:title" content={mainTitle} />
+    <meta property="twitter:title" content={mainTitle} />
     <meta property="og:type" content="website" />
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:creator" content="Yann Gouffon" />
-    <meta property="description" content={description} />
-    <meta property="og:description" content={description} />
-    <meta property="twitter:description" content={description} />
+    <meta property="description" content={mainDescription} />
+    <meta property="og:description" content={mainDescription} />
+    <meta property="twitter:description" content={mainDescription} />
     <meta
       property="og:image"
       content="https://associationgrand.ch/og-image.jpg"
