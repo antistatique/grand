@@ -10,7 +10,7 @@ import { Canvas } from '@react-three/fiber';
 import Categories from './Categories';
 
 const CategoriesCanvas = () => (
-  <Canvas>
+  <Canvas gl={{ preserveDrawingBuffer: true }}>
     <PerspectiveCamera fov={42} makeDefault position={[0, 0, 10]} />
 
     <color attach="background" args={['#EDEDED']} />

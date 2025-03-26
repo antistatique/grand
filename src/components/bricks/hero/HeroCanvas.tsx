@@ -11,7 +11,7 @@ import { Canvas } from '@react-three/fiber';
 import Hero from './Hero';
 
 const HeroCanvas = () => (
-  <Canvas>
+  <Canvas gl={{ preserveDrawingBuffer: true }}>
     <PerspectiveCamera fov={42} makeDefault position={[0, 0, 10]} />
     <color attach="background" args={['#EDEDED']} />
 

@@ -1,4 +1,5 @@
 import React from 'react';
+// import { useEffect } from 'react';
 import { Line, Text, type TextProps } from '@react-three/drei';
 import { useThree } from '@react-three/fiber';
 import { range } from 'ramda';
@@ -7,10 +8,12 @@ import Brick from '@/components/bricks/Brick';
 import { t } from '@/locales';
 
 const HeroTitle = () => {
-  const { viewport } = useThree();
+  const three = useThree();
+  const { viewport } = three;
+  // const { gl } = three;
   const h = viewport.height;
   const w = viewport.width;
-  const sm = window.innerWidth < 950;
+  const sm = window.innerWidth < 768;
 
   const l = sm ? -w / 5 : -2.4;
   const r = sm ? w / 7 : 2;
@@ -24,6 +27,20 @@ const HeroTitle = () => {
     anchorY: 'middle',
     font: '/fonts/bold.woff',
   };
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     const link = document.createElement('a');
+  //     link.setAttribute('download', 'hero.png');
+  //     link.setAttribute(
+  //       'href',
+  //       gl.domElement
+  //         .toDataURL('image/png')
+  //         .replace('image/png', 'image/octet-stream')
+  //     );
+  //     link.click();
+  //   }, 2000);
+  // }, []);
 
   return (
     <group>
