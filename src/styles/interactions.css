@@ -1,5 +1,34 @@
 .hover-underline {
-  @apply after:content-[''] after:bg-[currentColor] after:absolute after:z-10 after:-bottom-0.5 after:inset-x-0 after:h-px;
+  @apply relative;
+  @apply after:content-[''] after:bg-[currentColor] after:absolute after:z-10 after:-bottom-0.5 after:inset-x-0 after:h-[0.05em];
   @apply after:scale-x-0 after:origin-[right_center] after:transition-transform after:duration-300;
   @apply md:hover:after:scale-x-100 md:hover:after:origin-[left_center];
+}
+
+.link-wrapper a {
+  @apply relative;
+  @apply after:content-[''] after:bg-[currentColor] after:absolute after:z-10 after:-bottom-0.5 after:inset-x-0 after:h-px;
+
+  &:hover:after {
+    animation: underline 500ms ease-in-out;
+  }
+}
+
+@keyframes underline {
+  0% {
+    transform: scaleX(1);
+    transform-origin: right center;
+  }
+  48% {
+    transform: scaleX(0);
+    transform-origin: right center;
+  }
+  52% {
+    transform: scaleX(0);
+    transform-origin: left center;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
 }

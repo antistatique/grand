@@ -9,7 +9,7 @@ import { t } from '@/locales';
 >
   <div class="relative z-2 grid md:grid-cols-2 gap-12">
     <div
-      class="flex-col justify-between grid grid-cols-2 md:flex gap-2 [&_a]:underline [&_a]:underline-offset-6 [&_a]:decoration-1 text-paragraph-xs"
+      class="flex-col justify-between grid grid-cols-2 md:flex gap-2 text-paragraph-xs"
     >
       <a href="/">
         <img
@@ -18,7 +18,7 @@ import { t } from '@/locales';
           class="w-11 h-11 md:w-18 md:h-18"
         />
       </a>
-      <div>
+      <div class="link-wrapper">
         <p set:html={t('footer.contact_us')} />
         <div class="flex max-md:flex-col gap-7 mt-7">
           <p set:html={t('footer.copyright')} />
@@ -43,7 +43,7 @@ import { t } from '@/locales';
     </div>
   </div>
   <div
-    class="absolute inset-0 z-1 motion-opacity-in-0 motion-duration-1000 motion-blur-in-lg motion-delay-2000"
+    class="absolute inset-0 z-1 motion-opacity-in-0 motion-duration-1000 motion-blur-in-lg motion-delay-2000 opacity-0!"
   >
     <FooterCanvas client:visible />
   </div>
