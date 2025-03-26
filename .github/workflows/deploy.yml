@@ -32,7 +32,7 @@ jobs:
         run: bun install
 
       - name: Build with astro
-        run: bun build
+        run: bun run build
 
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
