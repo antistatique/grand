@@ -1,0 +1,45 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main-2025
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set deployment environment variables based on Git branches
+        id: deploy_target
+        run: |
+          if [[ $GITHUB_REF == 'refs/heads/main-2025' ]]; then
+              echo "DEPLOY_TARGET=sites/staging.associationgrand.ch" >> $GITHUB_ENV
+          fi
+          # if [[ $GITHUB_REF == 'refs/heads/main-2025' ]]; then
+          #   echo "DEPLOY_TARGET=sites/2025.associationgrand.ch" >> $GITHUB_ENV
+          # fi
+
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.2.6
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Build with astro
+        run: bun run build
+
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_SSH_KEY }}
+          SSH_CMD_ARGS: "-o StrictHostKeyChecking=no -o PubkeyAcceptedKeyTypes=ssh-rsa"
+          ARGS: "-avz --delete"
+          SOURCE: "dist/"
+          REMOTE_HOST: "ig7dp.ftp.infomaniak.com"
+          REMOTE_USER: "ig7dp_antistatique"
+          TARGET: ${{ env.DEPLOY_TARGET }}
