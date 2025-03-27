@@ -317,7 +317,8 @@
         { "slug": "baston", "link": "https://www.baston.ch/" },
         { "slug": "maxime", "link": "https://www.maxime.ch/" },
         { "slug": "sga", "link": "https://www.sga.ch/" },
-        { "slug": "weezevent", "link": "https://www.weezevent.com/" }
+        { "slug": "weezevent", "link": "https://www.weezevent.com/" },
+        { "slug": "blick", "link": "https://www.blick.ch/" }
       ]
     }
   },

@@ -24,7 +24,7 @@ const pathname = Astro.url.pathname;
 ---
 
 <header
-  class="flex items-center justify-between px-6 mx-auto md:px-10 pt-7 max-w-(--container)"
+  class="relative z-50 flex items-center justify-between px-6 mx-auto isolate md:px-10 pt-7 max-w-(--container)"
   x-data="{
     open: false,
     mobile: window.innerWidth < 768,
@@ -87,7 +87,7 @@ const pathname = Astro.url.pathname;
 
   <button
     class="relative z-10 md:text-gray-900 md:hidden"
-    @click="open = !open"
+    @click="open = !open; document.body.classList.toggle('overflow-hidden', open)"
     :class="open ? 'text-gray-100' : 'text-gray-900'"
   >
     <span x-show="!open">{t('menu.toggle_open')}</span>
