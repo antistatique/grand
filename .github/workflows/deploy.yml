@@ -15,12 +15,12 @@ jobs:
       - name: Set deployment environment variables based on Git branches
         id: deploy_target
         run: |
-          if [[ $GITHUB_REF == 'refs/heads/main-2025' ]]; then
-              echo "DEPLOY_TARGET=sites/staging.associationgrand.ch" >> $GITHUB_ENV
-          fi
           # if [[ $GITHUB_REF == 'refs/heads/main-2025' ]]; then
-          #   echo "DEPLOY_TARGET=sites/2025.associationgrand.ch" >> $GITHUB_ENV
+          #     echo "DEPLOY_TARGET=sites/staging.associationgrand.ch" >> $GITHUB_ENV
           # fi
+          if [[ $GITHUB_REF == 'refs/heads/main-2025' ]]; then
+            echo "DEPLOY_TARGET=sites/2025.associationgrand.ch" >> $GITHUB_ENV
+          fi
 
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
