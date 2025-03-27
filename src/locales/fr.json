@@ -315,10 +315,11 @@
         { "slug": "swissfilm", "link": "https://www.swissfilm.org/fr/" },
         { "slug": "antistatique", "link": "https://antistatique.net/" },
         { "slug": "baston", "link": "https://www.baston.ch/" },
-        { "slug": "maxime", "link": "https://www.maxime.ch/" },
+        { "slug": "maxime", "link": "https://maximedurand.net/" },
         { "slug": "sga", "link": "https://www.sga.ch/" },
         { "slug": "weezevent", "link": "https://www.weezevent.com/" },
-        { "slug": "blick", "link": "https://www.blick.ch/" }
+        { "slug": "blick", "link": "https://www.blick.ch/fr" },
+        { "slug": "wine", "link": "https://thewinefamily.ch/" }
       ]
     }
   },
