@@ -23,7 +23,10 @@
   },
   "hero": {
     "date": "27.05.25",
+    "night_date": "17.06.25",
     "title": "DEADLINE",
+    "night": "CÉRÉMONIE",
+    "save_the_date": "SAVE THE DATE",
     "subtitle": "GRAND PRIX ROMAND DE LA CRÉATION",
     "subtitle_mobile1": "GRAND PRIX ROMAND",
     "subtitle_mobile2": "DE LA CRÉATION"
