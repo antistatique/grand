@@ -8,7 +8,7 @@ import {
 } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 
-import Hero from './HeroSaveTheDate';
+import Hero from './HeroDeadline';
 
 const HeroCanvas = () => (
   <Canvas gl={{ preserveDrawingBuffer: true }}>
