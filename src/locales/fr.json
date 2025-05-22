@@ -322,7 +322,8 @@
         { "slug": "sga", "link": "https://www.sga.ch/" },
         { "slug": "weezevent", "link": "https://www.weezevent.com/" },
         { "slug": "blick", "link": "https://www.blick.ch/fr" },
-        { "slug": "wine", "link": "https://thewinefamily.ch/" }
+        { "slug": "wine", "link": "https://thewinefamily.ch/" },
+        { "slug": "tamedia", "link": "https://advertising.tamedia.ch/fr" }
       ]
     }
   },
